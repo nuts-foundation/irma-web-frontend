@@ -39,10 +39,18 @@
           </a>
         </li>
           <li class="kss-nav__item">
-            <a class="" href="section-examples.html">
+            <a class="kss-state-active" href="section-examples.html">
               <span class="kss-nav__ref">1</span>
               <span class="kss-nav__name">Examples</span>
             </a>
+                <ul class="kss-nav__subnav">
+                    <li class="kss-nav__item ">
+                      <a href="section-examples.html#kssref-examples-complete-example">
+                        <span class="kss-nav__ref">1.1</span>
+                        <span class="kss-nav__name">Complete example</span>
+                      </a>
+                    </li>
+                </ul>
           </li>
           <li class="kss-nav__item">
             <a class="" href="section-variables.html">
@@ -81,24 +89,18 @@
           the "root" element comes first in this loop, and can be detected using
           the "#if @first" block as seen below.
         -->
-            <header class="kss-section kss-section--depth-2" id="kssref-mixins-reset">
+            <header class="kss-section kss-section--depth-1" id="kssref-examples">
 
             <article class="kss-section__content">
-                <p class="kss-section__source">Source: <span>mixins/reset.scss</span>, line <span>1</span></p>
+                <p class="kss-section__source">Source: <span>examples/index.scss</span>, line <span>1</span></p>
 
-              <a class="kss-section__permalink" href="#kssref-mixins-reset">
-                <h2 class="kss-section__item kss-section__item--depth-2">
-                  <span class="kss-section__ref">3.2</span>
-                  <span class="kss-section__name">reset()</span>
-                </h2>
+              <a class="kss-section__permalink" href="#kssref-examples">
+                <h1 class="kss-section__item kss-section__item--depth-1">
+                  <span class="kss-section__ref">1</span>
+                  <span class="kss-section__name">Examples</span>
+                </h1>
               </a>
 
-                <div class="kss-section__description"><p>A mixin that resets margin, padding and box-sizing to reliable defaults on the given element and (optionally) all its children.</p>
-<pre class="hljs"><code class="language-css"><span class="hljs-selector-class">.complicated-element</span> {
-  @include reset;
-}
-</code></pre>
-</div>
 
             </article>
 

@@ -120,6 +120,9 @@
   height: 50px;
   vertical-align: middle;
 }
+.irma-web-form .irma-web-qr-code {
+  margin: 0px auto;
+}
 @media screen and (max-width: 768px) {
   .irma-web-form {
     padding: 1em 3px;
@@ -159,6 +162,9 @@
   height: 100%;
   text-align: center;
   z-index: -1;
+}
+.irma-web-qr-code.loading img, .irma-web-qr-code.waiting-for-user img, .irma-web-qr-code.cancelled img {
+  display: none;
 }
 .irma-web-qr-code.loading:before {
   background-size: 30%;
