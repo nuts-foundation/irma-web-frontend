@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>IRMA web front-end</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="generator" content="kss-node">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700,300">
+    <link rel="stylesheet" href="kss-assets/vendor/prism.css">
+    <link rel="stylesheet" href="kss-assets/css/kss.css">
+    <link rel="stylesheet" href="application.css">
+
+  </head>
+
+  <body class="kss-body">
+
+    <!-- header. -->
+    <header class="kss-header">
+      <section class="kss-header__inner">
+        <a class="kss-header__hamburger-trigger">
+          <div class="kss-header__hamburger"></div>
+        </a>
+        <h1 class="kss-header__title kss-title">IRMA web front-end</h1>
+      </section>
+    </header>
+    <!-- /header. -->
+
+
+    <!-- navigation. -->
+    <section class="kss-navigation">
+      <h1 class="kss-navigation__title kss-title">IRMA web front-end</h1>
+      <ul class="kss-nav">
+        <li class="kss-nav__item">
+          <a href="index.html">
+            <span class="kss-nav__ref">0</span>
+            <span class="kss-nav__name">Introduction</span>
+          </a>
+        </li>
+          <li class="kss-nav__item">
+            <a class="" href="section-hello.html">
+              <span class="kss-nav__ref">1</span>
+              <span class="kss-nav__name">Hello world</span>
+            </a>
+          </li>
+      </ul>
+    </section>
+    <!-- /navigation. -->
+
+
+    <!-- documentation. -->
+    <section class="kss-documentation">
+        <article class="kss-markdown">
+          <h1>IRMA web front-end</h1>
+<p>Implementing IRMA disclosure flows for verifying credentials or allowing users
+to log in using IRMA can be a bit daunting, from a UX perspective. IRMA has a
+lot of different states that the user has to be guided through and the whole
+thing needs to be interactive.</p>
+<p>Also, from a user's point of view, it will be beneficial to the adoption of IRMA
+for these kinds of flows if they are easily recognisable and have similar
+predictable behaviour. Seen one, seen them all.</p>
+<p>For these reasons we have released this important part of the
+<a href="https://helder.health">Helder application</a> as a stand-alone open source package
+that you can embed in your own (web based) applications.</p>
+<h2>Technical design considerations</h2>
+<p>We want to make embedding an IRMA disclosure flow in your website as simple as
+we can. We'll start with the required design elements that cover the different
+states of the flow, so we can connect those to the <code>irmajs</code> javascript
+implementation. We may later add a small javascript abstraction and add a
+dependency on <code>irmajs</code>, to make things even simpler.</p>
+<h2>UX considerations</h2>
+<p>Essentially we're guiding the user through a state machine, where for each state
+we help the user recognise the next step to take. We visually mirror the design
+of the IRMA app to help users make the subconscious connection between the
+website and the app.</p>
+<h3>The state machine</h3>
+<p>The state machine knows these states:</p>
+<ol>
+<li>Uninitialised</li>
+<li>Loading</li>
+<li>Showing QR code</li>
+<li>Code scanned, continue on phone</li>
+<li>Disclosure cancelled</li>
+<li>Disclosure timed out</li>
+<li>Disclosure errored</li>
+<li>Browser is not supported</li>
+<li>Success</li>
+</ol>
+<p>The happy path for this flow is:</p>
+<pre class="hljs"><code class="language-">1. Uninitialised → 2. Loading → 3. Showing QR code → 4. Code scanned, continue on phone → 9. Success
+</code></pre>
+<p>States 5 - 8 are all basically just catching different edge-cases.</p>
+<h2>Embedding in your application</h2>
+<p>This section is TODO. Sorry for that ;)</p>
+<h2>Contributing</h2>
+<p>This section is largely TODO. Sorry for that ;)</p>
+<p>Feel free to make pull requests on this repository. If you do, don't forget to
+sign off your commits:</p>
+<pre class="hljs"><code class="language-bash">$ git commit --signoff
+</code></pre>
+
+        </article>
+    </section>
+    <!-- /documentation. -->
+
+
+
+  <!-- scripts. -->
+  <script src="kss-assets/vendor/jquery.js"></script>
+  <script src="kss-assets/vendor/prism.js"></script>
+  <script src="kss-assets/js/kss.js"></script>
+  
+  <!-- /scripts. -->
+
+  </body>
+</html>
