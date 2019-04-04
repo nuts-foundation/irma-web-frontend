@@ -4,7 +4,7 @@
 //
 // Markup:
 // <section class="irma-web-form">
-//   <p>Inloggen met <img src="irma-image"/></p>
+//   <p>Inloggen met <img src="https://raw.githubusercontent.com/privacybydesign/irma_mobile/master/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png"/></p>
 //   <button>Some action here</button>
 // </section>
 //
@@ -45,6 +45,10 @@
     @include reset;
     height: 50px;
     vertical-align: middle;
+  }
+
+  .irma-web-qr-code {
+    margin: 0px auto;
   }
 
   @include on-small-screen {
