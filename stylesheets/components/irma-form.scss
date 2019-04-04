@@ -19,7 +19,7 @@
   @include reset;
   @include font($size: 20px);
   width: 80%;
-  min-width: 260px;
+  min-width: 266px;
   max-width: 400px;
   padding: 2em 3px;
 
@@ -29,7 +29,7 @@
 
   text-align: center;
 
-  p {
+  & > p {
     @include reset;
     padding: 0em 2em 2em 2em;
     margin-bottom: 2em;
@@ -39,12 +39,12 @@
       padding: 0em 1em 1em 1em;
       margin-bottom: 1em;
     }
-  }
 
-  p img {
-    @include reset;
-    height: 50px;
-    vertical-align: middle;
+    img {
+      @include reset;
+      height: 50px;
+      vertical-align: middle;
+    }
   }
 
   .irma-web-qr-code {

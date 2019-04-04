@@ -6,6 +6,10 @@
 // <section class="irma-web-qr-code {{modifier_class}}">
 //   <!-- Image with QR code -->
 //   <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAK8AAACvAQMAAACxXBw2AAAABlBMVEX///8AAABVwtN+AAAACXBIWXMAAA7EAAAOxAGVKw4bAAADOElEQVRIx+2XP2rlMBDGx6hQE+z2FQJdQ2miq+QINmmDZfPaYF/gQa6iNNE1BCpea5NGC8Kzo3WSYtlkkdtdFQb/DPoz8+mbMcA/PSRuGuTWOPSds5gqRF+MBdQgw4w2hIlbkKOFA9hMXAYctE/GQmKji4cwnFIzIojuBTF1f8Uc6l4RsTpcqkMYag6p77UXoFR6rD5PWYApsOoqukkF0b2qcOk+412AaWgM88S93BQEXD6zXIDlL4KTxtTqiM/r+waLMDwspJOhBwTaGw2noBjLMyUNl85KNmKEe3MEs6cKeZgAkjDoAGpl/Tf4bdLXVA0q4bqpgFmfxRjMwGnuWoFcrcZ8ZXw5bnvKzrpwmeAWkYKjy7FcWpJ9X2uUg8orqQOYvW36JJqFeza+kmxJv1COcSTP6FuObEXHLg2l6ACeI0/dpAUOt5H5fg/VF1jiijxVqwseKkeBhV0nRVg8kByzoIJoNTJcdDyAb1qIvq2BUrTxgOsuzUJMQeBh6DWjwIJg8xEs31a8irpzPqwxZ2aXfRmmufFEh1OI66sOz4gfSxZgeBhUxHVSnmRPjtpy5YuxaCZF8V4p3iaSWD9s/c+YFK1Pcly0l8sdh8eW63IszxRYpJtGRSDq9Ghwd80iLMwC1+xVIdDcLDVoD2AwpFgAzsKg6EHFzRdjlqpI1ltF6ev8bY7qAD5v+ur7XgFb7jRhi+VY3FBxTd2WHxiT6N7lU4Tl22xBVPnajK9K3LfwLabjXIUZHeD6w3k5wC77MvxUK0k6USGQNNl5jg7K8XnhMQw1WRi+WP9o3G5hRZhmc9QVjFb6KtICdOfLsXyC7Fzkv7jcAWlfYzlmQ614mEeLQHPTBuNeL4uwzB0JGxeQoiWdPKPb4/0Fnjd+ClPjIIyk0UtlYzlmS4VUhidgWd/h0jhdjuGmsVefLYj8H0NAjAcwmS3KzVifW258XriGYkwvZDxtY4McdBT3nYNy/KthpU5JeZGNh3zQHcBm0jG1VBQTNazyYj6crRArKtEzBjA/LPX+oL/HnLoCpL+U5oX0OX9YbxGGOu+kiYwNd9wL89nyF+CcE8nWkXRqqFF/P00h/j9+Hz8BKgnu5v9Z8jEAAAAASUVORK5CYII=" width=256 height=256/>
+//   <!-- Default Dutch feedback messages -->
+//   <p class="loading-text">Eén moment alsjeblieft</p>
+//   <p class="waiting-for-user-text">Volg de instructies op je telefoon</p>
+//   <p class="cancelled-text">Transactie is geannuleerd</p>
 // </section>
 //
 // .loading          - When we're waiting for a QR code
@@ -24,6 +28,17 @@
   border: 1px solid $border-color;
   z-index: 0;
 
+  // The QR code itself should nicely fit its parent
+
+  img {
+    @include reset;
+    width: 256px;
+    height: 256px;
+  }
+
+  // The other states generally have an icon and a text. The icon lives in a
+  // before pseudo-element, the text in a paragraph
+
   &:before {
     content: ' ';
     position: absolute;
@@ -33,18 +48,22 @@
     height: 100%;
 
     background-repeat: no-repeat;
-    z-index: -1;
   }
 
-  &:after {
+  p {
+    @include reset;
     @include font($color: $subtle-text-color, $size: 16px);
     position: absolute;
-    top: 0;
+    top: 65%;
     left: 0;
     width: 100%;
-    height: 100%;
     text-align: center;
-    z-index: -1;
+  }
+
+  // Hide state texts by default
+
+  .loading-text, .waiting-for-user-text, .cancelled-text {
+    display: none;
   }
 
   &.loading, &.waiting-for-user, &.cancelled {
@@ -59,9 +78,8 @@
       background-size: 30%;
       background-position: center 75px;
     }
-    &:after {
-      content: 'Eén moment alsjeblieft';
-      line-height: 360px;
+    .loading-text {
+      display: initial;
     }
   }
 
@@ -71,16 +89,15 @@
       background-size: 20%;
       background-position: center 65px;
     }
-    &:after {
-      content: 'Volg de instructies op je telefoon';
-      line-height: 390px;
+    .waiting-for-user-text {
+      display: initial;
     }
   }
 
   &.cancelled {
-    &:after {
-      content: 'Transactie is geannuleerd';
-      line-height: 256px;
+    .cancelled-text {
+      display: initial;
+      top: 40%;
     }
   }
 
