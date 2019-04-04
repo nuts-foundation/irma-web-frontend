@@ -1,4 +1,3 @@
-@charset "UTF-8";
 .irma-web-center-child {
   box-sizing: border-box;
   margin: 0px;
@@ -91,7 +90,7 @@
   font-size: 20px;
   color: #4C4C4C;
   width: 80%;
-  min-width: 260px;
+  min-width: 266px;
   max-width: 400px;
   padding: 2em 3px;
   background-color: #f8f8f8;
@@ -99,7 +98,7 @@
   border-radius: 10px;
   text-align: center;
 }
-.irma-web-form p {
+.irma-web-form > p {
   box-sizing: border-box;
   margin: 0px;
   padding: 0px;
@@ -108,12 +107,12 @@
   border-bottom: 1px solid #cccccc;
 }
 @media screen and (max-width: 768px) {
-  .irma-web-form p {
+  .irma-web-form > p {
     padding: 0em 1em 1em 1em;
     margin-bottom: 1em;
   }
 }
-.irma-web-form p img {
+.irma-web-form > p img {
   box-sizing: border-box;
   margin: 0px;
   padding: 0px;
@@ -140,6 +139,13 @@
   border: 1px solid #cccccc;
   z-index: 0;
 }
+.irma-web-qr-code img {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+  width: 256px;
+  height: 256px;
+}
 .irma-web-qr-code:before {
   content: " ";
   position: absolute;
@@ -148,47 +154,208 @@
   width: 100%;
   height: 100%;
   background-repeat: no-repeat;
-  z-index: -1;
 }
-.irma-web-qr-code:after {
+.irma-web-qr-code p {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
   font-family: "Roboto", Tahoma, Arial, sans-serif;
   font-weight: 500;
-  font-size: 16px;
+  font-size: 15px;
   color: #7f7f7f;
   position: absolute;
-  top: 0;
+  top: 65%;
   left: 0;
   width: 100%;
-  height: 100%;
+  padding: 0 1em;
   text-align: center;
-  z-index: -1;
 }
-.irma-web-qr-code.loading img, .irma-web-qr-code.waiting-for-user img, .irma-web-qr-code.cancelled img {
+.irma-web-qr-code p a {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+  color: #4C4C4C;
+  text-decoration: underline;
+}
+.irma-web-qr-code p a:hover {
+  color: #00b1e7;
+}
+.irma-web-qr-code .loading-text,
+.irma-web-qr-code .waiting-for-user-text,
+.irma-web-qr-code .cancelled-text,
+.irma-web-qr-code .timeout-text,
+.irma-web-qr-code .error-text,
+.irma-web-qr-code .unsupported-text,
+.irma-web-qr-code .success-text {
+  display: none;
+}
+.irma-web-qr-code.loading img, .irma-web-qr-code.waiting-for-user img, .irma-web-qr-code.cancelled img, .irma-web-qr-code.timeout img, .irma-web-qr-code.error img, .irma-web-qr-code.unsupported img, .irma-web-qr-code.success img {
   display: none;
 }
 .irma-web-qr-code.loading:before {
   background-size: 30%;
   background-position: center 75px;
 }
-.irma-web-qr-code.loading:after {
-  content: "Eén moment alsjeblieft";
-  line-height: 360px;
+.irma-web-qr-code.loading .loading-text {
+  display: initial;
 }
 .irma-web-qr-code.waiting-for-user:before {
   background-size: 20%;
   background-position: center 65px;
 }
-.irma-web-qr-code.waiting-for-user:after {
-  content: "Volg de instructies op je telefoon";
-  line-height: 390px;
+.irma-web-qr-code.waiting-for-user .waiting-for-user-text {
+  display: initial;
 }
-.irma-web-qr-code.cancelled:after {
-  content: "Transactie is geannuleerd";
-  line-height: 256px;
+.irma-web-qr-code.cancelled .cancelled-text {
+  display: initial;
+  top: 42%;
 }
-@media screen and (max-width: 768px) {
-  .irma-web-qr-code {
-    margin-bottom: 1em;
+.irma-web-qr-code.timeout .timeout-text {
+  display: initial;
+  top: 42%;
+}
+.irma-web-qr-code.error .error-text {
+  display: initial;
+  top: 42%;
+}
+.irma-web-qr-code.unsupported .unsupported-text {
+  display: initial;
+  top: 42%;
+}
+.irma-web-qr-code.success .success-text {
+  display: initial;
+  top: 45%;
+}
+
+.irma-web-loading-animation {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+  width: 39px;
+  height: 39px;
+}
+.irma-web-loading-animation * {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+.irma-web-loading-animation * {
+  display: inline-block;
+  width: 33%;
+  height: 33%;
+  background-color: #00b1e7;
+  float: left;
+  -webkit-animation: loading-animation 1.3s infinite ease-in-out;
+  animation: loading-animation 1.3s infinite ease-in-out;
+}
+.irma-web-loading-animation *:nth-child(1) {
+  -webkit-animation-delay: 0.2s;
+  animation-delay: 0.2s;
+}
+.irma-web-loading-animation *:nth-child(2) {
+  -webkit-animation-delay: 0.3s;
+  animation-delay: 0.3s;
+}
+.irma-web-loading-animation *:nth-child(3) {
+  -webkit-animation-delay: 0.4s;
+  animation-delay: 0.4s;
+}
+.irma-web-loading-animation *:nth-child(4) {
+  -webkit-animation-delay: 0.1s;
+  animation-delay: 0.1s;
+}
+.irma-web-loading-animation *:nth-child(5) {
+  -webkit-animation-delay: 0.2s;
+  animation-delay: 0.2s;
+}
+.irma-web-loading-animation *:nth-child(6) {
+  -webkit-animation-delay: 0.3s;
+  animation-delay: 0.3s;
+}
+.irma-web-loading-animation *:nth-child(7) {
+  -webkit-animation-delay: 0s;
+  animation-delay: 0s;
+}
+.irma-web-loading-animation *:nth-child(8) {
+  -webkit-animation-delay: 0.1s;
+  animation-delay: 0.1s;
+}
+.irma-web-loading-animation *:nth-child(9) {
+  -webkit-animation-delay: 0.2s;
+  animation-delay: 0.2s;
+}
+@-webkit-keyframes loading-animation {
+  0%, 70%, 100% {
+    -webkit-transform: scale3D(1, 1, 1);
+    transform: scale3D(1, 1, 1);
+  }
+  35% {
+    -webkit-transform: scale3D(0, 0, 1);
+    transform: scale3D(0, 0, 1);
+  }
+}
+@keyframes loading-animation {
+  0%, 70%, 100% {
+    -webkit-transform: scale3D(1, 1, 1);
+    transform: scale3D(1, 1, 1);
+  }
+  35% {
+    -webkit-transform: scale3D(0, 0, 1);
+    transform: scale3D(0, 0, 1);
+  }
+}
+
+.irma-web-waiting-for-user-animation {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+  width: 30px;
+  height: 50px;
+  position: relative;
+  background-color: #00b1e7;
+  border-radius: 2px;
+  -webkit-animation: waiting-for-user-animation 2s infinite ease-in-out;
+  animation: waiting-for-user-animation 2s infinite ease-in-out;
+}
+.irma-web-waiting-for-user-animation:before, .irma-web-waiting-for-user-animation:after {
+  content: "";
+  display: block;
+  position: absolute;
+  background-color: white;
+}
+.irma-web-waiting-for-user-animation:before {
+  top: 4px;
+  left: 4px;
+  right: 4px;
+  bottom: 10px;
+  border-radius: 1px;
+}
+.irma-web-waiting-for-user-animation:after {
+  width: 6px;
+  height: 6px;
+  left: 50%;
+  bottom: 2px;
+  margin-left: -3px;
+  border-radius: 50%;
+}
+@-webkit-keyframes waiting-for-user-animation {
+  0%, 100% {
+    -webkit-transform: scale3D(1, 1, 1);
+    transform: scale3D(1, 1, 1);
+  }
+  50% {
+    -webkit-transform: scale3D(0.8, 0.8, 1);
+    transform: scale3D(0.8, 0.8, 1);
+  }
+}
+@keyframes waiting-for-user-animation {
+  0%, 100% {
+    -webkit-transform: scale3D(1, 1, 1);
+    transform: scale3D(1, 1, 1);
+  }
+  50% {
+    -webkit-transform: scale3D(0.8, 0.8, 1);
+    transform: scale3D(0.8, 0.8, 1);
   }
 }
 

@@ -57,18 +57,10 @@
             </a>
           </li>
           <li class="kss-nav__item">
-            <a class="kss-state-active" href="section-layouts.html">
+            <a class="" href="section-layouts.html">
               <span class="kss-nav__ref">4</span>
               <span class="kss-nav__name">Layouts</span>
             </a>
-                <ul class="kss-nav__subnav">
-                    <li class="kss-nav__item ">
-                      <a href="section-layouts.html#kssref-layouts-center">
-                        <span class="kss-nav__ref">4.1</span>
-                        <span class="kss-nav__name">Center</span>
-                      </a>
-                    </li>
-                </ul>
           </li>
           <li class="kss-nav__item">
             <a class="" href="section-components.html">
@@ -77,10 +69,24 @@
             </a>
           </li>
           <li class="kss-nav__item">
-            <a class="" href="section-animations.html">
+            <a class="kss-state-active" href="section-animations.html">
               <span class="kss-nav__ref">6</span>
               <span class="kss-nav__name">Animations</span>
             </a>
+                <ul class="kss-nav__subnav">
+                    <li class="kss-nav__item ">
+                      <a href="section-animations.html#kssref-animations-loading">
+                        <span class="kss-nav__ref">6.1</span>
+                        <span class="kss-nav__name">Loading</span>
+                      </a>
+                    </li>
+                    <li class="kss-nav__item ">
+                      <a href="section-animations.html#kssref-animations-waiting-for-user">
+                        <span class="kss-nav__ref">6.2</span>
+                        <span class="kss-nav__name">Waiting for user</span>
+                      </a>
+                    </li>
+                </ul>
           </li>
       </ul>
     </section>
@@ -95,15 +101,15 @@
           the "root" element comes first in this loop, and can be detected using
           the "#if @first" block as seen below.
         -->
-            <header class="kss-section kss-section--depth-1" id="kssref-layouts">
+            <header class="kss-section kss-section--depth-1" id="kssref-animations">
 
             <article class="kss-section__content">
-                <p class="kss-section__source">Source: <span>layouts/index.scss</span>, line <span>1</span></p>
+                <p class="kss-section__source">Source: <span>animations/index.scss</span>, line <span>1</span></p>
 
-              <a class="kss-section__permalink" href="#kssref-layouts">
+              <a class="kss-section__permalink" href="#kssref-animations">
                 <h1 class="kss-section__item kss-section__item--depth-1">
-                  <span class="kss-section__ref">4</span>
-                  <span class="kss-section__name">Layouts</span>
+                  <span class="kss-section__ref">6</span>
+                  <span class="kss-section__name">Animations</span>
                 </h1>
               </a>
 
@@ -112,19 +118,19 @@
 
 
             </header>
-            <section class="kss-section kss-section--depth-2" id="kssref-layouts-center">
+            <section class="kss-section kss-section--depth-2" id="kssref-animations-loading">
 
             <article class="kss-section__content">
-                <p class="kss-section__source">Source: <span>layouts/center.scss</span>, line <span>1</span></p>
+                <p class="kss-section__source">Source: <span>animations/loading.scss</span>, line <span>1</span></p>
 
-              <a class="kss-section__permalink" href="#kssref-layouts-center">
+              <a class="kss-section__permalink" href="#kssref-animations-loading">
                 <h2 class="kss-section__item kss-section__item--depth-2">
-                  <span class="kss-section__ref">4.1</span>
-                  <span class="kss-section__name">Center</span>
+                  <span class="kss-section__ref">6.1</span>
+                  <span class="kss-section__name">Loading</span>
                 </h2>
               </a>
 
-                <div class="kss-section__description"><p>Center the content in its parent. Both vertically and horizontally.</p>
+                <div class="kss-section__description"><p>A loading animation that precedes the QR code</p>
 </div>
 
             </article>
@@ -133,16 +139,47 @@
                 <h1 class="kss-modifiers__heading">Example</h1>
 
 
-                <div class="kss-modifiers__example"><section class="irma-web-center-child" style="/** Parent styles **/ width: 100%; height: 500px; border: 2px solid red;">
-  <section style="width: 300px; height: 300px; background-color: blue"></section>
-</section></div>
+                <div class="kss-modifiers__example"><div class="irma-web-loading-animation">
+  <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+</div></div>
 
               </article>
 
                 <article class="kss-section__markup">
-                  <pre><code class="language-markup">&lt;section class&#x3D;&quot;irma-web-center-child&quot; style&#x3D;&quot;/** Parent styles **/ width: 100%; height: 500px; border: 2px solid red;&quot;&gt;
-  &lt;section style&#x3D;&quot;width: 300px; height: 300px; background-color: blue&quot;&gt;&lt;/section&gt;
-&lt;/section&gt;</code></pre>
+                  <pre><code class="language-markup">&lt;div class&#x3D;&quot;irma-web-loading-animation&quot;&gt;
+  &lt;i&gt;&lt;/i&gt;&lt;i&gt;&lt;/i&gt;&lt;i&gt;&lt;/i&gt;&lt;i&gt;&lt;/i&gt;&lt;i&gt;&lt;/i&gt;&lt;i&gt;&lt;/i&gt;&lt;i&gt;&lt;/i&gt;&lt;i&gt;&lt;/i&gt;&lt;i&gt;&lt;/i&gt;
+&lt;/div&gt;</code></pre>
+                </article>
+
+            </section>
+            <section class="kss-section kss-section--depth-2" id="kssref-animations-waiting-for-user">
+
+            <article class="kss-section__content">
+                <p class="kss-section__source">Source: <span>animations/waiting-for-user.scss</span>, line <span>1</span></p>
+
+              <a class="kss-section__permalink" href="#kssref-animations-waiting-for-user">
+                <h2 class="kss-section__item kss-section__item--depth-2">
+                  <span class="kss-section__ref">6.2</span>
+                  <span class="kss-section__name">Waiting for user</span>
+                </h2>
+              </a>
+
+                <div class="kss-section__description"><p>An animation to show while we wait for the user to disclose credentials from
+their mobile phone</p>
+</div>
+
+            </article>
+
+              <article class="kss-section__modifiers">
+                <h1 class="kss-modifiers__heading">Example</h1>
+
+
+                <div class="kss-modifiers__example"><div class="irma-web-waiting-for-user-animation"></div></div>
+
+              </article>
+
+                <article class="kss-section__markup">
+                  <pre><code class="language-markup">&lt;div class&#x3D;&quot;irma-web-waiting-for-user-animation&quot;&gt;&lt;/div&gt;</code></pre>
                 </article>
 
             </section>
