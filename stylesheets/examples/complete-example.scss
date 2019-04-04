@@ -1,0 +1,28 @@
+// Complete example
+//
+// Showing the whole QR code based disclosure flow
+//
+// <ol>
+//   <li><a onclick="document.querySelector('.irma-web-qr-code').className = 'irma-web-qr-code loading'">Uninitialised</a></li>
+//   <li><a onclick="document.querySelector('.irma-web-qr-code').className = 'irma-web-qr-code loading'">Loading</a></li>
+//   <li><a onclick="document.querySelector('.irma-web-qr-code').className = 'irma-web-qr-code hello'">Showing QR code</a></li>
+//   <li><a onclick="document.querySelector('.irma-web-qr-code').className = 'irma-web-qr-code waiting-for-user'">Code scanned, continue on phone</a></li>
+//   <li><a onclick="document.querySelector('.irma-web-qr-code').className = 'irma-web-qr-code cancelled'">Disclosure cancelled</a></li>
+//   <li><a onclick="document.querySelector('.irma-web-qr-code').className = 'irma-web-qr-code hello'">Disclosure timed out</a></li>
+//   <li><a onclick="document.querySelector('.irma-web-qr-code').className = 'irma-web-qr-code hello'">Disclosure errored</a></li>
+//   <li><a onclick="document.querySelector('.irma-web-qr-code').className = 'irma-web-qr-code hello'">Browser is not supported</a></li>
+//   <li><a onclick="document.querySelector('.irma-web-qr-code').className = 'irma-web-qr-code hello'">Success</a></li>
+// </ol>
+//
+// Markup:
+// <section class="irma-web-center-child" style="/** Parent styles **/ width: 100%; height: 700px; border: 2px solid red;">
+//   <section class="irma-web-form">
+//     <p>Inloggen met <img src="https://raw.githubusercontent.com/privacybydesign/irma_mobile/master/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png"/></p>
+//     <section class="irma-web-qr-code">
+//       <!-- Image with QR code -->
+//       <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAK8AAACvAQMAAACxXBw2AAAABlBMVEX///8AAABVwtN+AAAACXBIWXMAAA7EAAAOxAGVKw4bAAADOElEQVRIx+2XP2rlMBDGx6hQE+z2FQJdQ2miq+QINmmDZfPaYF/gQa6iNNE1BCpea5NGC8Kzo3WSYtlkkdtdFQb/DPoz8+mbMcA/PSRuGuTWOPSds5gqRF+MBdQgw4w2hIlbkKOFA9hMXAYctE/GQmKji4cwnFIzIojuBTF1f8Uc6l4RsTpcqkMYag6p77UXoFR6rD5PWYApsOoqukkF0b2qcOk+412AaWgM88S93BQEXD6zXIDlL4KTxtTqiM/r+waLMDwspJOhBwTaGw2noBjLMyUNl85KNmKEe3MEs6cKeZgAkjDoAGpl/Tf4bdLXVA0q4bqpgFmfxRjMwGnuWoFcrcZ8ZXw5bnvKzrpwmeAWkYKjy7FcWpJ9X2uUg8orqQOYvW36JJqFeza+kmxJv1COcSTP6FuObEXHLg2l6ACeI0/dpAUOt5H5fg/VF1jiijxVqwseKkeBhV0nRVg8kByzoIJoNTJcdDyAb1qIvq2BUrTxgOsuzUJMQeBh6DWjwIJg8xEs31a8irpzPqwxZ2aXfRmmufFEh1OI66sOz4gfSxZgeBhUxHVSnmRPjtpy5YuxaCZF8V4p3iaSWD9s/c+YFK1Pcly0l8sdh8eW63IszxRYpJtGRSDq9Ghwd80iLMwC1+xVIdDcLDVoD2AwpFgAzsKg6EHFzRdjlqpI1ltF6ev8bY7qAD5v+ur7XgFb7jRhi+VY3FBxTd2WHxiT6N7lU4Tl22xBVPnajK9K3LfwLabjXIUZHeD6w3k5wC77MvxUK0k6USGQNNl5jg7K8XnhMQw1WRi+WP9o3G5hRZhmc9QVjFb6KtICdOfLsXyC7Fzkv7jcAWlfYzlmQ614mEeLQHPTBuNeL4uwzB0JGxeQoiWdPKPb4/0Fnjd+ClPjIIyk0UtlYzlmS4VUhidgWd/h0jhdjuGmsVefLYj8H0NAjAcwmS3KzVifW258XriGYkwvZDxtY4McdBT3nYNy/KthpU5JeZGNh3zQHcBm0jG1VBQTNazyYj6crRArKtEzBjA/LPX+oL/HnLoCpL+U5oX0OX9YbxGGOu+kiYwNd9wL89nyF+CcE8nWkXRqqFF/P00h/j9+Hz8BKgnu5v9Z8jEAAAAASUVORK5CYII=" width=256 height=256/>
+//     </section>
+//   </section>
+// </section>
+//
+// Styleguide Examples.Complete example
