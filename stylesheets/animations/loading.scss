@@ -1,0 +1,88 @@
+// Loading
+//
+// A loading animation that precedes the QR code
+//
+// Markup:
+// <div class="irma-web-loading-animation">
+//   <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+// </div>
+//
+// Styleguide Animations.Loading
+
+@import '../mixins/reset',
+        '../variables/colours';
+
+.irma-web-loading-animation {
+  @include reset($children-too: true);
+  width: 39px;
+  height: 39px;
+
+  * {
+    display: inline-block;
+    width: 33%;
+    height: 33%;
+    background-color: $irma-blue;
+    float: left;
+
+    -webkit-animation: loading-animation 1.3s infinite ease-in-out;
+            animation: loading-animation 1.3s infinite ease-in-out;
+  }
+
+  *:nth-child(1) {
+    -webkit-animation-delay: 0.2s;
+            animation-delay: 0.2s;
+  }
+  *:nth-child(2) {
+    -webkit-animation-delay: 0.3s;
+            animation-delay: 0.3s;
+  }
+  *:nth-child(3) {
+    -webkit-animation-delay: 0.4s;
+            animation-delay: 0.4s;
+  }
+  *:nth-child(4) {
+    -webkit-animation-delay: 0.1s;
+            animation-delay: 0.1s;
+  }
+  *:nth-child(5) {
+    -webkit-animation-delay: 0.2s;
+            animation-delay: 0.2s;
+  }
+  *:nth-child(6) {
+    -webkit-animation-delay: 0.3s;
+            animation-delay: 0.3s;
+  }
+  *:nth-child(7) {
+    -webkit-animation-delay: 0s;
+            animation-delay: 0s;
+  }
+  *:nth-child(8) {
+    -webkit-animation-delay: 0.1s;
+            animation-delay: 0.1s;
+  }
+  *:nth-child(9) {
+    -webkit-animation-delay: 0.2s;
+            animation-delay: 0.2s;
+  }
+
+  @-webkit-keyframes loading-animation {
+    0%, 70%, 100% {
+      -webkit-transform: scale3D(1, 1, 1);
+              transform: scale3D(1, 1, 1);
+    } 35% {
+      -webkit-transform: scale3D(0, 0, 1);
+              transform: scale3D(0, 0, 1);
+    }
+  }
+
+  @keyframes loading-animation {
+    0%, 70%, 100% {
+      -webkit-transform: scale3D(1, 1, 1);
+              transform: scale3D(1, 1, 1);
+    } 35% {
+      -webkit-transform: scale3D(0, 0, 1);
+              transform: scale3D(0, 0, 1);
+    }
+  }
+
+}
