@@ -1,0 +1,10 @@
+{
+  "title": "IRMA web front-end",
+  "source": "stylesheets/",
+  "destination": "docs/",
+  "builder": "node_modules/michelangelo/kss_styleguide/custom-template/",
+  "homepage": "../README.md",
+  "css": [
+    "application.css"
+  ]
+}
