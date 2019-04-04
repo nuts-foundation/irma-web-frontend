@@ -56,15 +56,78 @@ States 5 - 8 are all basically just catching different edge-cases.
 
 ## Embedding in your application
 
-This section is TODO. Sorry for that ;)
+### The old fashioned way
+
+The easy way to use these styles in your project is to link them like so:
+
+```html
+<link rel="stylesheet" href="//nuts-foundation.github.io/irma-web-frontend/application.css" />
+```
+
+Or [download](https://nuts-foundation.github.io/irma-web-frontend/application.css)
+the CSS file and the fonts and host it yourself.
+
+### The way the cool kids do it
+
+Alternatively, you can install it as an npm package. This can be useful if you
+want to use (parts of) the SCSS behind it and override some variables, if you
+need to package it in some complicated way or if you want to stay up to date.
+
+```bash
+$ npm install nuts-foundation/irma-web-frontend
+```
+
+You can then pull from the entire thing or just bits and pieces of it in your
+SCSS/SASS:
+
+```scss
+  # The entire thing:
+  @import "~irma-web-frontend/stylesheets";
+
+  # Or just bits and pieces of it:
+  @import "~irma-web-frontend/stylesheets/components/irma-form";
+```
 
 ## Contributing
 
-This section is largely TODO. Sorry for that ;)
+### Compiling locally
 
-Feel free to make pull requests on this repository. If you do, don't forget to
-sign off your commits:
+Requires a working `git` and `npm` on your machine.
 
 ```bash
-$ git commit --signoff
+# Clone the project
+$ git clone git@github.com:nuts-foundation/irma-web-frontend.git
+
+# Install dependencies
+$ cd irma-web-frontend
+$ npm install
+
+# Run the compiler & dev server
+$ npm run dev
 ```
+
+You should now have the styleguide running on
+[http://localhost:8080](http://localhost:8080).
+
+Any change you make to the stylesheets will trigger a rebuild of the styleguide
+and will be shown after a browser refresh.
+
+### Making PRs
+
+Please commit your changes in two steps for legibility:
+
+```bash
+# Commit your actual work:
+$ git add stylesheets
+$ git commit --signoff -m "Update button shadows to reflect new design"
+
+# And then end with any updates to the living styleguide:
+$ npm run clean # To make sure we're all good
+$ git add docs
+$ git commit --signoff -m "Rebuild the docs"
+```
+
+Then, feel free to make pull requests on this repository.
+
+We sign off commits to indicate that we, as authors, are okay with releasing
+this software under the license in the `LICENSE` file.
