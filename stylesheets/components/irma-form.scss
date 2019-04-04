@@ -1,0 +1,107 @@
+// IRMA 'login form'
+//
+// A place to nicely show the different states of the IRMA disclosure flow
+//
+// Markup:
+// <section class="irma-web-form">
+//   <p>Inloggen met <img src="irma-image"/></p>
+//   <article class="irma-qr-code {{modifier_class}}">
+//     <img/>
+//   </article>
+// </section>
+//
+// .loading          - When we're waiting for a QR code
+// .waiting-for-user - When we're waiting for user input on their mobile phone
+// .cancelled        - When the user has cancelled the transation
+//
+// Styleguide Components.IRMA login
+
+@import '../mixins/reset',
+        '../mixins/fonts',
+        '../variables/colours';
+
+section.irma-web-form {
+  @include reset;
+  @include font($size: 20px);
+  width: 80%;
+  min-width: 258px;
+  max-width: 400px;
+
+  background-color: $background-color;
+  border: 1px solid $border-color;
+
+  p {
+    padding: 3em;
+    text-align: center;
+  }
+
+  p img {
+    height: 50px;
+    vertical-align: middle;
+  }
+
+  .irma-qr-code {
+    position: relative;
+    width: 256px;
+    height: 256px;
+    margin: 0 auto 3em auto;
+
+    background-color: white;
+    z-index: 0;
+
+    &:before {
+      content: ' ';
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+
+      background-repeat: no-repeat;
+      z-index: -1;
+    }
+
+    &:after {
+      @include font($color: $subtle-text-color, $size: 16px);
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      z-index: -1;
+    }
+
+    &.loading {
+      &:before {
+        // background-image: url($gif-image-waiting-animation);
+        background-size: 30%;
+        background-position: center 75px;
+      }
+      &:after {
+        content: 'Eén moment alsjeblieft';
+        line-height: 360px;
+      }
+    }
+
+    &.waiting-for-user {
+      &:before {
+        // background-image: svg-url($svg-image-irma-app);
+        background-size: 20%;
+        background-position: center 65px;
+      }
+      &:after {
+        content: 'Volg de instructies op je telefoon';
+        line-height: 390px;
+      }
+    }
+
+    &.cancelled {
+      &:after {
+        content: 'Transactie is geannuleerd';
+        line-height: 256px;
+      }
+    }
+
+  }
+}

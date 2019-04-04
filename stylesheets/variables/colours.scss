@@ -1,0 +1,33 @@
+// Colours
+//
+// Styleguide Variables.colours
+
+// Colours from the IRMA app
+//
+// For interface elements
+//
+// $irma-blue         - #00b1e7; For headers and highlights
+// $background-color  - #f8f8f8; For the background
+// $border-color      - #cccccc; For the borders
+//
+// Weight: 1
+//
+// Styleguide Variables.colours.app
+
+$irma-blue:         #00b1e7;
+$background-color:  #f8f8f8;
+$border-color:      #cccccc;
+
+// Text colours
+//
+// For the fonts
+//
+// $text-color        - #4C4C4C; For text
+// $subtle-text-color - #7f7f7f; For subtle text
+//
+// Weight: 2
+//
+// Styleguide Variables.colours.text
+
+$text-color:        #4C4C4C;
+$subtle-text-color: lighten($text-color, 20%);
