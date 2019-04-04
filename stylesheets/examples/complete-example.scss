@@ -3,15 +3,15 @@
 // Showing the whole QR code based disclosure flow
 //
 // <ol>
-//   <li><a onclick="document.querySelector('.irma-web-qr-code').className = 'irma-web-qr-code loading'">Uninitialised</a></li>
+//   <li><a onclick="document.querySelector('.irma-web-qr-code').className = 'irma-web-qr-code loading'">Uninitialised</a> (not a separate visual style)</li>
 //   <li><a onclick="document.querySelector('.irma-web-qr-code').className = 'irma-web-qr-code loading'">Loading</a></li>
-//   <li><a onclick="document.querySelector('.irma-web-qr-code').className = 'irma-web-qr-code hello'">Showing QR code</a></li>
+//   <li><a onclick="document.querySelector('.irma-web-qr-code').className = 'irma-web-qr-code'">Showing QR code</a> (the default style)</li>
 //   <li><a onclick="document.querySelector('.irma-web-qr-code').className = 'irma-web-qr-code waiting-for-user'">Code scanned, continue on phone</a></li>
 //   <li><a onclick="document.querySelector('.irma-web-qr-code').className = 'irma-web-qr-code cancelled'">Disclosure cancelled</a></li>
-//   <li><a onclick="document.querySelector('.irma-web-qr-code').className = 'irma-web-qr-code hello'">Disclosure timed out</a></li>
-//   <li><a onclick="document.querySelector('.irma-web-qr-code').className = 'irma-web-qr-code hello'">Disclosure errored</a></li>
-//   <li><a onclick="document.querySelector('.irma-web-qr-code').className = 'irma-web-qr-code hello'">Browser is not supported</a></li>
-//   <li><a onclick="document.querySelector('.irma-web-qr-code').className = 'irma-web-qr-code hello'">Success</a></li>
+//   <li><a onclick="document.querySelector('.irma-web-qr-code').className = 'irma-web-qr-code timeout'">Disclosure timed out</a></li>
+//   <li><a onclick="document.querySelector('.irma-web-qr-code').className = 'irma-web-qr-code error'">Disclosure errored</a></li>
+//   <li><a onclick="document.querySelector('.irma-web-qr-code').className = 'irma-web-qr-code unsupported'">Browser is not supported</a></li>
+//   <li><a onclick="document.querySelector('.irma-web-qr-code').className = 'irma-web-qr-code success'">Success</a></li>
 // </ol>
 //
 // Markup:
@@ -24,7 +24,11 @@
 //       <!-- Default Dutch feedback messages -->
 //       <p class="loading-text">Eén moment alsjeblieft</p>
 //       <p class="waiting-for-user-text">Volg de instructies op je telefoon</p>
-//       <p class="cancelled-text">Transactie is geannuleerd</p>
+//       <p class="cancelled-text">Transactie is geannuleerd<br/><a href="#">Opnieuw proberen</a></p>
+//       <p class="timeout-text">Transactie is verlopen<br/><a href="#">Opnieuw proberen</a></p>
+//       <p class="error-text">Er is een fout opgetreden<br/><a href="#">Opnieuw proberen</a></p>
+//       <p class="unsupported-text">Het spijt ons, maar je browser voldoet niet aan de minimale eisen</p>
+//       <p class="success-text">Transactie voltooid!</p>
 //     </section>
 //   </section>
 // </section>

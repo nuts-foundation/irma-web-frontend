@@ -9,12 +9,20 @@
 //   <!-- Default Dutch feedback messages -->
 //   <p class="loading-text">Eén moment alsjeblieft</p>
 //   <p class="waiting-for-user-text">Volg de instructies op je telefoon</p>
-//   <p class="cancelled-text">Transactie is geannuleerd</p>
+//   <p class="cancelled-text">Transactie is geannuleerd<br/><a href="#">Opnieuw proberen</a></p>
+//   <p class="timeout-text">Transactie is verlopen<br/><a href="#">Opnieuw proberen</a></p>
+//   <p class="error-text">Er is een fout opgetreden<br/><a href="#">Opnieuw proberen</a></p>
+//   <p class="unsupported-text">Het spijt ons, maar je browser voldoet niet aan de minimale eisen</p>
+//   <p class="success-text">Transactie voltooid!</p>
 // </section>
 //
 // .loading          - When we're waiting for a QR code
 // .waiting-for-user - When we're waiting for user input on their mobile phone
-// .cancelled        - When the user has cancelled the transation
+// .cancelled        - When the user has cancelled the disclosure
+// .timeout          - When its taking too long for the user to scan the code
+// .error            - When some other error has occured
+// .unsupported      - When the browser or device of the user doesn't suffice
+// .success          - When the disclosure was a success
 //
 // Styleguide Components.QR code
 
@@ -52,25 +60,52 @@
 
   p {
     @include reset;
-    @include font($color: $subtle-text-color, $size: 16px);
+    @include font($color: $subtle-text-color, $size: 15px);
     position: absolute;
     top: 65%;
     left: 0;
     width: 100%;
+    padding: 0 1em;
     text-align: center;
+
+    a {
+      @include reset;
+      color: $text-color;
+      text-decoration: underline;
+
+      &:hover {
+        color: $irma-blue;
+      }
+    }
   }
 
   // Hide state texts by default
 
-  .loading-text, .waiting-for-user-text, .cancelled-text {
+  .loading-text,
+  .waiting-for-user-text,
+  .cancelled-text,
+  .timeout-text,
+  .error-text,
+  .unsupported-text,
+  .success-text {
     display: none;
   }
 
-  &.loading, &.waiting-for-user, &.cancelled {
+  // Hide QR code if in a feedback state
+
+  &.loading,
+  &.waiting-for-user,
+  &.cancelled,
+  &.timeout,
+  &.error,
+  &.unsupported,
+  &.success {
     img {
       display: none;
     }
   }
+
+  // Feedback states
 
   &.loading {
     &:before {
@@ -97,12 +132,36 @@
   &.cancelled {
     .cancelled-text {
       display: initial;
-      top: 40%;
+      top: 42%;
     }
   }
 
-  @include on-small-screen {
-    margin-bottom: 1em;
+  &.timeout {
+    .timeout-text {
+      display: initial;
+      top: 42%;
+    }
+  }
+
+  &.error {
+    .error-text {
+      display: initial;
+      top: 42%;
+    }
+  }
+
+  &.unsupported {
+    .unsupported-text {
+      display: initial;
+      top: 42%;
+    }
+  }
+
+  &.success {
+    .success-text {
+      display: initial;
+      top: 45%;
+    }
   }
 
 }
