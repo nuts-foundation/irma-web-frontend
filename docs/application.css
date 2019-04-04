@@ -1,3 +1,171 @@
+@charset "UTF-8";
+.irma-web-center-child {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
+@font-face {
+  font-family: "Roboto";
+  src: url("fonts/roboto/Roboto-Black.ttf");
+  src: url("fonts/roboto/Roboto-Black.ttf") format("ttf");
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("fonts/roboto/Roboto-BlackItalic.ttf");
+  src: url("fonts/roboto/Roboto-BlackItalic.ttf") format("ttf");
+  font-weight: 900;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("fonts/roboto/Roboto-Bold.ttf");
+  src: url("fonts/roboto/Roboto-Bold.ttf") format("ttf");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("fonts/roboto/Roboto-BoldItalic.ttf");
+  src: url("fonts/roboto/Roboto-BoldItalic.ttf") format("ttf");
+  font-weight: 700;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("fonts/roboto/Roboto-Italic.ttf");
+  src: url("fonts/roboto/Roboto-Italic.ttf") format("ttf");
+  font-weight: 400;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("fonts/roboto/Roboto-Light.ttf");
+  src: url("fonts/roboto/Roboto-Light.ttf") format("ttf");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("fonts/roboto/Roboto-LightItalic.ttf");
+  src: url("fonts/roboto/Roboto-LightItalic.ttf") format("ttf");
+  font-weight: 300;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("fonts/roboto/Roboto-Medium.ttf");
+  src: url("fonts/roboto/Roboto-Medium.ttf") format("ttf");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("fonts/roboto/Roboto-MediumItalic.ttf");
+  src: url("fonts/roboto/Roboto-MediumItalic.ttf") format("ttf");
+  font-weight: 500;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("fonts/roboto/Roboto-Regular.ttf");
+  src: url("fonts/roboto/Roboto-Regular.ttf") format("ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("fonts/roboto/Roboto-Thin.ttf");
+  src: url("fonts/roboto/Roboto-Thin.ttf") format("ttf");
+  font-weight: 100;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("fonts/roboto/Roboto-ThinItalic.ttf");
+  src: url("fonts/roboto/Roboto-ThinItalic.ttf") format("ttf");
+  font-weight: 100;
+  font-style: italic;
+}
+section.irma-web-form {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+  font-family: "Roboto", Tahoma, Arial, sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  color: #4C4C4C;
+  width: 80%;
+  min-width: 258px;
+  max-width: 400px;
+  background-color: #f8f8f8;
+  border: 1px solid #cccccc;
+}
+section.irma-web-form p {
+  padding: 3em;
+  text-align: center;
+}
+section.irma-web-form p img {
+  height: 50px;
+  vertical-align: middle;
+}
+section.irma-web-form .irma-qr-code {
+  position: relative;
+  width: 256px;
+  height: 256px;
+  margin: 0 auto 3em auto;
+  background-color: white;
+  z-index: 0;
+}
+section.irma-web-form .irma-qr-code:before {
+  content: " ";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  z-index: -1;
+}
+section.irma-web-form .irma-qr-code:after {
+  font-family: "Roboto", Tahoma, Arial, sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  color: #7f7f7f;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  z-index: -1;
+}
+section.irma-web-form .irma-qr-code.loading:before {
+  background-size: 30%;
+  background-position: center 75px;
+}
+section.irma-web-form .irma-qr-code.loading:after {
+  content: "Eén moment alsjeblieft";
+  line-height: 360px;
+}
+section.irma-web-form .irma-qr-code.waiting-for-user:before {
+  background-size: 20%;
+  background-position: center 65px;
+}
+section.irma-web-form .irma-qr-code.waiting-for-user:after {
+  content: "Volg de instructies op je telefoon";
+  line-height: 390px;
+}
+section.irma-web-form .irma-qr-code.cancelled:after {
+  content: "Transactie is geannuleerd";
+  line-height: 256px;
+}
 
 /*# sourceMappingURL=application.css.map */

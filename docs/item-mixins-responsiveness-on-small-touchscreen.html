@@ -69,60 +69,35 @@
 
     <!-- documentation. -->
     <section class="kss-documentation">
-        <article class="kss-markdown">
-          <h1>IRMA web front-end</h1>
-<p>Implementing IRMA disclosure flows for verifying credentials or allowing users
-to log in using IRMA can be a bit daunting, from a UX perspective. IRMA has a
-lot of different states that the user has to be guided through and the whole
-thing needs to be interactive.</p>
-<p>Also, from a user's point of view, it will be beneficial to the adoption of IRMA
-for these kinds of flows if they are easily recognisable and have similar
-predictable behaviour. Seen one, seen them all.</p>
-<p>For these reasons we have released this important part of the
-<a href="https://helder.health">Helder application</a> as a stand-alone open source package
-that you can embed in your own (web based) applications.</p>
-<h2>Technical design considerations</h2>
-<p>We want to make embedding an IRMA disclosure flow in your website as simple as
-we can. We'll start with the required design elements that cover the different
-states of the flow, so we can connect those to the <code>irmajs</code> javascript
-implementation. We may later add a small javascript abstraction and add a
-dependency on <code>irmajs</code>, to make things even simpler.</p>
-<h2>UX considerations</h2>
-<p>Essentially we're guiding the user through a state machine, where for each state
-we help the user recognise the next step to take. We visually mirror the design
-of the IRMA app to help users make the subconscious connection between the
-website and the app.</p>
-<h3>The state machine</h3>
-<p>The state machine knows these states:</p>
-<ol>
-<li>Uninitialised</li>
-<li>Loading</li>
-<li>Showing QR code</li>
-<li>Code scanned, continue on phone</li>
-<li>Disclosure cancelled</li>
-<li>Disclosure timed out</li>
-<li>Disclosure errored</li>
-<li>Browser is not supported</li>
-<li>Success</li>
-</ol>
-<p>The happy path for this flow is:</p>
-<pre class="hljs"><code class="language-">1. Uninitialised →
-  2. Loading →
-    3. Showing QR code →
-      4. Code scanned, continue on phone →
-        9. Success
-</code></pre>
-<p>States 5 - 8 are all basically just catching different edge-cases.</p>
-<h2>Embedding in your application</h2>
-<p>This section is TODO. Sorry for that ;)</p>
-<h2>Contributing</h2>
-<p>This section is largely TODO. Sorry for that ;)</p>
-<p>Feel free to make pull requests on this repository. If you do, don't forget to
-sign off your commits:</p>
-<pre class="hljs"><code class="language-bash">$ git commit --signoff
-</code></pre>
 
-        </article>
+        <!--
+          display each section, in order.
+          the "root" element comes first in this loop, and can be detected using
+          the "#if @first" block as seen below.
+        -->
+            <header class="kss-section kss-section--depth-3" id="kssref-mixins-responsiveness-on-small-touchscreen">
+
+            <article class="kss-section__content">
+                <p class="kss-section__source">Source: <span>mixins/responsiveness.scss</span>, line <span>9</span></p>
+
+              <a class="kss-section__permalink" href="#kssref-mixins-responsiveness-on-small-touchscreen">
+                <h3 class="kss-section__item kss-section__item--depth-3">
+                  <span class="kss-section__ref">2.3.6</span>
+                  <span class="kss-section__name">on-small-touchscreen {}</span>
+                </h3>
+              </a>
+
+                <div class="kss-section__description"><p>Mixin to specify styling that is only applicable to touchscreen devices with a maximum screen width of 768 pixels.</p>
+<pre class="hljs"><code class="language-css">@<span class="hljs-keyword">include</span> on-small-touchscreen {
+  // <span class="hljs-selector-tag">Styling</span> <span class="hljs-selector-tag">to</span> <span class="hljs-selector-tag">apply</span>
+}
+</code></pre>
+</div>
+
+            </article>
+
+
+            </header>
     </section>
     <!-- /documentation. -->
 
