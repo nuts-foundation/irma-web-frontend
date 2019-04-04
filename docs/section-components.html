@@ -68,6 +68,12 @@
                         <span class="kss-nav__name">IRMA &#x27;login form&#x27;</span>
                       </a>
                     </li>
+                    <li class="kss-nav__item ">
+                      <a href="section-components.html#kssref-components-qr-code">
+                        <span class="kss-nav__ref">4.2</span>
+                        <span class="kss-nav__name">QR code</span>
+                      </a>
+                    </li>
                 </ul>
           </li>
       </ul>
@@ -118,55 +124,71 @@
             </article>
 
               <article class="kss-section__modifiers">
-                <h1 class="kss-modifiers__heading">Examples</h1>
+                <h1 class="kss-modifiers__heading">Example</h1>
 
-                  <h2 class="kss-modifiers__name">Default styling</h2>
 
                 <div class="kss-modifiers__example"><section class="irma-web-form">
   <p>Inloggen met <img src="irma-image"/></p>
-  <article class="irma-qr-code [modifier class]">
-    <img/>
-  </article>
+  <button>Some action here</button>
 </section></div>
 
-                  <article class="kss-modifiers__modifier">
-                    <h2 class="kss-modifiers__name">.loading</h2>
-                    <p class="kss-modifiers__description">When we're waiting for a QR code</p>
-                    <div class="kss-modifiers__example"><section class="irma-web-form">
-  <p>Inloggen met <img src="irma-image"/></p>
-  <article class="irma-qr-code loading">
-    <img/>
-  </article>
-</section></div>
-                  </article>
-                  <article class="kss-modifiers__modifier">
-                    <h2 class="kss-modifiers__name">.waiting-for-user</h2>
-                    <p class="kss-modifiers__description">When we're waiting for user input on their mobile phone</p>
-                    <div class="kss-modifiers__example"><section class="irma-web-form">
-  <p>Inloggen met <img src="irma-image"/></p>
-  <article class="irma-qr-code waiting-for-user">
-    <img/>
-  </article>
-</section></div>
-                  </article>
-                  <article class="kss-modifiers__modifier">
-                    <h2 class="kss-modifiers__name">.cancelled</h2>
-                    <p class="kss-modifiers__description">When the user has cancelled the transation</p>
-                    <div class="kss-modifiers__example"><section class="irma-web-form">
-  <p>Inloggen met <img src="irma-image"/></p>
-  <article class="irma-qr-code cancelled">
-    <img/>
-  </article>
-</section></div>
-                  </article>
               </article>
 
                 <article class="kss-section__markup">
                   <pre><code class="language-markup">&lt;section class&#x3D;&quot;irma-web-form&quot;&gt;
   &lt;p&gt;Inloggen met &lt;img src&#x3D;&quot;irma-image&quot;/&gt;&lt;/p&gt;
-  &lt;article class&#x3D;&quot;irma-qr-code [modifier class]&quot;&gt;
-    &lt;img/&gt;
-  &lt;/article&gt;
+  &lt;button&gt;Some action here&lt;/button&gt;
+&lt;/section&gt;</code></pre>
+                </article>
+
+            </section>
+            <section class="kss-section kss-section--depth-2" id="kssref-components-qr-code">
+
+            <article class="kss-section__content">
+                <p class="kss-section__source">Source: <span>components/qr-code.scss</span>, line <span>1</span></p>
+
+              <a class="kss-section__permalink" href="#kssref-components-qr-code">
+                <h2 class="kss-section__item kss-section__item--depth-2">
+                  <span class="kss-section__ref">4.2</span>
+                  <span class="kss-section__name">QR code</span>
+                </h2>
+              </a>
+
+                <div class="kss-section__description"><p>A container for the QR code and QR flow related states</p>
+</div>
+
+            </article>
+
+              <article class="kss-section__modifiers">
+                <h1 class="kss-modifiers__heading">Examples</h1>
+
+                  <h2 class="kss-modifiers__name">Default styling</h2>
+
+                <div class="kss-modifiers__example"><section class="irma-web-qr-code [modifier class]">
+</section></div>
+
+                  <article class="kss-modifiers__modifier">
+                    <h2 class="kss-modifiers__name">.loading</h2>
+                    <p class="kss-modifiers__description">When we're waiting for a QR code</p>
+                    <div class="kss-modifiers__example"><section class="irma-web-qr-code loading">
+</section></div>
+                  </article>
+                  <article class="kss-modifiers__modifier">
+                    <h2 class="kss-modifiers__name">.waiting-for-user</h2>
+                    <p class="kss-modifiers__description">When we're waiting for user input on their mobile phone</p>
+                    <div class="kss-modifiers__example"><section class="irma-web-qr-code waiting-for-user">
+</section></div>
+                  </article>
+                  <article class="kss-modifiers__modifier">
+                    <h2 class="kss-modifiers__name">.cancelled</h2>
+                    <p class="kss-modifiers__description">When the user has cancelled the transation</p>
+                    <div class="kss-modifiers__example"><section class="irma-web-qr-code cancelled">
+</section></div>
+                  </article>
+              </article>
+
+                <article class="kss-section__markup">
+                  <pre><code class="language-markup">&lt;section class&#x3D;&quot;irma-web-qr-code [modifier class]&quot;&gt;
 &lt;/section&gt;</code></pre>
                 </article>
 
