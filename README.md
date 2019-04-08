@@ -34,8 +34,10 @@ The state machine knows these states:
 
  1. Uninitialised
  2. Loading
- 3. Showing QR code
- 4. Code scanned, continue on phone
+ 3. Transition to IRMA app
+    * Showing QR code (desktop)
+    * Showing IRMA button (mobile)
+ 4. Code scanned, continue on phone (desktop)
  5. Disclosure cancelled
  6. Disclosure timed out
  7. Disclosure errored
@@ -47,9 +49,9 @@ The happy path for this flow is:
 ```
 1. Uninitialised →
   2. Loading →
-    3. Showing QR code →
-      4. Code scanned, continue on phone →
-        9. Success
+    3. Transition to IRMA app →
+      (4. Code scanned, continue on phone) →
+         9. Success
 ```
 
 States 5 - 8 are all basically just catching different edge-cases.
