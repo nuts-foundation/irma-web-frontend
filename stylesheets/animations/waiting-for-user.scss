@@ -15,8 +15,8 @@
 .irma-web-waiting-for-user-animation {
   @include reset;
   display: inline-block;
-  width: 30px;
-  height: 50px;
+  width: 23px;
+  height: 39px;
   position: relative;
 
   background-color: $irma-blue;
@@ -30,19 +30,19 @@
   }
 
   &:before {
-    top: 4px;
-    left: 4px;
-    right: 4px;
-    bottom: 10px;
+    top: 3px;
+    left: 3px;
+    right: 3px;
+    bottom: 8px;
     border-radius: 1px;
   }
 
   &:after {
-    width: 6px;
-    height: 6px;
+    width: 4px;
+    height: 4px;
     left: 50%;
     bottom: 2px;
-    margin-left: -3px;
+    margin-left: -2px;
     border-radius: 50%;
   }
 
@@ -50,11 +50,11 @@
 
   @include keyframes(waiting-for-user-animation) {
     0%, 100% {
-      -webkit-transform: scale3D(1, 1, 1);
-              transform: scale3D(1, 1, 1);
+      -webkit-transform: scale3D(1.1, 1.1, 1);
+              transform: scale3D(1.1, 1.1, 1);
     } 50% {
-      -webkit-transform: scale3D(0.8, 0.8, 1);
-              transform: scale3D(0.8, 0.8, 1);
+      -webkit-transform: scale3D(0.9, 0.9, 1);
+              transform: scale3D(0.9, 0.9, 1);
     }
   }
 
