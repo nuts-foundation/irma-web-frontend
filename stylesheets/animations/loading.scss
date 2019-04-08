@@ -15,6 +15,7 @@
 
 .irma-web-loading-animation {
   @include reset($children-too: true);
+  display: inline-block;
   width: 39px;
   height: 39px;
 
