@@ -1,28 +1,12 @@
 // QR code
 //
-// A container for the QR code and QR flow related states
+// A simple container for the QR code
 //
 // Markup:
-// <section class="irma-web-qr-code {{modifier_class}}">
+// <section class="irma-web-qr-code">
 //   <!-- Image with QR code -->
-//   <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAK8AAACvAQMAAACxXBw2AAAABlBMVEX///8AAABVwtN+AAAACXBIWXMAAA7EAAAOxAGVKw4bAAADOElEQVRIx+2XP2rlMBDGx6hQE+z2FQJdQ2miq+QINmmDZfPaYF/gQa6iNNE1BCpea5NGC8Kzo3WSYtlkkdtdFQb/DPoz8+mbMcA/PSRuGuTWOPSds5gqRF+MBdQgw4w2hIlbkKOFA9hMXAYctE/GQmKji4cwnFIzIojuBTF1f8Uc6l4RsTpcqkMYag6p77UXoFR6rD5PWYApsOoqukkF0b2qcOk+412AaWgM88S93BQEXD6zXIDlL4KTxtTqiM/r+waLMDwspJOhBwTaGw2noBjLMyUNl85KNmKEe3MEs6cKeZgAkjDoAGpl/Tf4bdLXVA0q4bqpgFmfxRjMwGnuWoFcrcZ8ZXw5bnvKzrpwmeAWkYKjy7FcWpJ9X2uUg8orqQOYvW36JJqFeza+kmxJv1COcSTP6FuObEXHLg2l6ACeI0/dpAUOt5H5fg/VF1jiijxVqwseKkeBhV0nRVg8kByzoIJoNTJcdDyAb1qIvq2BUrTxgOsuzUJMQeBh6DWjwIJg8xEs31a8irpzPqwxZ2aXfRmmufFEh1OI66sOz4gfSxZgeBhUxHVSnmRPjtpy5YuxaCZF8V4p3iaSWD9s/c+YFK1Pcly0l8sdh8eW63IszxRYpJtGRSDq9Ghwd80iLMwC1+xVIdDcLDVoD2AwpFgAzsKg6EHFzRdjlqpI1ltF6ev8bY7qAD5v+ur7XgFb7jRhi+VY3FBxTd2WHxiT6N7lU4Tl22xBVPnajK9K3LfwLabjXIUZHeD6w3k5wC77MvxUK0k6USGQNNl5jg7K8XnhMQw1WRi+WP9o3G5hRZhmc9QVjFb6KtICdOfLsXyC7Fzkv7jcAWlfYzlmQ614mEeLQHPTBuNeL4uwzB0JGxeQoiWdPKPb4/0Fnjd+ClPjIIyk0UtlYzlmS4VUhidgWd/h0jhdjuGmsVefLYj8H0NAjAcwmS3KzVifW258XriGYkwvZDxtY4McdBT3nYNy/KthpU5JeZGNh3zQHcBm0jG1VBQTNazyYj6crRArKtEzBjA/LPX+oL/HnLoCpL+U5oX0OX9YbxGGOu+kiYwNd9wL89nyF+CcE8nWkXRqqFF/P00h/j9+Hz8BKgnu5v9Z8jEAAAAASUVORK5CYII=" width=256 height=256/>
-//   <!-- Default Dutch feedback messages -->
-//   <p class="loading-text">Eén moment alsjeblieft</p>
-//   <p class="waiting-for-user-text">Volg de instructies op je telefoon</p>
-//   <p class="cancelled-text">Transactie is geannuleerd<br/><a href="#">Opnieuw proberen</a></p>
-//   <p class="timeout-text">Transactie is verlopen<br/><a href="#">Opnieuw proberen</a></p>
-//   <p class="error-text">Er is een fout opgetreden<br/><a href="#">Opnieuw proberen</a></p>
-//   <p class="unsupported-text">Het spijt ons, maar je browser voldoet niet aan de minimale eisen</p>
-//   <p class="success-text">Transactie voltooid!</p>
+//   <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAK8AAACvAQMAAACxXBw2AAAABlBMVEX///8AAABVwtN+AAAACXBIWXMAAA7EAAAOxAGVKw4bAAADOElEQVRIx+2XP2rlMBDGx6hQE+z2FQJdQ2miq+QINmmDZfPaYF/gQa6iNNE1BCpea5NGC8Kzo3WSYtlkkdtdFQb/DPoz8+mbMcA/PSRuGuTWOPSds5gqRF+MBdQgw4w2hIlbkKOFA9hMXAYctE/GQmKji4cwnFIzIojuBTF1f8Uc6l4RsTpcqkMYag6p77UXoFR6rD5PWYApsOoqukkF0b2qcOk+412AaWgM88S93BQEXD6zXIDlL4KTxtTqiM/r+waLMDwspJOhBwTaGw2noBjLMyUNl85KNmKEe3MEs6cKeZgAkjDoAGpl/Tf4bdLXVA0q4bqpgFmfxRjMwGnuWoFcrcZ8ZXw5bnvKzrpwmeAWkYKjy7FcWpJ9X2uUg8orqQOYvW36JJqFeza+kmxJv1COcSTP6FuObEXHLg2l6ACeI0/dpAUOt5H5fg/VF1jiijxVqwseKkeBhV0nRVg8kByzoIJoNTJcdDyAb1qIvq2BUrTxgOsuzUJMQeBh6DWjwIJg8xEs31a8irpzPqwxZ2aXfRmmufFEh1OI66sOz4gfSxZgeBhUxHVSnmRPjtpy5YuxaCZF8V4p3iaSWD9s/c+YFK1Pcly0l8sdh8eW63IszxRYpJtGRSDq9Ghwd80iLMwC1+xVIdDcLDVoD2AwpFgAzsKg6EHFzRdjlqpI1ltF6ev8bY7qAD5v+ur7XgFb7jRhi+VY3FBxTd2WHxiT6N7lU4Tl22xBVPnajK9K3LfwLabjXIUZHeD6w3k5wC77MvxUK0k6USGQNNl5jg7K8XnhMQw1WRi+WP9o3G5hRZhmc9QVjFb6KtICdOfLsXyC7Fzkv7jcAWlfYzlmQ614mEeLQHPTBuNeL4uwzB0JGxeQoiWdPKPb4/0Fnjd+ClPjIIyk0UtlYzlmS4VUhidgWd/h0jhdjuGmsVefLYj8H0NAjAcwmS3KzVifW258XriGYkwvZDxtY4McdBT3nYNy/KthpU5JeZGNh3zQHcBm0jG1VBQTNazyYj6crRArKtEzBjA/LPX+oL/HnLoCpL+U5oX0OX9YbxGGOu+kiYwNd9wL89nyF+CcE8nWkXRqqFF/P00h/j9+Hz8BKgnu5v9Z8jEAAAAASUVORK5CYII="/>
 // </section>
-//
-// .loading          - When we're waiting for a QR code
-// .waiting-for-user - When we're waiting for user input on their mobile phone
-// .cancelled        - When the user has cancelled the disclosure
-// .timeout          - When its taking too long for the user to scan the code
-// .error            - When some other error has occured
-// .unsupported      - When the browser or device of the user doesn't suffice
-// .success          - When the disclosure was a success
 //
 // Styleguide Components.QR code
 
@@ -33,120 +17,12 @@
   height: 258px;
 
   background-color: white;
-  border: 1px solid $border-color;
   z-index: 0;
-
-  // The QR code itself should nicely fit its parent
 
   & > img {
     @include reset;
     width: 256px;
     height: 256px;
-  }
-
-  // The other states generally have an icon and a text. The icon is a `div`,
-  // the text is a `p`. They are hidden by default.
-
-  & > div {
-    position: absolute;
-    left: 50%;
-    top: 33%;
-
-    display: none;
-  }
-
-  & > p {
-    @include reset;
-    @include font($color: $subtle-text-color, $size: 15px);
-    position: absolute;
-    top: 60%;
-    left: 0;
-    width: 100%;
-    padding: 0 1em;
-    text-align: center;
-
-    display: none;
-
-    a {
-      @include reset;
-      color: $text-color;
-      text-decoration: underline;
-
-      &:hover {
-        color: $irma-blue;
-      }
-    }
-  }
-
-  // Hide QR code if in a feedback state
-
-  &.loading,
-  &.waiting-for-user,
-  &.cancelled,
-  &.timeout,
-  &.error,
-  &.unsupported,
-  &.success {
-    img {
-      display: none;
-    }
-  }
-
-  // Specifics for feedback states
-
-  &.loading {
-    .loading-text {
-      display: initial;
-    }
-    .loading-animation {
-      display: initial;
-      margin-left: -19px;
-    }
-  }
-
-  &.waiting-for-user {
-    .waiting-for-user-text {
-      display: initial;
-    }
-    .waiting-for-user-animation {
-      display: initial;
-      margin-left: -15px;
-    }
-  }
-
-  &.cancelled {
-    .cancelled-text {
-      display: initial;
-      top: 42%;
-    }
-  }
-
-  &.timeout {
-    .timeout-text {
-      display: initial;
-      top: 42%;
-    }
-  }
-
-  &.error {
-    .error-text {
-      display: initial;
-      top: 42%;
-    }
-  }
-
-  &.unsupported {
-    .unsupported-text {
-      display: initial;
-      top: 42%;
-    }
-  }
-
-  &.success {
-    .success-text {
-      display: initial;
-      top: 45%;
-    }
   }
 
 }
