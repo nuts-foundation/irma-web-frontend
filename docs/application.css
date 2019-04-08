@@ -85,47 +85,103 @@
   box-sizing: border-box;
   margin: 0px;
   padding: 0px;
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  min-width: 266px;
+  max-width: 400px;
+  min-height: 480px;
+  background-color: #f8f8f8;
+  border: 1px solid #cccccc;
+  border-radius: 10px;
+}
+@media screen and (max-width: 768px) {
+  .irma-web-form {
+    min-height: 430px;
+  }
+}
+.irma-web-form .header {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+  flex: 0 0 auto;
+  padding: 2em;
+  margin: 0 3px;
+  text-align: center;
+  border-bottom: 1px solid #cccccc;
+}
+@media screen and (max-width: 768px) {
+  .irma-web-form .header {
+    padding: 1em;
+  }
+}
+.irma-web-form .header p {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
   font-family: "Roboto", Tahoma, Arial, sans-serif;
   font-weight: 500;
   font-size: 20px;
   color: #4C4C4C;
-  width: 80%;
-  min-width: 266px;
-  max-width: 400px;
-  padding: 2em 3px;
-  background-color: #f8f8f8;
-  border: 1px solid #cccccc;
-  border-radius: 10px;
-  text-align: center;
-}
-.irma-web-form > p {
-  box-sizing: border-box;
-  margin: 0px;
-  padding: 0px;
-  padding: 0em 2em 2em 2em;
-  margin-bottom: 2em;
-  border-bottom: 1px solid #cccccc;
 }
 @media screen and (max-width: 768px) {
-  .irma-web-form > p {
-    padding: 0em 1em 1em 1em;
-    margin-bottom: 1em;
+  .irma-web-form .header p {
+    font-family: "Roboto", Tahoma, Arial, sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: #4C4C4C;
   }
 }
-.irma-web-form > p img {
+.irma-web-form .header img {
   box-sizing: border-box;
   margin: 0px;
   padding: 0px;
   height: 50px;
   vertical-align: middle;
 }
-.irma-web-form .irma-web-qr-code {
-  margin: 0px auto;
+.irma-web-form .content {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1 1 auto;
+}
+.irma-web-form .content .centered {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+  height: auto;
+  text-align: center;
+}
+.irma-web-form .content p {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+  font-family: "Roboto", Tahoma, Arial, sans-serif;
+  font-weight: 500;
+  font-size: 15px;
+  color: #7f7f7f;
+  margin: 1em 4em;
 }
 @media screen and (max-width: 768px) {
-  .irma-web-form {
-    padding: 1em 3px;
+  .irma-web-form .content p {
+    margin: 1em 2em;
   }
+}
+.irma-web-form .content a {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+  font-family: "Roboto", Tahoma, Arial, sans-serif;
+  font-weight: 500;
+  font-size: 15px;
+  color: #4C4C4C;
+  text-decoration: underline;
+}
+.irma-web-form .content a:hover {
+  color: #00b1e7;
 }
 
 .irma-web-qr-code {
@@ -136,101 +192,119 @@
   width: 258px;
   height: 258px;
   background-color: white;
-  border: 1px solid #cccccc;
   z-index: 0;
 }
-.irma-web-qr-code img {
+.irma-web-qr-code > img {
   box-sizing: border-box;
   margin: 0px;
   padding: 0px;
   width: 256px;
   height: 256px;
 }
-.irma-web-qr-code:before {
-  content: " ";
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-repeat: no-repeat;
+
+@font-face {
+  font-family: "Roboto";
+  src: url("fonts/roboto/Roboto-Black.ttf") format("ttf");
+  font-weight: 900;
+  font-style: normal;
 }
-.irma-web-qr-code p {
+@font-face {
+  font-family: "Roboto";
+  src: url("fonts/roboto/Roboto-BlackItalic.ttf") format("ttf");
+  font-weight: 900;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("fonts/roboto/Roboto-Bold.ttf") format("ttf");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("fonts/roboto/Roboto-BoldItalic.ttf") format("ttf");
+  font-weight: 700;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("fonts/roboto/Roboto-Italic.ttf") format("ttf");
+  font-weight: 400;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("fonts/roboto/Roboto-Light.ttf") format("ttf");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("fonts/roboto/Roboto-LightItalic.ttf") format("ttf");
+  font-weight: 300;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("fonts/roboto/Roboto-Medium.ttf") format("ttf");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("fonts/roboto/Roboto-MediumItalic.ttf") format("ttf");
+  font-weight: 500;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("fonts/roboto/Roboto-Regular.ttf") format("ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("fonts/roboto/Roboto-Thin.ttf") format("ttf");
+  font-weight: 100;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("fonts/roboto/Roboto-ThinItalic.ttf") format("ttf");
+  font-weight: 100;
+  font-style: italic;
+}
+.irma-web-button {
   box-sizing: border-box;
   margin: 0px;
   padding: 0px;
   font-family: "Roboto", Tahoma, Arial, sans-serif;
   font-weight: 500;
-  font-size: 15px;
-  color: #7f7f7f;
-  position: absolute;
-  top: 65%;
-  left: 0;
-  width: 100%;
-  padding: 0 1em;
-  text-align: center;
-}
-.irma-web-qr-code p a {
-  box-sizing: border-box;
-  margin: 0px;
-  padding: 0px;
+  font-size: 14px;
   color: #4C4C4C;
-  text-decoration: underline;
+  display: inline-block;
+  padding: 2.5em;
+  background-color: #00b1e7;
+  border: 1px solid #008ab4;
+  border-radius: 10px;
+  box-shadow: 1px 1px 3px 0px rgba(0, 0, 0, 0.5);
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
 }
-.irma-web-qr-code p a:hover {
-  color: #00b1e7;
+.irma-web-button:active {
+  transform: translate(1px, 1px);
+  box-shadow: -1px -1px 3px 0px rgba(0, 0, 0, 0.5);
 }
-.irma-web-qr-code .loading-text,
-.irma-web-qr-code .waiting-for-user-text,
-.irma-web-qr-code .cancelled-text,
-.irma-web-qr-code .timeout-text,
-.irma-web-qr-code .error-text,
-.irma-web-qr-code .unsupported-text,
-.irma-web-qr-code .success-text {
-  display: none;
-}
-.irma-web-qr-code.loading img, .irma-web-qr-code.waiting-for-user img, .irma-web-qr-code.cancelled img, .irma-web-qr-code.timeout img, .irma-web-qr-code.error img, .irma-web-qr-code.unsupported img, .irma-web-qr-code.success img {
-  display: none;
-}
-.irma-web-qr-code.loading:before {
-  background-size: 30%;
-  background-position: center 75px;
-}
-.irma-web-qr-code.loading .loading-text {
-  display: initial;
-}
-.irma-web-qr-code.waiting-for-user:before {
-  background-size: 20%;
-  background-position: center 65px;
-}
-.irma-web-qr-code.waiting-for-user .waiting-for-user-text {
-  display: initial;
-}
-.irma-web-qr-code.cancelled .cancelled-text {
-  display: initial;
-  top: 42%;
-}
-.irma-web-qr-code.timeout .timeout-text {
-  display: initial;
-  top: 42%;
-}
-.irma-web-qr-code.error .error-text {
-  display: initial;
-  top: 42%;
-}
-.irma-web-qr-code.unsupported .unsupported-text {
-  display: initial;
-  top: 42%;
-}
-.irma-web-qr-code.success .success-text {
-  display: initial;
-  top: 45%;
+.irma-web-button:focus {
+  outline: 0;
 }
 
 .irma-web-loading-animation {
   box-sizing: border-box;
   margin: 0px;
   padding: 0px;
+  display: inline-block;
   width: 39px;
   height: 39px;
 }
@@ -240,6 +314,9 @@
   padding: 0px;
 }
 .irma-web-loading-animation * {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
   display: block;
   width: 33%;
   height: 33%;
@@ -329,6 +406,7 @@
   box-sizing: border-box;
   margin: 0px;
   padding: 0px;
+  display: inline-block;
   width: 30px;
   height: 50px;
   position: relative;

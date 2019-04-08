@@ -87,20 +87,18 @@
           the "root" element comes first in this loop, and can be detected using
           the "#if @first" block as seen below.
         -->
-            <header class="kss-section kss-section--depth-2" id="kssref-components-irma-login">
+            <header class="kss-section kss-section--depth-3" id="kssref-examples-mobile-states-showing-qr-code">
 
             <article class="kss-section__content">
-                <p class="kss-section__source">Source: <span>components/irma-form.scss</span>, line <span>1</span></p>
+                <p class="kss-section__source">Source: <span>examples/mobile.scss</span>, line <span>49</span></p>
 
-              <a class="kss-section__permalink" href="#kssref-components-irma-login">
-                <h2 class="kss-section__item kss-section__item--depth-2">
-                  <span class="kss-section__ref">5.2</span>
-                  <span class="kss-section__name">IRMA &#x27;login form&#x27;</span>
-                </h2>
+              <a class="kss-section__permalink" href="#kssref-examples-mobile-states-showing-qr-code">
+                <h3 class="kss-section__item kss-section__item--depth-3">
+                  <span class="kss-section__ref">1.1.4</span>
+                  <span class="kss-section__name">State 3: Showing IRMA button</span>
+                </h3>
               </a>
 
-                <div class="kss-section__description"><p>A place to nicely show the different states of the IRMA disclosure flow</p>
-</div>
 
             </article>
 
@@ -108,14 +106,16 @@
                 <h1 class="kss-modifiers__heading">Example</h1>
 
 
-                <div class="kss-modifiers__example"><section class="irma-web-form">
-  <header class="header">
-    <p>Inloggen met <img src="https://raw.githubusercontent.com/privacybydesign/irma_mobile/master/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png"/></p>
-  </header>
-  <section class="content">
-    <section class="centered">
-      <button>Some action here</button>
-      <p>With some text <a href="#">and stuff</a></p>
+                <div class="kss-modifiers__example"><section class="irma-web-center-child" style="/** Parent styles **/ width: 100%; height: 700px; border: 2px solid red;">
+  <section class="irma-web-form">
+    <header class="header">
+      <p>Inloggen met <img src="https://raw.githubusercontent.com/privacybydesign/irma_mobile/master/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png"/></p>
+    </header>
+    <section class="content">
+      <section class="centered">
+        <button class="irma-web-button">Open IRMA app</button>
+        <p><a href="#">Toon QR code</a></p>
+      </section>
     </section>
   </section>
 </section></div>
@@ -123,14 +123,16 @@
               </article>
 
                 <article class="kss-section__markup">
-                  <pre><code class="language-markup">&lt;section class&#x3D;&quot;irma-web-form&quot;&gt;
-  &lt;header class&#x3D;&quot;header&quot;&gt;
-    &lt;p&gt;Inloggen met &lt;img src&#x3D;&quot;https://raw.githubusercontent.com/privacybydesign/irma_mobile/master/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png&quot;/&gt;&lt;/p&gt;
-  &lt;/header&gt;
-  &lt;section class&#x3D;&quot;content&quot;&gt;
-    &lt;section class&#x3D;&quot;centered&quot;&gt;
-      &lt;button&gt;Some action here&lt;/button&gt;
-      &lt;p&gt;With some text &lt;a href&#x3D;&quot;#&quot;&gt;and stuff&lt;/a&gt;&lt;/p&gt;
+                  <pre><code class="language-markup">&lt;section class&#x3D;&quot;irma-web-center-child&quot; style&#x3D;&quot;/** Parent styles **/ width: 100%; height: 700px; border: 2px solid red;&quot;&gt;
+  &lt;section class&#x3D;&quot;irma-web-form&quot;&gt;
+    &lt;header class&#x3D;&quot;header&quot;&gt;
+      &lt;p&gt;Inloggen met &lt;img src&#x3D;&quot;https://raw.githubusercontent.com/privacybydesign/irma_mobile/master/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png&quot;/&gt;&lt;/p&gt;
+    &lt;/header&gt;
+    &lt;section class&#x3D;&quot;content&quot;&gt;
+      &lt;section class&#x3D;&quot;centered&quot;&gt;
+        &lt;button class&#x3D;&quot;irma-web-button&quot;&gt;Open IRMA app&lt;/button&gt;
+        &lt;p&gt;&lt;a href&#x3D;&quot;#&quot;&gt;Toon QR code&lt;/a&gt;&lt;/p&gt;
+      &lt;/section&gt;
     &lt;/section&gt;
   &lt;/section&gt;
 &lt;/section&gt;</code></pre>

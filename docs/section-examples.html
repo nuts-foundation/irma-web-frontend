@@ -45,9 +45,69 @@
             </a>
                 <ul class="kss-nav__subnav">
                     <li class="kss-nav__item ">
-                      <a href="section-examples.html#kssref-examples-complete-example">
+                      <a href="section-examples.html#kssref-examples-states">
                         <span class="kss-nav__ref">1.1</span>
-                        <span class="kss-nav__name">Complete example</span>
+                        <span class="kss-nav__name">States</span>
+                      </a>
+                    </li>
+                    <li class="kss-nav__item kss-nav__item--grandchild">
+                      <a href="section-examples.html#kssref-examples-states-uninitialised">
+                        <span class="kss-nav__ref">1.1.1</span>
+                        <span class="kss-nav__name">State 1: Uninitialised</span>
+                      </a>
+                    </li>
+                    <li class="kss-nav__item kss-nav__item--grandchild">
+                      <a href="section-examples.html#kssref-examples-states-loading">
+                        <span class="kss-nav__ref">1.1.2</span>
+                        <span class="kss-nav__name">State 2: Loading</span>
+                      </a>
+                    </li>
+                    <li class="kss-nav__item kss-nav__item--grandchild">
+                      <a href="section-examples.html#kssref-examples-states-showing-qr-code">
+                        <span class="kss-nav__ref">1.1.3</span>
+                        <span class="kss-nav__name">State 3a: Showing QR code (desktop)</span>
+                      </a>
+                    </li>
+                    <li class="kss-nav__item kss-nav__item--grandchild">
+                      <a href="section-examples.html#kssref-examples-states-showing-irma-button">
+                        <span class="kss-nav__ref">1.1.4</span>
+                        <span class="kss-nav__name">State 3b: Showing IRMA button (mobile)</span>
+                      </a>
+                    </li>
+                    <li class="kss-nav__item kss-nav__item--grandchild">
+                      <a href="section-examples.html#kssref-examples-states-code-scanned-continue-on-phone">
+                        <span class="kss-nav__ref">1.1.5</span>
+                        <span class="kss-nav__name">State 4: Code scanned, continue on phone</span>
+                      </a>
+                    </li>
+                    <li class="kss-nav__item kss-nav__item--grandchild">
+                      <a href="section-examples.html#kssref-examples-states-disclosure-cancelled">
+                        <span class="kss-nav__ref">1.1.6</span>
+                        <span class="kss-nav__name">State 5: Disclosure cancelled</span>
+                      </a>
+                    </li>
+                    <li class="kss-nav__item kss-nav__item--grandchild">
+                      <a href="section-examples.html#kssref-examples-states-disclosure-timed-out">
+                        <span class="kss-nav__ref">1.1.7</span>
+                        <span class="kss-nav__name">State 6: Disclosure timed out</span>
+                      </a>
+                    </li>
+                    <li class="kss-nav__item kss-nav__item--grandchild">
+                      <a href="section-examples.html#kssref-examples-states-disclosure-errored">
+                        <span class="kss-nav__ref">1.1.8</span>
+                        <span class="kss-nav__name">State 7: Disclosure errored</span>
+                      </a>
+                    </li>
+                    <li class="kss-nav__item kss-nav__item--grandchild">
+                      <a href="section-examples.html#kssref-examples-states-browser-is-not-supported">
+                        <span class="kss-nav__ref">1.1.9</span>
+                        <span class="kss-nav__name">State 8: Browser is not supported</span>
+                      </a>
+                    </li>
+                    <li class="kss-nav__item kss-nav__item--grandchild">
+                      <a href="section-examples.html#kssref-examples-states-success">
+                        <span class="kss-nav__ref">1.1.10</span>
+                        <span class="kss-nav__name">State 9: Success</span>
                       </a>
                     </li>
                 </ul>
@@ -112,30 +172,38 @@
 
 
             </header>
-            <section class="kss-section kss-section--depth-2" id="kssref-examples-complete-example">
+            <section class="kss-section kss-section--depth-2" id="kssref-examples-states">
 
             <article class="kss-section__content">
-                <p class="kss-section__source">Source: <span>examples/complete-example.scss</span>, line <span>1</span></p>
+                <p class="kss-section__source">Source: <span>examples/states.scss</span>, line <span>1</span></p>
 
-              <a class="kss-section__permalink" href="#kssref-examples-complete-example">
+              <a class="kss-section__permalink" href="#kssref-examples-states">
                 <h2 class="kss-section__item kss-section__item--depth-2">
                   <span class="kss-section__ref">1.1</span>
-                  <span class="kss-section__name">Complete example</span>
+                  <span class="kss-section__name">States</span>
                 </h2>
               </a>
 
-                <div class="kss-section__description"><p>Showing the whole QR code based disclosure flow</p>
-<ol>
-  <li><a onclick="document.querySelector('.irma-web-qr-code').className = 'irma-web-qr-code loading'">Uninitialised</a> (not a separate visual style)</li>
-  <li><a onclick="document.querySelector('.irma-web-qr-code').className = 'irma-web-qr-code loading'">Loading</a></li>
-  <li><a onclick="document.querySelector('.irma-web-qr-code').className = 'irma-web-qr-code'">Showing QR code</a> (the default style)</li>
-  <li><a onclick="document.querySelector('.irma-web-qr-code').className = 'irma-web-qr-code waiting-for-user'">Code scanned, continue on phone</a></li>
-  <li><a onclick="document.querySelector('.irma-web-qr-code').className = 'irma-web-qr-code cancelled'">Disclosure cancelled</a></li>
-  <li><a onclick="document.querySelector('.irma-web-qr-code').className = 'irma-web-qr-code timeout'">Disclosure timed out</a></li>
-  <li><a onclick="document.querySelector('.irma-web-qr-code').className = 'irma-web-qr-code error'">Disclosure errored</a></li>
-  <li><a onclick="document.querySelector('.irma-web-qr-code').className = 'irma-web-qr-code unsupported'">Browser is not supported</a></li>
-  <li><a onclick="document.querySelector('.irma-web-qr-code').className = 'irma-web-qr-code success'">Success</a></li>
-</ol></div>
+                <div class="kss-section__description"><p>These examples show the different states that the disclosure flow can move
+through.</p>
+</div>
+
+            </article>
+
+
+            </section>
+            <section class="kss-section kss-section--depth-3" id="kssref-examples-states-uninitialised">
+
+            <article class="kss-section__content">
+                <p class="kss-section__source">Source: <span>examples/states.scss</span>, line <span>8</span></p>
+
+              <a class="kss-section__permalink" href="#kssref-examples-states-uninitialised">
+                <h3 class="kss-section__item kss-section__item--depth-3">
+                  <span class="kss-section__ref">1.1.1</span>
+                  <span class="kss-section__name">State 1: Uninitialised</span>
+                </h3>
+              </a>
+
 
             </article>
 
@@ -145,18 +213,14 @@
 
                 <div class="kss-modifiers__example"><section class="irma-web-center-child" style="/** Parent styles **/ width: 100%; height: 700px; border: 2px solid red;">
   <section class="irma-web-form">
-    <p>Inloggen met <img src="https://raw.githubusercontent.com/privacybydesign/irma_mobile/master/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png"/></p>
-    <section class="irma-web-qr-code">
-      <!-- Image with QR code -->
-      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAK8AAACvAQMAAACxXBw2AAAABlBMVEX///8AAABVwtN+AAAACXBIWXMAAA7EAAAOxAGVKw4bAAADOElEQVRIx+2XP2rlMBDGx6hQE+z2FQJdQ2miq+QINmmDZfPaYF/gQa6iNNE1BCpea5NGC8Kzo3WSYtlkkdtdFQb/DPoz8+mbMcA/PSRuGuTWOPSds5gqRF+MBdQgw4w2hIlbkKOFA9hMXAYctE/GQmKji4cwnFIzIojuBTF1f8Uc6l4RsTpcqkMYag6p77UXoFR6rD5PWYApsOoqukkF0b2qcOk+412AaWgM88S93BQEXD6zXIDlL4KTxtTqiM/r+waLMDwspJOhBwTaGw2noBjLMyUNl85KNmKEe3MEs6cKeZgAkjDoAGpl/Tf4bdLXVA0q4bqpgFmfxRjMwGnuWoFcrcZ8ZXw5bnvKzrpwmeAWkYKjy7FcWpJ9X2uUg8orqQOYvW36JJqFeza+kmxJv1COcSTP6FuObEXHLg2l6ACeI0/dpAUOt5H5fg/VF1jiijxVqwseKkeBhV0nRVg8kByzoIJoNTJcdDyAb1qIvq2BUrTxgOsuzUJMQeBh6DWjwIJg8xEs31a8irpzPqwxZ2aXfRmmufFEh1OI66sOz4gfSxZgeBhUxHVSnmRPjtpy5YuxaCZF8V4p3iaSWD9s/c+YFK1Pcly0l8sdh8eW63IszxRYpJtGRSDq9Ghwd80iLMwC1+xVIdDcLDVoD2AwpFgAzsKg6EHFzRdjlqpI1ltF6ev8bY7qAD5v+ur7XgFb7jRhi+VY3FBxTd2WHxiT6N7lU4Tl22xBVPnajK9K3LfwLabjXIUZHeD6w3k5wC77MvxUK0k6USGQNNl5jg7K8XnhMQw1WRi+WP9o3G5hRZhmc9QVjFb6KtICdOfLsXyC7Fzkv7jcAWlfYzlmQ614mEeLQHPTBuNeL4uwzB0JGxeQoiWdPKPb4/0Fnjd+ClPjIIyk0UtlYzlmS4VUhidgWd/h0jhdjuGmsVefLYj8H0NAjAcwmS3KzVifW258XriGYkwvZDxtY4McdBT3nYNy/KthpU5JeZGNh3zQHcBm0jG1VBQTNazyYj6crRArKtEzBjA/LPX+oL/HnLoCpL+U5oX0OX9YbxGGOu+kiYwNd9wL89nyF+CcE8nWkXRqqFF/P00h/j9+Hz8BKgnu5v9Z8jEAAAAASUVORK5CYII="/>
-      <!-- Default Dutch feedback messages -->
-      <p class="loading-text">Eén moment alsjeblieft</p>
-      <p class="waiting-for-user-text">Volg de instructies op je telefoon</p>
-      <p class="cancelled-text">Transactie is geannuleerd<br/><a href="#">Opnieuw proberen</a></p>
-      <p class="timeout-text">Transactie is verlopen<br/><a href="#">Opnieuw proberen</a></p>
-      <p class="error-text">Er is een fout opgetreden<br/><a href="#">Opnieuw proberen</a></p>
-      <p class="unsupported-text">Het spijt ons, maar je browser voldoet niet aan de minimale eisen</p>
-      <p class="success-text">Transactie voltooid!</p>
+    <header class="header">
+      <p>Inloggen met <img src="https://raw.githubusercontent.com/privacybydesign/irma_mobile/master/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png"/></p>
+    </header>
+    <section class="content">
+      <section class="centered">
+        <div class="irma-web-loading-animation"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+        <p>Eén moment alsjeblieft</p>
+      </section>
     </section>
   </section>
 </section></div>
@@ -166,18 +230,476 @@
                 <article class="kss-section__markup">
                   <pre><code class="language-markup">&lt;section class&#x3D;&quot;irma-web-center-child&quot; style&#x3D;&quot;/** Parent styles **/ width: 100%; height: 700px; border: 2px solid red;&quot;&gt;
   &lt;section class&#x3D;&quot;irma-web-form&quot;&gt;
-    &lt;p&gt;Inloggen met &lt;img src&#x3D;&quot;https://raw.githubusercontent.com/privacybydesign/irma_mobile/master/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png&quot;/&gt;&lt;/p&gt;
-    &lt;section class&#x3D;&quot;irma-web-qr-code&quot;&gt;
-      &lt;!-- Image with QR code --&gt;
-      &lt;img src&#x3D;&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAK8AAACvAQMAAACxXBw2AAAABlBMVEX///8AAABVwtN+AAAACXBIWXMAAA7EAAAOxAGVKw4bAAADOElEQVRIx+2XP2rlMBDGx6hQE+z2FQJdQ2miq+QINmmDZfPaYF/gQa6iNNE1BCpea5NGC8Kzo3WSYtlkkdtdFQb/DPoz8+mbMcA/PSRuGuTWOPSds5gqRF+MBdQgw4w2hIlbkKOFA9hMXAYctE/GQmKji4cwnFIzIojuBTF1f8Uc6l4RsTpcqkMYag6p77UXoFR6rD5PWYApsOoqukkF0b2qcOk+412AaWgM88S93BQEXD6zXIDlL4KTxtTqiM/r+waLMDwspJOhBwTaGw2noBjLMyUNl85KNmKEe3MEs6cKeZgAkjDoAGpl/Tf4bdLXVA0q4bqpgFmfxRjMwGnuWoFcrcZ8ZXw5bnvKzrpwmeAWkYKjy7FcWpJ9X2uUg8orqQOYvW36JJqFeza+kmxJv1COcSTP6FuObEXHLg2l6ACeI0/dpAUOt5H5fg/VF1jiijxVqwseKkeBhV0nRVg8kByzoIJoNTJcdDyAb1qIvq2BUrTxgOsuzUJMQeBh6DWjwIJg8xEs31a8irpzPqwxZ2aXfRmmufFEh1OI66sOz4gfSxZgeBhUxHVSnmRPjtpy5YuxaCZF8V4p3iaSWD9s/c+YFK1Pcly0l8sdh8eW63IszxRYpJtGRSDq9Ghwd80iLMwC1+xVIdDcLDVoD2AwpFgAzsKg6EHFzRdjlqpI1ltF6ev8bY7qAD5v+ur7XgFb7jRhi+VY3FBxTd2WHxiT6N7lU4Tl22xBVPnajK9K3LfwLabjXIUZHeD6w3k5wC77MvxUK0k6USGQNNl5jg7K8XnhMQw1WRi+WP9o3G5hRZhmc9QVjFb6KtICdOfLsXyC7Fzkv7jcAWlfYzlmQ614mEeLQHPTBuNeL4uwzB0JGxeQoiWdPKPb4/0Fnjd+ClPjIIyk0UtlYzlmS4VUhidgWd/h0jhdjuGmsVefLYj8H0NAjAcwmS3KzVifW258XriGYkwvZDxtY4McdBT3nYNy/KthpU5JeZGNh3zQHcBm0jG1VBQTNazyYj6crRArKtEzBjA/LPX+oL/HnLoCpL+U5oX0OX9YbxGGOu+kiYwNd9wL89nyF+CcE8nWkXRqqFF/P00h/j9+Hz8BKgnu5v9Z8jEAAAAASUVORK5CYII&#x3D;&quot;/&gt;
-      &lt;!-- Default Dutch feedback messages --&gt;
-      &lt;p class&#x3D;&quot;loading-text&quot;&gt;Eén moment alsjeblieft&lt;/p&gt;
-      &lt;p class&#x3D;&quot;waiting-for-user-text&quot;&gt;Volg de instructies op je telefoon&lt;/p&gt;
-      &lt;p class&#x3D;&quot;cancelled-text&quot;&gt;Transactie is geannuleerd&lt;br/&gt;&lt;a href&#x3D;&quot;#&quot;&gt;Opnieuw proberen&lt;/a&gt;&lt;/p&gt;
-      &lt;p class&#x3D;&quot;timeout-text&quot;&gt;Transactie is verlopen&lt;br/&gt;&lt;a href&#x3D;&quot;#&quot;&gt;Opnieuw proberen&lt;/a&gt;&lt;/p&gt;
-      &lt;p class&#x3D;&quot;error-text&quot;&gt;Er is een fout opgetreden&lt;br/&gt;&lt;a href&#x3D;&quot;#&quot;&gt;Opnieuw proberen&lt;/a&gt;&lt;/p&gt;
-      &lt;p class&#x3D;&quot;unsupported-text&quot;&gt;Het spijt ons, maar je browser voldoet niet aan de minimale eisen&lt;/p&gt;
-      &lt;p class&#x3D;&quot;success-text&quot;&gt;Transactie voltooid!&lt;/p&gt;
+    &lt;header class&#x3D;&quot;header&quot;&gt;
+      &lt;p&gt;Inloggen met &lt;img src&#x3D;&quot;https://raw.githubusercontent.com/privacybydesign/irma_mobile/master/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png&quot;/&gt;&lt;/p&gt;
+    &lt;/header&gt;
+    &lt;section class&#x3D;&quot;content&quot;&gt;
+      &lt;section class&#x3D;&quot;centered&quot;&gt;
+        &lt;div class&#x3D;&quot;irma-web-loading-animation&quot;&gt;&lt;i&gt;&lt;/i&gt;&lt;i&gt;&lt;/i&gt;&lt;i&gt;&lt;/i&gt;&lt;i&gt;&lt;/i&gt;&lt;i&gt;&lt;/i&gt;&lt;i&gt;&lt;/i&gt;&lt;i&gt;&lt;/i&gt;&lt;i&gt;&lt;/i&gt;&lt;i&gt;&lt;/i&gt;&lt;/div&gt;
+        &lt;p&gt;Eén moment alsjeblieft&lt;/p&gt;
+      &lt;/section&gt;
+    &lt;/section&gt;
+  &lt;/section&gt;
+&lt;/section&gt;</code></pre>
+                </article>
+
+            </section>
+            <section class="kss-section kss-section--depth-3" id="kssref-examples-states-loading">
+
+            <article class="kss-section__content">
+                <p class="kss-section__source">Source: <span>examples/states.scss</span>, line <span>29</span></p>
+
+              <a class="kss-section__permalink" href="#kssref-examples-states-loading">
+                <h3 class="kss-section__item kss-section__item--depth-3">
+                  <span class="kss-section__ref">1.1.2</span>
+                  <span class="kss-section__name">State 2: Loading</span>
+                </h3>
+              </a>
+
+
+            </article>
+
+              <article class="kss-section__modifiers">
+                <h1 class="kss-modifiers__heading">Example</h1>
+
+
+                <div class="kss-modifiers__example"><section class="irma-web-center-child" style="/** Parent styles **/ width: 100%; height: 700px; border: 2px solid red;">
+  <section class="irma-web-form">
+    <header class="header">
+      <p>Inloggen met <img src="https://raw.githubusercontent.com/privacybydesign/irma_mobile/master/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png"/></p>
+    </header>
+    <section class="content">
+      <section class="centered">
+        <div class="irma-web-loading-animation"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+        <p>Eén moment alsjeblieft</p>
+      </section>
+    </section>
+  </section>
+</section></div>
+
+              </article>
+
+                <article class="kss-section__markup">
+                  <pre><code class="language-markup">&lt;section class&#x3D;&quot;irma-web-center-child&quot; style&#x3D;&quot;/** Parent styles **/ width: 100%; height: 700px; border: 2px solid red;&quot;&gt;
+  &lt;section class&#x3D;&quot;irma-web-form&quot;&gt;
+    &lt;header class&#x3D;&quot;header&quot;&gt;
+      &lt;p&gt;Inloggen met &lt;img src&#x3D;&quot;https://raw.githubusercontent.com/privacybydesign/irma_mobile/master/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png&quot;/&gt;&lt;/p&gt;
+    &lt;/header&gt;
+    &lt;section class&#x3D;&quot;content&quot;&gt;
+      &lt;section class&#x3D;&quot;centered&quot;&gt;
+        &lt;div class&#x3D;&quot;irma-web-loading-animation&quot;&gt;&lt;i&gt;&lt;/i&gt;&lt;i&gt;&lt;/i&gt;&lt;i&gt;&lt;/i&gt;&lt;i&gt;&lt;/i&gt;&lt;i&gt;&lt;/i&gt;&lt;i&gt;&lt;/i&gt;&lt;i&gt;&lt;/i&gt;&lt;i&gt;&lt;/i&gt;&lt;i&gt;&lt;/i&gt;&lt;/div&gt;
+        &lt;p&gt;Eén moment alsjeblieft&lt;/p&gt;
+      &lt;/section&gt;
+    &lt;/section&gt;
+  &lt;/section&gt;
+&lt;/section&gt;</code></pre>
+                </article>
+
+            </section>
+            <section class="kss-section kss-section--depth-3" id="kssref-examples-states-showing-qr-code">
+
+            <article class="kss-section__content">
+                <p class="kss-section__source">Source: <span>examples/states.scss</span>, line <span>50</span></p>
+
+              <a class="kss-section__permalink" href="#kssref-examples-states-showing-qr-code">
+                <h3 class="kss-section__item kss-section__item--depth-3">
+                  <span class="kss-section__ref">1.1.3</span>
+                  <span class="kss-section__name">State 3a: Showing QR code (desktop)</span>
+                </h3>
+              </a>
+
+
+            </article>
+
+              <article class="kss-section__modifiers">
+                <h1 class="kss-modifiers__heading">Example</h1>
+
+
+                <div class="kss-modifiers__example"><section class="irma-web-center-child" style="/** Parent styles **/ width: 100%; height: 700px; border: 2px solid red;">
+  <section class="irma-web-form">
+    <header class="header">
+      <p>Inloggen met <img src="https://raw.githubusercontent.com/privacybydesign/irma_mobile/master/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png"/></p>
+    </header>
+    <section class="content">
+      <section class="centered irma-web-qr-code">
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAK8AAACvAQMAAACxXBw2AAAABlBMVEX///8AAABVwtN+AAAACXBIWXMAAA7EAAAOxAGVKw4bAAADOElEQVRIx+2XP2rlMBDGx6hQE+z2FQJdQ2miq+QINmmDZfPaYF/gQa6iNNE1BCpea5NGC8Kzo3WSYtlkkdtdFQb/DPoz8+mbMcA/PSRuGuTWOPSds5gqRF+MBdQgw4w2hIlbkKOFA9hMXAYctE/GQmKji4cwnFIzIojuBTF1f8Uc6l4RsTpcqkMYag6p77UXoFR6rD5PWYApsOoqukkF0b2qcOk+412AaWgM88S93BQEXD6zXIDlL4KTxtTqiM/r+waLMDwspJOhBwTaGw2noBjLMyUNl85KNmKEe3MEs6cKeZgAkjDoAGpl/Tf4bdLXVA0q4bqpgFmfxRjMwGnuWoFcrcZ8ZXw5bnvKzrpwmeAWkYKjy7FcWpJ9X2uUg8orqQOYvW36JJqFeza+kmxJv1COcSTP6FuObEXHLg2l6ACeI0/dpAUOt5H5fg/VF1jiijxVqwseKkeBhV0nRVg8kByzoIJoNTJcdDyAb1qIvq2BUrTxgOsuzUJMQeBh6DWjwIJg8xEs31a8irpzPqwxZ2aXfRmmufFEh1OI66sOz4gfSxZgeBhUxHVSnmRPjtpy5YuxaCZF8V4p3iaSWD9s/c+YFK1Pcly0l8sdh8eW63IszxRYpJtGRSDq9Ghwd80iLMwC1+xVIdDcLDVoD2AwpFgAzsKg6EHFzRdjlqpI1ltF6ev8bY7qAD5v+ur7XgFb7jRhi+VY3FBxTd2WHxiT6N7lU4Tl22xBVPnajK9K3LfwLabjXIUZHeD6w3k5wC77MvxUK0k6USGQNNl5jg7K8XnhMQw1WRi+WP9o3G5hRZhmc9QVjFb6KtICdOfLsXyC7Fzkv7jcAWlfYzlmQ614mEeLQHPTBuNeL4uwzB0JGxeQoiWdPKPb4/0Fnjd+ClPjIIyk0UtlYzlmS4VUhidgWd/h0jhdjuGmsVefLYj8H0NAjAcwmS3KzVifW258XriGYkwvZDxtY4McdBT3nYNy/KthpU5JeZGNh3zQHcBm0jG1VBQTNazyYj6crRArKtEzBjA/LPX+oL/HnLoCpL+U5oX0OX9YbxGGOu+kiYwNd9wL89nyF+CcE8nWkXRqqFF/P00h/j9+Hz8BKgnu5v9Z8jEAAAAASUVORK5CYII="/>
+      </section>
+    </section>
+  </section>
+</section></div>
+
+              </article>
+
+                <article class="kss-section__markup">
+                  <pre><code class="language-markup">&lt;section class&#x3D;&quot;irma-web-center-child&quot; style&#x3D;&quot;/** Parent styles **/ width: 100%; height: 700px; border: 2px solid red;&quot;&gt;
+  &lt;section class&#x3D;&quot;irma-web-form&quot;&gt;
+    &lt;header class&#x3D;&quot;header&quot;&gt;
+      &lt;p&gt;Inloggen met &lt;img src&#x3D;&quot;https://raw.githubusercontent.com/privacybydesign/irma_mobile/master/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png&quot;/&gt;&lt;/p&gt;
+    &lt;/header&gt;
+    &lt;section class&#x3D;&quot;content&quot;&gt;
+      &lt;section class&#x3D;&quot;centered irma-web-qr-code&quot;&gt;
+        &lt;img src&#x3D;&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAK8AAACvAQMAAACxXBw2AAAABlBMVEX///8AAABVwtN+AAAACXBIWXMAAA7EAAAOxAGVKw4bAAADOElEQVRIx+2XP2rlMBDGx6hQE+z2FQJdQ2miq+QINmmDZfPaYF/gQa6iNNE1BCpea5NGC8Kzo3WSYtlkkdtdFQb/DPoz8+mbMcA/PSRuGuTWOPSds5gqRF+MBdQgw4w2hIlbkKOFA9hMXAYctE/GQmKji4cwnFIzIojuBTF1f8Uc6l4RsTpcqkMYag6p77UXoFR6rD5PWYApsOoqukkF0b2qcOk+412AaWgM88S93BQEXD6zXIDlL4KTxtTqiM/r+waLMDwspJOhBwTaGw2noBjLMyUNl85KNmKEe3MEs6cKeZgAkjDoAGpl/Tf4bdLXVA0q4bqpgFmfxRjMwGnuWoFcrcZ8ZXw5bnvKzrpwmeAWkYKjy7FcWpJ9X2uUg8orqQOYvW36JJqFeza+kmxJv1COcSTP6FuObEXHLg2l6ACeI0/dpAUOt5H5fg/VF1jiijxVqwseKkeBhV0nRVg8kByzoIJoNTJcdDyAb1qIvq2BUrTxgOsuzUJMQeBh6DWjwIJg8xEs31a8irpzPqwxZ2aXfRmmufFEh1OI66sOz4gfSxZgeBhUxHVSnmRPjtpy5YuxaCZF8V4p3iaSWD9s/c+YFK1Pcly0l8sdh8eW63IszxRYpJtGRSDq9Ghwd80iLMwC1+xVIdDcLDVoD2AwpFgAzsKg6EHFzRdjlqpI1ltF6ev8bY7qAD5v+ur7XgFb7jRhi+VY3FBxTd2WHxiT6N7lU4Tl22xBVPnajK9K3LfwLabjXIUZHeD6w3k5wC77MvxUK0k6USGQNNl5jg7K8XnhMQw1WRi+WP9o3G5hRZhmc9QVjFb6KtICdOfLsXyC7Fzkv7jcAWlfYzlmQ614mEeLQHPTBuNeL4uwzB0JGxeQoiWdPKPb4/0Fnjd+ClPjIIyk0UtlYzlmS4VUhidgWd/h0jhdjuGmsVefLYj8H0NAjAcwmS3KzVifW258XriGYkwvZDxtY4McdBT3nYNy/KthpU5JeZGNh3zQHcBm0jG1VBQTNazyYj6crRArKtEzBjA/LPX+oL/HnLoCpL+U5oX0OX9YbxGGOu+kiYwNd9wL89nyF+CcE8nWkXRqqFF/P00h/j9+Hz8BKgnu5v9Z8jEAAAAASUVORK5CYII&#x3D;&quot;/&gt;
+      &lt;/section&gt;
+    &lt;/section&gt;
+  &lt;/section&gt;
+&lt;/section&gt;</code></pre>
+                </article>
+
+            </section>
+            <section class="kss-section kss-section--depth-3" id="kssref-examples-states-showing-irma-button">
+
+            <article class="kss-section__content">
+                <p class="kss-section__source">Source: <span>examples/states.scss</span>, line <span>70</span></p>
+
+              <a class="kss-section__permalink" href="#kssref-examples-states-showing-irma-button">
+                <h3 class="kss-section__item kss-section__item--depth-3">
+                  <span class="kss-section__ref">1.1.4</span>
+                  <span class="kss-section__name">State 3b: Showing IRMA button (mobile)</span>
+                </h3>
+              </a>
+
+
+            </article>
+
+              <article class="kss-section__modifiers">
+                <h1 class="kss-modifiers__heading">Example</h1>
+
+
+                <div class="kss-modifiers__example"><section class="irma-web-center-child" style="/** Parent styles **/ width: 100%; height: 700px; border: 2px solid red;">
+  <section class="irma-web-form">
+    <header class="header">
+      <p>Inloggen met <img src="https://raw.githubusercontent.com/privacybydesign/irma_mobile/master/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png"/></p>
+    </header>
+    <section class="content">
+      <section class="centered">
+        <button class="irma-web-button">Open IRMA app</button>
+        <p><a href="#">Toon QR code</a></p>
+      </section>
+    </section>
+  </section>
+</section></div>
+
+              </article>
+
+                <article class="kss-section__markup">
+                  <pre><code class="language-markup">&lt;section class&#x3D;&quot;irma-web-center-child&quot; style&#x3D;&quot;/** Parent styles **/ width: 100%; height: 700px; border: 2px solid red;&quot;&gt;
+  &lt;section class&#x3D;&quot;irma-web-form&quot;&gt;
+    &lt;header class&#x3D;&quot;header&quot;&gt;
+      &lt;p&gt;Inloggen met &lt;img src&#x3D;&quot;https://raw.githubusercontent.com/privacybydesign/irma_mobile/master/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png&quot;/&gt;&lt;/p&gt;
+    &lt;/header&gt;
+    &lt;section class&#x3D;&quot;content&quot;&gt;
+      &lt;section class&#x3D;&quot;centered&quot;&gt;
+        &lt;button class&#x3D;&quot;irma-web-button&quot;&gt;Open IRMA app&lt;/button&gt;
+        &lt;p&gt;&lt;a href&#x3D;&quot;#&quot;&gt;Toon QR code&lt;/a&gt;&lt;/p&gt;
+      &lt;/section&gt;
+    &lt;/section&gt;
+  &lt;/section&gt;
+&lt;/section&gt;</code></pre>
+                </article>
+
+            </section>
+            <section class="kss-section kss-section--depth-3" id="kssref-examples-states-code-scanned-continue-on-phone">
+
+            <article class="kss-section__content">
+                <p class="kss-section__source">Source: <span>examples/states.scss</span>, line <span>91</span></p>
+
+              <a class="kss-section__permalink" href="#kssref-examples-states-code-scanned-continue-on-phone">
+                <h3 class="kss-section__item kss-section__item--depth-3">
+                  <span class="kss-section__ref">1.1.5</span>
+                  <span class="kss-section__name">State 4: Code scanned, continue on phone</span>
+                </h3>
+              </a>
+
+
+            </article>
+
+              <article class="kss-section__modifiers">
+                <h1 class="kss-modifiers__heading">Example</h1>
+
+
+                <div class="kss-modifiers__example"><section class="irma-web-center-child" style="/** Parent styles **/ width: 100%; height: 700px; border: 2px solid red;">
+  <section class="irma-web-form">
+    <header class="header">
+      <p>Inloggen met <img src="https://raw.githubusercontent.com/privacybydesign/irma_mobile/master/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png"/></p>
+    </header>
+    <section class="content">
+      <section class="centered">
+        <div class="irma-web-waiting-for-user-animation"></div>
+        <p>Volg de instructies op je telefoon</p>
+      </section>
+    </section>
+  </section>
+</section></div>
+
+              </article>
+
+                <article class="kss-section__markup">
+                  <pre><code class="language-markup">&lt;section class&#x3D;&quot;irma-web-center-child&quot; style&#x3D;&quot;/** Parent styles **/ width: 100%; height: 700px; border: 2px solid red;&quot;&gt;
+  &lt;section class&#x3D;&quot;irma-web-form&quot;&gt;
+    &lt;header class&#x3D;&quot;header&quot;&gt;
+      &lt;p&gt;Inloggen met &lt;img src&#x3D;&quot;https://raw.githubusercontent.com/privacybydesign/irma_mobile/master/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png&quot;/&gt;&lt;/p&gt;
+    &lt;/header&gt;
+    &lt;section class&#x3D;&quot;content&quot;&gt;
+      &lt;section class&#x3D;&quot;centered&quot;&gt;
+        &lt;div class&#x3D;&quot;irma-web-waiting-for-user-animation&quot;&gt;&lt;/div&gt;
+        &lt;p&gt;Volg de instructies op je telefoon&lt;/p&gt;
+      &lt;/section&gt;
+    &lt;/section&gt;
+  &lt;/section&gt;
+&lt;/section&gt;</code></pre>
+                </article>
+
+            </section>
+            <section class="kss-section kss-section--depth-3" id="kssref-examples-states-disclosure-cancelled">
+
+            <article class="kss-section__content">
+                <p class="kss-section__source">Source: <span>examples/states.scss</span>, line <span>112</span></p>
+
+              <a class="kss-section__permalink" href="#kssref-examples-states-disclosure-cancelled">
+                <h3 class="kss-section__item kss-section__item--depth-3">
+                  <span class="kss-section__ref">1.1.6</span>
+                  <span class="kss-section__name">State 5: Disclosure cancelled</span>
+                </h3>
+              </a>
+
+
+            </article>
+
+              <article class="kss-section__modifiers">
+                <h1 class="kss-modifiers__heading">Example</h1>
+
+
+                <div class="kss-modifiers__example"><section class="irma-web-center-child" style="/** Parent styles **/ width: 100%; height: 700px; border: 2px solid red;">
+  <section class="irma-web-form">
+    <header class="header">
+      <p>Inloggen met <img src="https://raw.githubusercontent.com/privacybydesign/irma_mobile/master/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png"/></p>
+    </header>
+    <section class="content">
+      <section class="centered">
+        <p>Transactie is geannuleerd</p>
+        <p><a href="#">Opnieuw proberen</a></p>
+      </section>
+    </section>
+  </section>
+</section></div>
+
+              </article>
+
+                <article class="kss-section__markup">
+                  <pre><code class="language-markup">&lt;section class&#x3D;&quot;irma-web-center-child&quot; style&#x3D;&quot;/** Parent styles **/ width: 100%; height: 700px; border: 2px solid red;&quot;&gt;
+  &lt;section class&#x3D;&quot;irma-web-form&quot;&gt;
+    &lt;header class&#x3D;&quot;header&quot;&gt;
+      &lt;p&gt;Inloggen met &lt;img src&#x3D;&quot;https://raw.githubusercontent.com/privacybydesign/irma_mobile/master/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png&quot;/&gt;&lt;/p&gt;
+    &lt;/header&gt;
+    &lt;section class&#x3D;&quot;content&quot;&gt;
+      &lt;section class&#x3D;&quot;centered&quot;&gt;
+        &lt;p&gt;Transactie is geannuleerd&lt;/p&gt;
+        &lt;p&gt;&lt;a href&#x3D;&quot;#&quot;&gt;Opnieuw proberen&lt;/a&gt;&lt;/p&gt;
+      &lt;/section&gt;
+    &lt;/section&gt;
+  &lt;/section&gt;
+&lt;/section&gt;</code></pre>
+                </article>
+
+            </section>
+            <section class="kss-section kss-section--depth-3" id="kssref-examples-states-disclosure-timed-out">
+
+            <article class="kss-section__content">
+                <p class="kss-section__source">Source: <span>examples/states.scss</span>, line <span>133</span></p>
+
+              <a class="kss-section__permalink" href="#kssref-examples-states-disclosure-timed-out">
+                <h3 class="kss-section__item kss-section__item--depth-3">
+                  <span class="kss-section__ref">1.1.7</span>
+                  <span class="kss-section__name">State 6: Disclosure timed out</span>
+                </h3>
+              </a>
+
+
+            </article>
+
+              <article class="kss-section__modifiers">
+                <h1 class="kss-modifiers__heading">Example</h1>
+
+
+                <div class="kss-modifiers__example"><section class="irma-web-center-child" style="/** Parent styles **/ width: 100%; height: 700px; border: 2px solid red;">
+  <section class="irma-web-form">
+    <header class="header">
+      <p>Inloggen met <img src="https://raw.githubusercontent.com/privacybydesign/irma_mobile/master/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png"/></p>
+    </header>
+    <section class="content">
+      <section class="centered">
+        <p>Transactie is verlopen</p>
+        <p><a href="#">Opnieuw proberen</a></p>
+      </section>
+    </section>
+  </section>
+</section></div>
+
+              </article>
+
+                <article class="kss-section__markup">
+                  <pre><code class="language-markup">&lt;section class&#x3D;&quot;irma-web-center-child&quot; style&#x3D;&quot;/** Parent styles **/ width: 100%; height: 700px; border: 2px solid red;&quot;&gt;
+  &lt;section class&#x3D;&quot;irma-web-form&quot;&gt;
+    &lt;header class&#x3D;&quot;header&quot;&gt;
+      &lt;p&gt;Inloggen met &lt;img src&#x3D;&quot;https://raw.githubusercontent.com/privacybydesign/irma_mobile/master/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png&quot;/&gt;&lt;/p&gt;
+    &lt;/header&gt;
+    &lt;section class&#x3D;&quot;content&quot;&gt;
+      &lt;section class&#x3D;&quot;centered&quot;&gt;
+        &lt;p&gt;Transactie is verlopen&lt;/p&gt;
+        &lt;p&gt;&lt;a href&#x3D;&quot;#&quot;&gt;Opnieuw proberen&lt;/a&gt;&lt;/p&gt;
+      &lt;/section&gt;
+    &lt;/section&gt;
+  &lt;/section&gt;
+&lt;/section&gt;</code></pre>
+                </article>
+
+            </section>
+            <section class="kss-section kss-section--depth-3" id="kssref-examples-states-disclosure-errored">
+
+            <article class="kss-section__content">
+                <p class="kss-section__source">Source: <span>examples/states.scss</span>, line <span>154</span></p>
+
+              <a class="kss-section__permalink" href="#kssref-examples-states-disclosure-errored">
+                <h3 class="kss-section__item kss-section__item--depth-3">
+                  <span class="kss-section__ref">1.1.8</span>
+                  <span class="kss-section__name">State 7: Disclosure errored</span>
+                </h3>
+              </a>
+
+
+            </article>
+
+              <article class="kss-section__modifiers">
+                <h1 class="kss-modifiers__heading">Example</h1>
+
+
+                <div class="kss-modifiers__example"><section class="irma-web-center-child" style="/** Parent styles **/ width: 100%; height: 700px; border: 2px solid red;">
+  <section class="irma-web-form">
+    <header class="header">
+      <p>Inloggen met <img src="https://raw.githubusercontent.com/privacybydesign/irma_mobile/master/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png"/></p>
+    </header>
+    <section class="content">
+      <section class="centered">
+        <p>Er is een fout opgetreden</p>
+        <p><a href="#">Opnieuw proberen</a></p>
+      </section>
+    </section>
+  </section>
+</section></div>
+
+              </article>
+
+                <article class="kss-section__markup">
+                  <pre><code class="language-markup">&lt;section class&#x3D;&quot;irma-web-center-child&quot; style&#x3D;&quot;/** Parent styles **/ width: 100%; height: 700px; border: 2px solid red;&quot;&gt;
+  &lt;section class&#x3D;&quot;irma-web-form&quot;&gt;
+    &lt;header class&#x3D;&quot;header&quot;&gt;
+      &lt;p&gt;Inloggen met &lt;img src&#x3D;&quot;https://raw.githubusercontent.com/privacybydesign/irma_mobile/master/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png&quot;/&gt;&lt;/p&gt;
+    &lt;/header&gt;
+    &lt;section class&#x3D;&quot;content&quot;&gt;
+      &lt;section class&#x3D;&quot;centered&quot;&gt;
+        &lt;p&gt;Er is een fout opgetreden&lt;/p&gt;
+        &lt;p&gt;&lt;a href&#x3D;&quot;#&quot;&gt;Opnieuw proberen&lt;/a&gt;&lt;/p&gt;
+      &lt;/section&gt;
+    &lt;/section&gt;
+  &lt;/section&gt;
+&lt;/section&gt;</code></pre>
+                </article>
+
+            </section>
+            <section class="kss-section kss-section--depth-3" id="kssref-examples-states-browser-is-not-supported">
+
+            <article class="kss-section__content">
+                <p class="kss-section__source">Source: <span>examples/states.scss</span>, line <span>175</span></p>
+
+              <a class="kss-section__permalink" href="#kssref-examples-states-browser-is-not-supported">
+                <h3 class="kss-section__item kss-section__item--depth-3">
+                  <span class="kss-section__ref">1.1.9</span>
+                  <span class="kss-section__name">State 8: Browser is not supported</span>
+                </h3>
+              </a>
+
+
+            </article>
+
+              <article class="kss-section__modifiers">
+                <h1 class="kss-modifiers__heading">Example</h1>
+
+
+                <div class="kss-modifiers__example"><section class="irma-web-center-child" style="/** Parent styles **/ width: 100%; height: 700px; border: 2px solid red;">
+  <section class="irma-web-form">
+    <header class="header">
+      <p>Inloggen met <img src="https://raw.githubusercontent.com/privacybydesign/irma_mobile/master/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png"/></p>
+    </header>
+    <section class="content">
+      <section class="centered">
+        <p>Het spijt ons, maar je browser voldoet niet aan de minimale eisen</p>
+      </section>
+    </section>
+  </section>
+</section></div>
+
+              </article>
+
+                <article class="kss-section__markup">
+                  <pre><code class="language-markup">&lt;section class&#x3D;&quot;irma-web-center-child&quot; style&#x3D;&quot;/** Parent styles **/ width: 100%; height: 700px; border: 2px solid red;&quot;&gt;
+  &lt;section class&#x3D;&quot;irma-web-form&quot;&gt;
+    &lt;header class&#x3D;&quot;header&quot;&gt;
+      &lt;p&gt;Inloggen met &lt;img src&#x3D;&quot;https://raw.githubusercontent.com/privacybydesign/irma_mobile/master/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png&quot;/&gt;&lt;/p&gt;
+    &lt;/header&gt;
+    &lt;section class&#x3D;&quot;content&quot;&gt;
+      &lt;section class&#x3D;&quot;centered&quot;&gt;
+        &lt;p&gt;Het spijt ons, maar je browser voldoet niet aan de minimale eisen&lt;/p&gt;
+      &lt;/section&gt;
+    &lt;/section&gt;
+  &lt;/section&gt;
+&lt;/section&gt;</code></pre>
+                </article>
+
+            </section>
+            <section class="kss-section kss-section--depth-3" id="kssref-examples-states-success">
+
+            <article class="kss-section__content">
+                <p class="kss-section__source">Source: <span>examples/states.scss</span>, line <span>195</span></p>
+
+              <a class="kss-section__permalink" href="#kssref-examples-states-success">
+                <h3 class="kss-section__item kss-section__item--depth-3">
+                  <span class="kss-section__ref">1.1.10</span>
+                  <span class="kss-section__name">State 9: Success</span>
+                </h3>
+              </a>
+
+
+            </article>
+
+              <article class="kss-section__modifiers">
+                <h1 class="kss-modifiers__heading">Example</h1>
+
+
+                <div class="kss-modifiers__example"><section class="irma-web-center-child" style="/** Parent styles **/ width: 100%; height: 700px; border: 2px solid red;">
+  <section class="irma-web-form">
+    <header class="header">
+      <p>Inloggen met <img src="https://raw.githubusercontent.com/privacybydesign/irma_mobile/master/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png"/></p>
+    </header>
+    <section class="content">
+      <section class="centered">
+        <p>Transactie voltooid!</p>
+      </section>
+    </section>
+  </section>
+</section></div>
+
+              </article>
+
+                <article class="kss-section__markup">
+                  <pre><code class="language-markup">&lt;section class&#x3D;&quot;irma-web-center-child&quot; style&#x3D;&quot;/** Parent styles **/ width: 100%; height: 700px; border: 2px solid red;&quot;&gt;
+  &lt;section class&#x3D;&quot;irma-web-form&quot;&gt;
+    &lt;header class&#x3D;&quot;header&quot;&gt;
+      &lt;p&gt;Inloggen met &lt;img src&#x3D;&quot;https://raw.githubusercontent.com/privacybydesign/irma_mobile/master/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png&quot;/&gt;&lt;/p&gt;
+    &lt;/header&gt;
+    &lt;section class&#x3D;&quot;content&quot;&gt;
+      &lt;section class&#x3D;&quot;centered&quot;&gt;
+        &lt;p&gt;Transactie voltooid!&lt;/p&gt;
+      &lt;/section&gt;
     &lt;/section&gt;
   &lt;/section&gt;
 &lt;/section&gt;</code></pre>

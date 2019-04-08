@@ -69,14 +69,20 @@
             </a>
                 <ul class="kss-nav__subnav">
                     <li class="kss-nav__item ">
-                      <a href="section-components.html#kssref-components-irma-login">
+                      <a href="section-components.html#kssref-components-irma-button">
                         <span class="kss-nav__ref">5.1</span>
+                        <span class="kss-nav__name">IRMA button</span>
+                      </a>
+                    </li>
+                    <li class="kss-nav__item ">
+                      <a href="section-components.html#kssref-components-irma-login">
+                        <span class="kss-nav__ref">5.2</span>
                         <span class="kss-nav__name">IRMA &#x27;login form&#x27;</span>
                       </a>
                     </li>
                     <li class="kss-nav__item ">
                       <a href="section-components.html#kssref-components-qr-code">
-                        <span class="kss-nav__ref">5.2</span>
+                        <span class="kss-nav__ref">5.3</span>
                         <span class="kss-nav__name">QR code</span>
                       </a>
                     </li>
@@ -118,6 +124,47 @@
 
 
             </header>
+            <section class="kss-section kss-section--depth-2" id="kssref-components-irma-button">
+
+            <article class="kss-section__content">
+                <p class="kss-section__source">Source: <span>components/irma-button.scss</span>, line <span>1</span></p>
+
+              <a class="kss-section__permalink" href="#kssref-components-irma-button">
+                <h2 class="kss-section__item kss-section__item--depth-2">
+                  <span class="kss-section__ref">5.1</span>
+                  <span class="kss-section__name">IRMA button</span>
+                </h2>
+              </a>
+
+                <div class="kss-section__description"><p>A button to press to launch the disclosure flow in the IRMA app (locally on a
+mobile device)</p>
+</div>
+
+            </article>
+
+              <article class="kss-section__modifiers">
+                <h1 class="kss-modifiers__heading">Example</h1>
+
+
+                <div class="kss-modifiers__example"><button class="irma-web-button">
+  Open IRMA app
+</button>
+<a href="#" class="irma-web-button">
+  Open IRMA app
+</a></div>
+
+              </article>
+
+                <article class="kss-section__markup">
+                  <pre><code class="language-markup">&lt;button class&#x3D;&quot;irma-web-button&quot;&gt;
+  Open IRMA app
+&lt;/button&gt;
+&lt;a href&#x3D;&quot;#&quot; class&#x3D;&quot;irma-web-button&quot;&gt;
+  Open IRMA app
+&lt;/a&gt;</code></pre>
+                </article>
+
+            </section>
             <section class="kss-section kss-section--depth-2" id="kssref-components-irma-login">
 
             <article class="kss-section__content">
@@ -125,7 +172,7 @@
 
               <a class="kss-section__permalink" href="#kssref-components-irma-login">
                 <h2 class="kss-section__item kss-section__item--depth-2">
-                  <span class="kss-section__ref">5.1</span>
+                  <span class="kss-section__ref">5.2</span>
                   <span class="kss-section__name">IRMA &#x27;login form&#x27;</span>
                 </h2>
               </a>
@@ -140,16 +187,30 @@
 
 
                 <div class="kss-modifiers__example"><section class="irma-web-form">
-  <p>Inloggen met <img src="https://raw.githubusercontent.com/privacybydesign/irma_mobile/master/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png"/></p>
-  <button>Some action here</button>
+  <header class="header">
+    <p>Inloggen met <img src="https://raw.githubusercontent.com/privacybydesign/irma_mobile/master/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png"/></p>
+  </header>
+  <section class="content">
+    <section class="centered">
+      <button>Some action here</button>
+      <p>With some text <a href="#">and stuff</a></p>
+    </section>
+  </section>
 </section></div>
 
               </article>
 
                 <article class="kss-section__markup">
                   <pre><code class="language-markup">&lt;section class&#x3D;&quot;irma-web-form&quot;&gt;
-  &lt;p&gt;Inloggen met &lt;img src&#x3D;&quot;https://raw.githubusercontent.com/privacybydesign/irma_mobile/master/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png&quot;/&gt;&lt;/p&gt;
-  &lt;button&gt;Some action here&lt;/button&gt;
+  &lt;header class&#x3D;&quot;header&quot;&gt;
+    &lt;p&gt;Inloggen met &lt;img src&#x3D;&quot;https://raw.githubusercontent.com/privacybydesign/irma_mobile/master/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png&quot;/&gt;&lt;/p&gt;
+  &lt;/header&gt;
+  &lt;section class&#x3D;&quot;content&quot;&gt;
+    &lt;section class&#x3D;&quot;centered&quot;&gt;
+      &lt;button&gt;Some action here&lt;/button&gt;
+      &lt;p&gt;With some text &lt;a href&#x3D;&quot;#&quot;&gt;and stuff&lt;/a&gt;&lt;/p&gt;
+    &lt;/section&gt;
+  &lt;/section&gt;
 &lt;/section&gt;</code></pre>
                 </article>
 
@@ -161,160 +222,31 @@
 
               <a class="kss-section__permalink" href="#kssref-components-qr-code">
                 <h2 class="kss-section__item kss-section__item--depth-2">
-                  <span class="kss-section__ref">5.2</span>
+                  <span class="kss-section__ref">5.3</span>
                   <span class="kss-section__name">QR code</span>
                 </h2>
               </a>
 
-                <div class="kss-section__description"><p>A container for the QR code and QR flow related states</p>
+                <div class="kss-section__description"><p>A simple container for the QR code</p>
 </div>
 
             </article>
 
               <article class="kss-section__modifiers">
-                <h1 class="kss-modifiers__heading">Examples</h1>
+                <h1 class="kss-modifiers__heading">Example</h1>
 
-                  <h2 class="kss-modifiers__name">Default styling</h2>
 
-                <div class="kss-modifiers__example"><section class="irma-web-qr-code [modifier class]">
+                <div class="kss-modifiers__example"><section class="irma-web-qr-code">
   <!-- Image with QR code -->
-  <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAK8AAACvAQMAAACxXBw2AAAABlBMVEX///8AAABVwtN+AAAACXBIWXMAAA7EAAAOxAGVKw4bAAADOElEQVRIx+2XP2rlMBDGx6hQE+z2FQJdQ2miq+QINmmDZfPaYF/gQa6iNNE1BCpea5NGC8Kzo3WSYtlkkdtdFQb/DPoz8+mbMcA/PSRuGuTWOPSds5gqRF+MBdQgw4w2hIlbkKOFA9hMXAYctE/GQmKji4cwnFIzIojuBTF1f8Uc6l4RsTpcqkMYag6p77UXoFR6rD5PWYApsOoqukkF0b2qcOk+412AaWgM88S93BQEXD6zXIDlL4KTxtTqiM/r+waLMDwspJOhBwTaGw2noBjLMyUNl85KNmKEe3MEs6cKeZgAkjDoAGpl/Tf4bdLXVA0q4bqpgFmfxRjMwGnuWoFcrcZ8ZXw5bnvKzrpwmeAWkYKjy7FcWpJ9X2uUg8orqQOYvW36JJqFeza+kmxJv1COcSTP6FuObEXHLg2l6ACeI0/dpAUOt5H5fg/VF1jiijxVqwseKkeBhV0nRVg8kByzoIJoNTJcdDyAb1qIvq2BUrTxgOsuzUJMQeBh6DWjwIJg8xEs31a8irpzPqwxZ2aXfRmmufFEh1OI66sOz4gfSxZgeBhUxHVSnmRPjtpy5YuxaCZF8V4p3iaSWD9s/c+YFK1Pcly0l8sdh8eW63IszxRYpJtGRSDq9Ghwd80iLMwC1+xVIdDcLDVoD2AwpFgAzsKg6EHFzRdjlqpI1ltF6ev8bY7qAD5v+ur7XgFb7jRhi+VY3FBxTd2WHxiT6N7lU4Tl22xBVPnajK9K3LfwLabjXIUZHeD6w3k5wC77MvxUK0k6USGQNNl5jg7K8XnhMQw1WRi+WP9o3G5hRZhmc9QVjFb6KtICdOfLsXyC7Fzkv7jcAWlfYzlmQ614mEeLQHPTBuNeL4uwzB0JGxeQoiWdPKPb4/0Fnjd+ClPjIIyk0UtlYzlmS4VUhidgWd/h0jhdjuGmsVefLYj8H0NAjAcwmS3KzVifW258XriGYkwvZDxtY4McdBT3nYNy/KthpU5JeZGNh3zQHcBm0jG1VBQTNazyYj6crRArKtEzBjA/LPX+oL/HnLoCpL+U5oX0OX9YbxGGOu+kiYwNd9wL89nyF+CcE8nWkXRqqFF/P00h/j9+Hz8BKgnu5v9Z8jEAAAAASUVORK5CYII=" width=256 height=256/>
-  <!-- Default Dutch feedback messages -->
-  <p class="loading-text">Eén moment alsjeblieft</p>
-  <p class="waiting-for-user-text">Volg de instructies op je telefoon</p>
-  <p class="cancelled-text">Transactie is geannuleerd<br/><a href="#">Opnieuw proberen</a></p>
-  <p class="timeout-text">Transactie is verlopen<br/><a href="#">Opnieuw proberen</a></p>
-  <p class="error-text">Er is een fout opgetreden<br/><a href="#">Opnieuw proberen</a></p>
-  <p class="unsupported-text">Het spijt ons, maar je browser voldoet niet aan de minimale eisen</p>
-  <p class="success-text">Transactie voltooid!</p>
+  <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAK8AAACvAQMAAACxXBw2AAAABlBMVEX///8AAABVwtN+AAAACXBIWXMAAA7EAAAOxAGVKw4bAAADOElEQVRIx+2XP2rlMBDGx6hQE+z2FQJdQ2miq+QINmmDZfPaYF/gQa6iNNE1BCpea5NGC8Kzo3WSYtlkkdtdFQb/DPoz8+mbMcA/PSRuGuTWOPSds5gqRF+MBdQgw4w2hIlbkKOFA9hMXAYctE/GQmKji4cwnFIzIojuBTF1f8Uc6l4RsTpcqkMYag6p77UXoFR6rD5PWYApsOoqukkF0b2qcOk+412AaWgM88S93BQEXD6zXIDlL4KTxtTqiM/r+waLMDwspJOhBwTaGw2noBjLMyUNl85KNmKEe3MEs6cKeZgAkjDoAGpl/Tf4bdLXVA0q4bqpgFmfxRjMwGnuWoFcrcZ8ZXw5bnvKzrpwmeAWkYKjy7FcWpJ9X2uUg8orqQOYvW36JJqFeza+kmxJv1COcSTP6FuObEXHLg2l6ACeI0/dpAUOt5H5fg/VF1jiijxVqwseKkeBhV0nRVg8kByzoIJoNTJcdDyAb1qIvq2BUrTxgOsuzUJMQeBh6DWjwIJg8xEs31a8irpzPqwxZ2aXfRmmufFEh1OI66sOz4gfSxZgeBhUxHVSnmRPjtpy5YuxaCZF8V4p3iaSWD9s/c+YFK1Pcly0l8sdh8eW63IszxRYpJtGRSDq9Ghwd80iLMwC1+xVIdDcLDVoD2AwpFgAzsKg6EHFzRdjlqpI1ltF6ev8bY7qAD5v+ur7XgFb7jRhi+VY3FBxTd2WHxiT6N7lU4Tl22xBVPnajK9K3LfwLabjXIUZHeD6w3k5wC77MvxUK0k6USGQNNl5jg7K8XnhMQw1WRi+WP9o3G5hRZhmc9QVjFb6KtICdOfLsXyC7Fzkv7jcAWlfYzlmQ614mEeLQHPTBuNeL4uwzB0JGxeQoiWdPKPb4/0Fnjd+ClPjIIyk0UtlYzlmS4VUhidgWd/h0jhdjuGmsVefLYj8H0NAjAcwmS3KzVifW258XriGYkwvZDxtY4McdBT3nYNy/KthpU5JeZGNh3zQHcBm0jG1VBQTNazyYj6crRArKtEzBjA/LPX+oL/HnLoCpL+U5oX0OX9YbxGGOu+kiYwNd9wL89nyF+CcE8nWkXRqqFF/P00h/j9+Hz8BKgnu5v9Z8jEAAAAASUVORK5CYII="/>
 </section></div>
 
-                  <article class="kss-modifiers__modifier">
-                    <h2 class="kss-modifiers__name">.loading</h2>
-                    <p class="kss-modifiers__description">When we're waiting for a QR code</p>
-                    <div class="kss-modifiers__example"><section class="irma-web-qr-code loading">
-  <!-- Image with QR code -->
-  <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAK8AAACvAQMAAACxXBw2AAAABlBMVEX///8AAABVwtN+AAAACXBIWXMAAA7EAAAOxAGVKw4bAAADOElEQVRIx+2XP2rlMBDGx6hQE+z2FQJdQ2miq+QINmmDZfPaYF/gQa6iNNE1BCpea5NGC8Kzo3WSYtlkkdtdFQb/DPoz8+mbMcA/PSRuGuTWOPSds5gqRF+MBdQgw4w2hIlbkKOFA9hMXAYctE/GQmKji4cwnFIzIojuBTF1f8Uc6l4RsTpcqkMYag6p77UXoFR6rD5PWYApsOoqukkF0b2qcOk+412AaWgM88S93BQEXD6zXIDlL4KTxtTqiM/r+waLMDwspJOhBwTaGw2noBjLMyUNl85KNmKEe3MEs6cKeZgAkjDoAGpl/Tf4bdLXVA0q4bqpgFmfxRjMwGnuWoFcrcZ8ZXw5bnvKzrpwmeAWkYKjy7FcWpJ9X2uUg8orqQOYvW36JJqFeza+kmxJv1COcSTP6FuObEXHLg2l6ACeI0/dpAUOt5H5fg/VF1jiijxVqwseKkeBhV0nRVg8kByzoIJoNTJcdDyAb1qIvq2BUrTxgOsuzUJMQeBh6DWjwIJg8xEs31a8irpzPqwxZ2aXfRmmufFEh1OI66sOz4gfSxZgeBhUxHVSnmRPjtpy5YuxaCZF8V4p3iaSWD9s/c+YFK1Pcly0l8sdh8eW63IszxRYpJtGRSDq9Ghwd80iLMwC1+xVIdDcLDVoD2AwpFgAzsKg6EHFzRdjlqpI1ltF6ev8bY7qAD5v+ur7XgFb7jRhi+VY3FBxTd2WHxiT6N7lU4Tl22xBVPnajK9K3LfwLabjXIUZHeD6w3k5wC77MvxUK0k6USGQNNl5jg7K8XnhMQw1WRi+WP9o3G5hRZhmc9QVjFb6KtICdOfLsXyC7Fzkv7jcAWlfYzlmQ614mEeLQHPTBuNeL4uwzB0JGxeQoiWdPKPb4/0Fnjd+ClPjIIyk0UtlYzlmS4VUhidgWd/h0jhdjuGmsVefLYj8H0NAjAcwmS3KzVifW258XriGYkwvZDxtY4McdBT3nYNy/KthpU5JeZGNh3zQHcBm0jG1VBQTNazyYj6crRArKtEzBjA/LPX+oL/HnLoCpL+U5oX0OX9YbxGGOu+kiYwNd9wL89nyF+CcE8nWkXRqqFF/P00h/j9+Hz8BKgnu5v9Z8jEAAAAASUVORK5CYII=" width=256 height=256/>
-  <!-- Default Dutch feedback messages -->
-  <p class="loading-text">Eén moment alsjeblieft</p>
-  <p class="waiting-for-user-text">Volg de instructies op je telefoon</p>
-  <p class="cancelled-text">Transactie is geannuleerd<br/><a href="#">Opnieuw proberen</a></p>
-  <p class="timeout-text">Transactie is verlopen<br/><a href="#">Opnieuw proberen</a></p>
-  <p class="error-text">Er is een fout opgetreden<br/><a href="#">Opnieuw proberen</a></p>
-  <p class="unsupported-text">Het spijt ons, maar je browser voldoet niet aan de minimale eisen</p>
-  <p class="success-text">Transactie voltooid!</p>
-</section></div>
-                  </article>
-                  <article class="kss-modifiers__modifier">
-                    <h2 class="kss-modifiers__name">.waiting-for-user</h2>
-                    <p class="kss-modifiers__description">When we're waiting for user input on their mobile phone</p>
-                    <div class="kss-modifiers__example"><section class="irma-web-qr-code waiting-for-user">
-  <!-- Image with QR code -->
-  <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAK8AAACvAQMAAACxXBw2AAAABlBMVEX///8AAABVwtN+AAAACXBIWXMAAA7EAAAOxAGVKw4bAAADOElEQVRIx+2XP2rlMBDGx6hQE+z2FQJdQ2miq+QINmmDZfPaYF/gQa6iNNE1BCpea5NGC8Kzo3WSYtlkkdtdFQb/DPoz8+mbMcA/PSRuGuTWOPSds5gqRF+MBdQgw4w2hIlbkKOFA9hMXAYctE/GQmKji4cwnFIzIojuBTF1f8Uc6l4RsTpcqkMYag6p77UXoFR6rD5PWYApsOoqukkF0b2qcOk+412AaWgM88S93BQEXD6zXIDlL4KTxtTqiM/r+waLMDwspJOhBwTaGw2noBjLMyUNl85KNmKEe3MEs6cKeZgAkjDoAGpl/Tf4bdLXVA0q4bqpgFmfxRjMwGnuWoFcrcZ8ZXw5bnvKzrpwmeAWkYKjy7FcWpJ9X2uUg8orqQOYvW36JJqFeza+kmxJv1COcSTP6FuObEXHLg2l6ACeI0/dpAUOt5H5fg/VF1jiijxVqwseKkeBhV0nRVg8kByzoIJoNTJcdDyAb1qIvq2BUrTxgOsuzUJMQeBh6DWjwIJg8xEs31a8irpzPqwxZ2aXfRmmufFEh1OI66sOz4gfSxZgeBhUxHVSnmRPjtpy5YuxaCZF8V4p3iaSWD9s/c+YFK1Pcly0l8sdh8eW63IszxRYpJtGRSDq9Ghwd80iLMwC1+xVIdDcLDVoD2AwpFgAzsKg6EHFzRdjlqpI1ltF6ev8bY7qAD5v+ur7XgFb7jRhi+VY3FBxTd2WHxiT6N7lU4Tl22xBVPnajK9K3LfwLabjXIUZHeD6w3k5wC77MvxUK0k6USGQNNl5jg7K8XnhMQw1WRi+WP9o3G5hRZhmc9QVjFb6KtICdOfLsXyC7Fzkv7jcAWlfYzlmQ614mEeLQHPTBuNeL4uwzB0JGxeQoiWdPKPb4/0Fnjd+ClPjIIyk0UtlYzlmS4VUhidgWd/h0jhdjuGmsVefLYj8H0NAjAcwmS3KzVifW258XriGYkwvZDxtY4McdBT3nYNy/KthpU5JeZGNh3zQHcBm0jG1VBQTNazyYj6crRArKtEzBjA/LPX+oL/HnLoCpL+U5oX0OX9YbxGGOu+kiYwNd9wL89nyF+CcE8nWkXRqqFF/P00h/j9+Hz8BKgnu5v9Z8jEAAAAASUVORK5CYII=" width=256 height=256/>
-  <!-- Default Dutch feedback messages -->
-  <p class="loading-text">Eén moment alsjeblieft</p>
-  <p class="waiting-for-user-text">Volg de instructies op je telefoon</p>
-  <p class="cancelled-text">Transactie is geannuleerd<br/><a href="#">Opnieuw proberen</a></p>
-  <p class="timeout-text">Transactie is verlopen<br/><a href="#">Opnieuw proberen</a></p>
-  <p class="error-text">Er is een fout opgetreden<br/><a href="#">Opnieuw proberen</a></p>
-  <p class="unsupported-text">Het spijt ons, maar je browser voldoet niet aan de minimale eisen</p>
-  <p class="success-text">Transactie voltooid!</p>
-</section></div>
-                  </article>
-                  <article class="kss-modifiers__modifier">
-                    <h2 class="kss-modifiers__name">.cancelled</h2>
-                    <p class="kss-modifiers__description">When the user has cancelled the disclosure</p>
-                    <div class="kss-modifiers__example"><section class="irma-web-qr-code cancelled">
-  <!-- Image with QR code -->
-  <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAK8AAACvAQMAAACxXBw2AAAABlBMVEX///8AAABVwtN+AAAACXBIWXMAAA7EAAAOxAGVKw4bAAADOElEQVRIx+2XP2rlMBDGx6hQE+z2FQJdQ2miq+QINmmDZfPaYF/gQa6iNNE1BCpea5NGC8Kzo3WSYtlkkdtdFQb/DPoz8+mbMcA/PSRuGuTWOPSds5gqRF+MBdQgw4w2hIlbkKOFA9hMXAYctE/GQmKji4cwnFIzIojuBTF1f8Uc6l4RsTpcqkMYag6p77UXoFR6rD5PWYApsOoqukkF0b2qcOk+412AaWgM88S93BQEXD6zXIDlL4KTxtTqiM/r+waLMDwspJOhBwTaGw2noBjLMyUNl85KNmKEe3MEs6cKeZgAkjDoAGpl/Tf4bdLXVA0q4bqpgFmfxRjMwGnuWoFcrcZ8ZXw5bnvKzrpwmeAWkYKjy7FcWpJ9X2uUg8orqQOYvW36JJqFeza+kmxJv1COcSTP6FuObEXHLg2l6ACeI0/dpAUOt5H5fg/VF1jiijxVqwseKkeBhV0nRVg8kByzoIJoNTJcdDyAb1qIvq2BUrTxgOsuzUJMQeBh6DWjwIJg8xEs31a8irpzPqwxZ2aXfRmmufFEh1OI66sOz4gfSxZgeBhUxHVSnmRPjtpy5YuxaCZF8V4p3iaSWD9s/c+YFK1Pcly0l8sdh8eW63IszxRYpJtGRSDq9Ghwd80iLMwC1+xVIdDcLDVoD2AwpFgAzsKg6EHFzRdjlqpI1ltF6ev8bY7qAD5v+ur7XgFb7jRhi+VY3FBxTd2WHxiT6N7lU4Tl22xBVPnajK9K3LfwLabjXIUZHeD6w3k5wC77MvxUK0k6USGQNNl5jg7K8XnhMQw1WRi+WP9o3G5hRZhmc9QVjFb6KtICdOfLsXyC7Fzkv7jcAWlfYzlmQ614mEeLQHPTBuNeL4uwzB0JGxeQoiWdPKPb4/0Fnjd+ClPjIIyk0UtlYzlmS4VUhidgWd/h0jhdjuGmsVefLYj8H0NAjAcwmS3KzVifW258XriGYkwvZDxtY4McdBT3nYNy/KthpU5JeZGNh3zQHcBm0jG1VBQTNazyYj6crRArKtEzBjA/LPX+oL/HnLoCpL+U5oX0OX9YbxGGOu+kiYwNd9wL89nyF+CcE8nWkXRqqFF/P00h/j9+Hz8BKgnu5v9Z8jEAAAAASUVORK5CYII=" width=256 height=256/>
-  <!-- Default Dutch feedback messages -->
-  <p class="loading-text">Eén moment alsjeblieft</p>
-  <p class="waiting-for-user-text">Volg de instructies op je telefoon</p>
-  <p class="cancelled-text">Transactie is geannuleerd<br/><a href="#">Opnieuw proberen</a></p>
-  <p class="timeout-text">Transactie is verlopen<br/><a href="#">Opnieuw proberen</a></p>
-  <p class="error-text">Er is een fout opgetreden<br/><a href="#">Opnieuw proberen</a></p>
-  <p class="unsupported-text">Het spijt ons, maar je browser voldoet niet aan de minimale eisen</p>
-  <p class="success-text">Transactie voltooid!</p>
-</section></div>
-                  </article>
-                  <article class="kss-modifiers__modifier">
-                    <h2 class="kss-modifiers__name">.timeout</h2>
-                    <p class="kss-modifiers__description">When its taking too long for the user to scan the code</p>
-                    <div class="kss-modifiers__example"><section class="irma-web-qr-code timeout">
-  <!-- Image with QR code -->
-  <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAK8AAACvAQMAAACxXBw2AAAABlBMVEX///8AAABVwtN+AAAACXBIWXMAAA7EAAAOxAGVKw4bAAADOElEQVRIx+2XP2rlMBDGx6hQE+z2FQJdQ2miq+QINmmDZfPaYF/gQa6iNNE1BCpea5NGC8Kzo3WSYtlkkdtdFQb/DPoz8+mbMcA/PSRuGuTWOPSds5gqRF+MBdQgw4w2hIlbkKOFA9hMXAYctE/GQmKji4cwnFIzIojuBTF1f8Uc6l4RsTpcqkMYag6p77UXoFR6rD5PWYApsOoqukkF0b2qcOk+412AaWgM88S93BQEXD6zXIDlL4KTxtTqiM/r+waLMDwspJOhBwTaGw2noBjLMyUNl85KNmKEe3MEs6cKeZgAkjDoAGpl/Tf4bdLXVA0q4bqpgFmfxRjMwGnuWoFcrcZ8ZXw5bnvKzrpwmeAWkYKjy7FcWpJ9X2uUg8orqQOYvW36JJqFeza+kmxJv1COcSTP6FuObEXHLg2l6ACeI0/dpAUOt5H5fg/VF1jiijxVqwseKkeBhV0nRVg8kByzoIJoNTJcdDyAb1qIvq2BUrTxgOsuzUJMQeBh6DWjwIJg8xEs31a8irpzPqwxZ2aXfRmmufFEh1OI66sOz4gfSxZgeBhUxHVSnmRPjtpy5YuxaCZF8V4p3iaSWD9s/c+YFK1Pcly0l8sdh8eW63IszxRYpJtGRSDq9Ghwd80iLMwC1+xVIdDcLDVoD2AwpFgAzsKg6EHFzRdjlqpI1ltF6ev8bY7qAD5v+ur7XgFb7jRhi+VY3FBxTd2WHxiT6N7lU4Tl22xBVPnajK9K3LfwLabjXIUZHeD6w3k5wC77MvxUK0k6USGQNNl5jg7K8XnhMQw1WRi+WP9o3G5hRZhmc9QVjFb6KtICdOfLsXyC7Fzkv7jcAWlfYzlmQ614mEeLQHPTBuNeL4uwzB0JGxeQoiWdPKPb4/0Fnjd+ClPjIIyk0UtlYzlmS4VUhidgWd/h0jhdjuGmsVefLYj8H0NAjAcwmS3KzVifW258XriGYkwvZDxtY4McdBT3nYNy/KthpU5JeZGNh3zQHcBm0jG1VBQTNazyYj6crRArKtEzBjA/LPX+oL/HnLoCpL+U5oX0OX9YbxGGOu+kiYwNd9wL89nyF+CcE8nWkXRqqFF/P00h/j9+Hz8BKgnu5v9Z8jEAAAAASUVORK5CYII=" width=256 height=256/>
-  <!-- Default Dutch feedback messages -->
-  <p class="loading-text">Eén moment alsjeblieft</p>
-  <p class="waiting-for-user-text">Volg de instructies op je telefoon</p>
-  <p class="cancelled-text">Transactie is geannuleerd<br/><a href="#">Opnieuw proberen</a></p>
-  <p class="timeout-text">Transactie is verlopen<br/><a href="#">Opnieuw proberen</a></p>
-  <p class="error-text">Er is een fout opgetreden<br/><a href="#">Opnieuw proberen</a></p>
-  <p class="unsupported-text">Het spijt ons, maar je browser voldoet niet aan de minimale eisen</p>
-  <p class="success-text">Transactie voltooid!</p>
-</section></div>
-                  </article>
-                  <article class="kss-modifiers__modifier">
-                    <h2 class="kss-modifiers__name">.error</h2>
-                    <p class="kss-modifiers__description">When some other error has occured</p>
-                    <div class="kss-modifiers__example"><section class="irma-web-qr-code error">
-  <!-- Image with QR code -->
-  <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAK8AAACvAQMAAACxXBw2AAAABlBMVEX///8AAABVwtN+AAAACXBIWXMAAA7EAAAOxAGVKw4bAAADOElEQVRIx+2XP2rlMBDGx6hQE+z2FQJdQ2miq+QINmmDZfPaYF/gQa6iNNE1BCpea5NGC8Kzo3WSYtlkkdtdFQb/DPoz8+mbMcA/PSRuGuTWOPSds5gqRF+MBdQgw4w2hIlbkKOFA9hMXAYctE/GQmKji4cwnFIzIojuBTF1f8Uc6l4RsTpcqkMYag6p77UXoFR6rD5PWYApsOoqukkF0b2qcOk+412AaWgM88S93BQEXD6zXIDlL4KTxtTqiM/r+waLMDwspJOhBwTaGw2noBjLMyUNl85KNmKEe3MEs6cKeZgAkjDoAGpl/Tf4bdLXVA0q4bqpgFmfxRjMwGnuWoFcrcZ8ZXw5bnvKzrpwmeAWkYKjy7FcWpJ9X2uUg8orqQOYvW36JJqFeza+kmxJv1COcSTP6FuObEXHLg2l6ACeI0/dpAUOt5H5fg/VF1jiijxVqwseKkeBhV0nRVg8kByzoIJoNTJcdDyAb1qIvq2BUrTxgOsuzUJMQeBh6DWjwIJg8xEs31a8irpzPqwxZ2aXfRmmufFEh1OI66sOz4gfSxZgeBhUxHVSnmRPjtpy5YuxaCZF8V4p3iaSWD9s/c+YFK1Pcly0l8sdh8eW63IszxRYpJtGRSDq9Ghwd80iLMwC1+xVIdDcLDVoD2AwpFgAzsKg6EHFzRdjlqpI1ltF6ev8bY7qAD5v+ur7XgFb7jRhi+VY3FBxTd2WHxiT6N7lU4Tl22xBVPnajK9K3LfwLabjXIUZHeD6w3k5wC77MvxUK0k6USGQNNl5jg7K8XnhMQw1WRi+WP9o3G5hRZhmc9QVjFb6KtICdOfLsXyC7Fzkv7jcAWlfYzlmQ614mEeLQHPTBuNeL4uwzB0JGxeQoiWdPKPb4/0Fnjd+ClPjIIyk0UtlYzlmS4VUhidgWd/h0jhdjuGmsVefLYj8H0NAjAcwmS3KzVifW258XriGYkwvZDxtY4McdBT3nYNy/KthpU5JeZGNh3zQHcBm0jG1VBQTNazyYj6crRArKtEzBjA/LPX+oL/HnLoCpL+U5oX0OX9YbxGGOu+kiYwNd9wL89nyF+CcE8nWkXRqqFF/P00h/j9+Hz8BKgnu5v9Z8jEAAAAASUVORK5CYII=" width=256 height=256/>
-  <!-- Default Dutch feedback messages -->
-  <p class="loading-text">Eén moment alsjeblieft</p>
-  <p class="waiting-for-user-text">Volg de instructies op je telefoon</p>
-  <p class="cancelled-text">Transactie is geannuleerd<br/><a href="#">Opnieuw proberen</a></p>
-  <p class="timeout-text">Transactie is verlopen<br/><a href="#">Opnieuw proberen</a></p>
-  <p class="error-text">Er is een fout opgetreden<br/><a href="#">Opnieuw proberen</a></p>
-  <p class="unsupported-text">Het spijt ons, maar je browser voldoet niet aan de minimale eisen</p>
-  <p class="success-text">Transactie voltooid!</p>
-</section></div>
-                  </article>
-                  <article class="kss-modifiers__modifier">
-                    <h2 class="kss-modifiers__name">.unsupported</h2>
-                    <p class="kss-modifiers__description">When the browser or device of the user doesn't suffice</p>
-                    <div class="kss-modifiers__example"><section class="irma-web-qr-code unsupported">
-  <!-- Image with QR code -->
-  <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAK8AAACvAQMAAACxXBw2AAAABlBMVEX///8AAABVwtN+AAAACXBIWXMAAA7EAAAOxAGVKw4bAAADOElEQVRIx+2XP2rlMBDGx6hQE+z2FQJdQ2miq+QINmmDZfPaYF/gQa6iNNE1BCpea5NGC8Kzo3WSYtlkkdtdFQb/DPoz8+mbMcA/PSRuGuTWOPSds5gqRF+MBdQgw4w2hIlbkKOFA9hMXAYctE/GQmKji4cwnFIzIojuBTF1f8Uc6l4RsTpcqkMYag6p77UXoFR6rD5PWYApsOoqukkF0b2qcOk+412AaWgM88S93BQEXD6zXIDlL4KTxtTqiM/r+waLMDwspJOhBwTaGw2noBjLMyUNl85KNmKEe3MEs6cKeZgAkjDoAGpl/Tf4bdLXVA0q4bqpgFmfxRjMwGnuWoFcrcZ8ZXw5bnvKzrpwmeAWkYKjy7FcWpJ9X2uUg8orqQOYvW36JJqFeza+kmxJv1COcSTP6FuObEXHLg2l6ACeI0/dpAUOt5H5fg/VF1jiijxVqwseKkeBhV0nRVg8kByzoIJoNTJcdDyAb1qIvq2BUrTxgOsuzUJMQeBh6DWjwIJg8xEs31a8irpzPqwxZ2aXfRmmufFEh1OI66sOz4gfSxZgeBhUxHVSnmRPjtpy5YuxaCZF8V4p3iaSWD9s/c+YFK1Pcly0l8sdh8eW63IszxRYpJtGRSDq9Ghwd80iLMwC1+xVIdDcLDVoD2AwpFgAzsKg6EHFzRdjlqpI1ltF6ev8bY7qAD5v+ur7XgFb7jRhi+VY3FBxTd2WHxiT6N7lU4Tl22xBVPnajK9K3LfwLabjXIUZHeD6w3k5wC77MvxUK0k6USGQNNl5jg7K8XnhMQw1WRi+WP9o3G5hRZhmc9QVjFb6KtICdOfLsXyC7Fzkv7jcAWlfYzlmQ614mEeLQHPTBuNeL4uwzB0JGxeQoiWdPKPb4/0Fnjd+ClPjIIyk0UtlYzlmS4VUhidgWd/h0jhdjuGmsVefLYj8H0NAjAcwmS3KzVifW258XriGYkwvZDxtY4McdBT3nYNy/KthpU5JeZGNh3zQHcBm0jG1VBQTNazyYj6crRArKtEzBjA/LPX+oL/HnLoCpL+U5oX0OX9YbxGGOu+kiYwNd9wL89nyF+CcE8nWkXRqqFF/P00h/j9+Hz8BKgnu5v9Z8jEAAAAASUVORK5CYII=" width=256 height=256/>
-  <!-- Default Dutch feedback messages -->
-  <p class="loading-text">Eén moment alsjeblieft</p>
-  <p class="waiting-for-user-text">Volg de instructies op je telefoon</p>
-  <p class="cancelled-text">Transactie is geannuleerd<br/><a href="#">Opnieuw proberen</a></p>
-  <p class="timeout-text">Transactie is verlopen<br/><a href="#">Opnieuw proberen</a></p>
-  <p class="error-text">Er is een fout opgetreden<br/><a href="#">Opnieuw proberen</a></p>
-  <p class="unsupported-text">Het spijt ons, maar je browser voldoet niet aan de minimale eisen</p>
-  <p class="success-text">Transactie voltooid!</p>
-</section></div>
-                  </article>
-                  <article class="kss-modifiers__modifier">
-                    <h2 class="kss-modifiers__name">.success</h2>
-                    <p class="kss-modifiers__description">When the disclosure was a success</p>
-                    <div class="kss-modifiers__example"><section class="irma-web-qr-code success">
-  <!-- Image with QR code -->
-  <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAK8AAACvAQMAAACxXBw2AAAABlBMVEX///8AAABVwtN+AAAACXBIWXMAAA7EAAAOxAGVKw4bAAADOElEQVRIx+2XP2rlMBDGx6hQE+z2FQJdQ2miq+QINmmDZfPaYF/gQa6iNNE1BCpea5NGC8Kzo3WSYtlkkdtdFQb/DPoz8+mbMcA/PSRuGuTWOPSds5gqRF+MBdQgw4w2hIlbkKOFA9hMXAYctE/GQmKji4cwnFIzIojuBTF1f8Uc6l4RsTpcqkMYag6p77UXoFR6rD5PWYApsOoqukkF0b2qcOk+412AaWgM88S93BQEXD6zXIDlL4KTxtTqiM/r+waLMDwspJOhBwTaGw2noBjLMyUNl85KNmKEe3MEs6cKeZgAkjDoAGpl/Tf4bdLXVA0q4bqpgFmfxRjMwGnuWoFcrcZ8ZXw5bnvKzrpwmeAWkYKjy7FcWpJ9X2uUg8orqQOYvW36JJqFeza+kmxJv1COcSTP6FuObEXHLg2l6ACeI0/dpAUOt5H5fg/VF1jiijxVqwseKkeBhV0nRVg8kByzoIJoNTJcdDyAb1qIvq2BUrTxgOsuzUJMQeBh6DWjwIJg8xEs31a8irpzPqwxZ2aXfRmmufFEh1OI66sOz4gfSxZgeBhUxHVSnmRPjtpy5YuxaCZF8V4p3iaSWD9s/c+YFK1Pcly0l8sdh8eW63IszxRYpJtGRSDq9Ghwd80iLMwC1+xVIdDcLDVoD2AwpFgAzsKg6EHFzRdjlqpI1ltF6ev8bY7qAD5v+ur7XgFb7jRhi+VY3FBxTd2WHxiT6N7lU4Tl22xBVPnajK9K3LfwLabjXIUZHeD6w3k5wC77MvxUK0k6USGQNNl5jg7K8XnhMQw1WRi+WP9o3G5hRZhmc9QVjFb6KtICdOfLsXyC7Fzkv7jcAWlfYzlmQ614mEeLQHPTBuNeL4uwzB0JGxeQoiWdPKPb4/0Fnjd+ClPjIIyk0UtlYzlmS4VUhidgWd/h0jhdjuGmsVefLYj8H0NAjAcwmS3KzVifW258XriGYkwvZDxtY4McdBT3nYNy/KthpU5JeZGNh3zQHcBm0jG1VBQTNazyYj6crRArKtEzBjA/LPX+oL/HnLoCpL+U5oX0OX9YbxGGOu+kiYwNd9wL89nyF+CcE8nWkXRqqFF/P00h/j9+Hz8BKgnu5v9Z8jEAAAAASUVORK5CYII=" width=256 height=256/>
-  <!-- Default Dutch feedback messages -->
-  <p class="loading-text">Eén moment alsjeblieft</p>
-  <p class="waiting-for-user-text">Volg de instructies op je telefoon</p>
-  <p class="cancelled-text">Transactie is geannuleerd<br/><a href="#">Opnieuw proberen</a></p>
-  <p class="timeout-text">Transactie is verlopen<br/><a href="#">Opnieuw proberen</a></p>
-  <p class="error-text">Er is een fout opgetreden<br/><a href="#">Opnieuw proberen</a></p>
-  <p class="unsupported-text">Het spijt ons, maar je browser voldoet niet aan de minimale eisen</p>
-  <p class="success-text">Transactie voltooid!</p>
-</section></div>
-                  </article>
               </article>
 
                 <article class="kss-section__markup">
-                  <pre><code class="language-markup">&lt;section class&#x3D;&quot;irma-web-qr-code [modifier class]&quot;&gt;
+                  <pre><code class="language-markup">&lt;section class&#x3D;&quot;irma-web-qr-code&quot;&gt;
   &lt;!-- Image with QR code --&gt;
-  &lt;img src&#x3D;&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAK8AAACvAQMAAACxXBw2AAAABlBMVEX///8AAABVwtN+AAAACXBIWXMAAA7EAAAOxAGVKw4bAAADOElEQVRIx+2XP2rlMBDGx6hQE+z2FQJdQ2miq+QINmmDZfPaYF/gQa6iNNE1BCpea5NGC8Kzo3WSYtlkkdtdFQb/DPoz8+mbMcA/PSRuGuTWOPSds5gqRF+MBdQgw4w2hIlbkKOFA9hMXAYctE/GQmKji4cwnFIzIojuBTF1f8Uc6l4RsTpcqkMYag6p77UXoFR6rD5PWYApsOoqukkF0b2qcOk+412AaWgM88S93BQEXD6zXIDlL4KTxtTqiM/r+waLMDwspJOhBwTaGw2noBjLMyUNl85KNmKEe3MEs6cKeZgAkjDoAGpl/Tf4bdLXVA0q4bqpgFmfxRjMwGnuWoFcrcZ8ZXw5bnvKzrpwmeAWkYKjy7FcWpJ9X2uUg8orqQOYvW36JJqFeza+kmxJv1COcSTP6FuObEXHLg2l6ACeI0/dpAUOt5H5fg/VF1jiijxVqwseKkeBhV0nRVg8kByzoIJoNTJcdDyAb1qIvq2BUrTxgOsuzUJMQeBh6DWjwIJg8xEs31a8irpzPqwxZ2aXfRmmufFEh1OI66sOz4gfSxZgeBhUxHVSnmRPjtpy5YuxaCZF8V4p3iaSWD9s/c+YFK1Pcly0l8sdh8eW63IszxRYpJtGRSDq9Ghwd80iLMwC1+xVIdDcLDVoD2AwpFgAzsKg6EHFzRdjlqpI1ltF6ev8bY7qAD5v+ur7XgFb7jRhi+VY3FBxTd2WHxiT6N7lU4Tl22xBVPnajK9K3LfwLabjXIUZHeD6w3k5wC77MvxUK0k6USGQNNl5jg7K8XnhMQw1WRi+WP9o3G5hRZhmc9QVjFb6KtICdOfLsXyC7Fzkv7jcAWlfYzlmQ614mEeLQHPTBuNeL4uwzB0JGxeQoiWdPKPb4/0Fnjd+ClPjIIyk0UtlYzlmS4VUhidgWd/h0jhdjuGmsVefLYj8H0NAjAcwmS3KzVifW258XriGYkwvZDxtY4McdBT3nYNy/KthpU5JeZGNh3zQHcBm0jG1VBQTNazyYj6crRArKtEzBjA/LPX+oL/HnLoCpL+U5oX0OX9YbxGGOu+kiYwNd9wL89nyF+CcE8nWkXRqqFF/P00h/j9+Hz8BKgnu5v9Z8jEAAAAASUVORK5CYII&#x3D;&quot; width&#x3D;256 height&#x3D;256/&gt;
-  &lt;!-- Default Dutch feedback messages --&gt;
-  &lt;p class&#x3D;&quot;loading-text&quot;&gt;Eén moment alsjeblieft&lt;/p&gt;
-  &lt;p class&#x3D;&quot;waiting-for-user-text&quot;&gt;Volg de instructies op je telefoon&lt;/p&gt;
-  &lt;p class&#x3D;&quot;cancelled-text&quot;&gt;Transactie is geannuleerd&lt;br/&gt;&lt;a href&#x3D;&quot;#&quot;&gt;Opnieuw proberen&lt;/a&gt;&lt;/p&gt;
-  &lt;p class&#x3D;&quot;timeout-text&quot;&gt;Transactie is verlopen&lt;br/&gt;&lt;a href&#x3D;&quot;#&quot;&gt;Opnieuw proberen&lt;/a&gt;&lt;/p&gt;
-  &lt;p class&#x3D;&quot;error-text&quot;&gt;Er is een fout opgetreden&lt;br/&gt;&lt;a href&#x3D;&quot;#&quot;&gt;Opnieuw proberen&lt;/a&gt;&lt;/p&gt;
-  &lt;p class&#x3D;&quot;unsupported-text&quot;&gt;Het spijt ons, maar je browser voldoet niet aan de minimale eisen&lt;/p&gt;
-  &lt;p class&#x3D;&quot;success-text&quot;&gt;Transactie voltooid!&lt;/p&gt;
+  &lt;img src&#x3D;&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAK8AAACvAQMAAACxXBw2AAAABlBMVEX///8AAABVwtN+AAAACXBIWXMAAA7EAAAOxAGVKw4bAAADOElEQVRIx+2XP2rlMBDGx6hQE+z2FQJdQ2miq+QINmmDZfPaYF/gQa6iNNE1BCpea5NGC8Kzo3WSYtlkkdtdFQb/DPoz8+mbMcA/PSRuGuTWOPSds5gqRF+MBdQgw4w2hIlbkKOFA9hMXAYctE/GQmKji4cwnFIzIojuBTF1f8Uc6l4RsTpcqkMYag6p77UXoFR6rD5PWYApsOoqukkF0b2qcOk+412AaWgM88S93BQEXD6zXIDlL4KTxtTqiM/r+waLMDwspJOhBwTaGw2noBjLMyUNl85KNmKEe3MEs6cKeZgAkjDoAGpl/Tf4bdLXVA0q4bqpgFmfxRjMwGnuWoFcrcZ8ZXw5bnvKzrpwmeAWkYKjy7FcWpJ9X2uUg8orqQOYvW36JJqFeza+kmxJv1COcSTP6FuObEXHLg2l6ACeI0/dpAUOt5H5fg/VF1jiijxVqwseKkeBhV0nRVg8kByzoIJoNTJcdDyAb1qIvq2BUrTxgOsuzUJMQeBh6DWjwIJg8xEs31a8irpzPqwxZ2aXfRmmufFEh1OI66sOz4gfSxZgeBhUxHVSnmRPjtpy5YuxaCZF8V4p3iaSWD9s/c+YFK1Pcly0l8sdh8eW63IszxRYpJtGRSDq9Ghwd80iLMwC1+xVIdDcLDVoD2AwpFgAzsKg6EHFzRdjlqpI1ltF6ev8bY7qAD5v+ur7XgFb7jRhi+VY3FBxTd2WHxiT6N7lU4Tl22xBVPnajK9K3LfwLabjXIUZHeD6w3k5wC77MvxUK0k6USGQNNl5jg7K8XnhMQw1WRi+WP9o3G5hRZhmc9QVjFb6KtICdOfLsXyC7Fzkv7jcAWlfYzlmQ614mEeLQHPTBuNeL4uwzB0JGxeQoiWdPKPb4/0Fnjd+ClPjIIyk0UtlYzlmS4VUhidgWd/h0jhdjuGmsVefLYj8H0NAjAcwmS3KzVifW258XriGYkwvZDxtY4McdBT3nYNy/KthpU5JeZGNh3zQHcBm0jG1VBQTNazyYj6crRArKtEzBjA/LPX+oL/HnLoCpL+U5oX0OX9YbxGGOu+kiYwNd9wL89nyF+CcE8nWkXRqqFF/P00h/j9+Hz8BKgnu5v9Z8jEAAAAASUVORK5CYII&#x3D;&quot;/&gt;
 &lt;/section&gt;</code></pre>
                 </article>
 

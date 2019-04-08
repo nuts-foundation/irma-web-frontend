@@ -87,44 +87,18 @@
           the "root" element comes first in this loop, and can be detected using
           the "#if @first" block as seen below.
         -->
-            <header class="kss-section kss-section--depth-2" id="kssref-examples-complete-example">
+            <header class="kss-section kss-section--depth-3" id="kssref-examples-desktop-states-showing-qr-code">
 
             <article class="kss-section__content">
-                <p class="kss-section__source">Source: <span>examples/complete-example.scss</span>, line <span>1</span></p>
+                <p class="kss-section__source">Source: <span>examples/states.scss</span>, line <span>49</span></p>
 
-              <a class="kss-section__permalink" href="#kssref-examples-complete-example">
-                <h2 class="kss-section__item kss-section__item--depth-2">
-                  <span class="kss-section__ref">1.1</span>
-                  <span class="kss-section__name">State 1: Uninitialised</span>
-                </h2>
+              <a class="kss-section__permalink" href="#kssref-examples-desktop-states-showing-qr-code">
+                <h3 class="kss-section__item kss-section__item--depth-3">
+                  <span class="kss-section__ref">1.1.3</span>
+                  <span class="kss-section__name">State 3: Showing QR code</span>
+                </h3>
               </a>
 
-                <div class="kss-section__description"><p>Showing the whole QR code based disclosure flow</p>
-<ol>
-  <li><a onclick="document.querySelector('.irma-web-qr-code').className = 'irma-web-qr-code loading'">Uninitialised</a> (not a separate visual style)</li>
-  <li><a onclick="document.querySelector('.irma-web-qr-code').className = 'irma-web-qr-code loading'">Loading</a></li>
-  <li><a onclick="document.querySelector('.irma-web-qr-code').className = 'irma-web-qr-code'">Showing QR code</a> (the default style)</li>
-  <li><a onclick="document.querySelector('.irma-web-qr-code').className = 'irma-web-qr-code waiting-for-user'">Code scanned, continue on phone</a></li>
-  <li><a onclick="document.querySelector('.irma-web-qr-code').className = 'irma-web-qr-code cancelled'">Disclosure cancelled</a></li>
-  <li><a onclick="document.querySelector('.irma-web-qr-code').className = 'irma-web-qr-code timeout'">Disclosure timed out</a></li>
-  <li><a onclick="document.querySelector('.irma-web-qr-code').className = 'irma-web-qr-code error'">Disclosure errored</a></li>
-  <li><a onclick="document.querySelector('.irma-web-qr-code').className = 'irma-web-qr-code unsupported'">Browser is not supported</a></li>
-  <li><a onclick="document.querySelector('.irma-web-qr-code').className = 'irma-web-qr-code success'">Success</a></li>
-</ol>
-<pre><code>  &lt;!-- Default Dutch feedback messages --&gt;
-  &lt;div class=&quot;loading-animation irma-web-loading-animation&quot;&gt;&lt;i&gt;&lt;/i&gt;&lt;i&gt;&lt;/i&gt;&lt;i&gt;&lt;/i&gt;&lt;i&gt;&lt;/i&gt;&lt;i&gt;&lt;/i&gt;&lt;i&gt;&lt;/i&gt;&lt;i&gt;&lt;/i&gt;&lt;i&gt;&lt;/i&gt;&lt;i&gt;&lt;/i&gt;&lt;/div&gt;
-  &lt;p class=&quot;loading-text&quot;&gt;Eén moment alsjeblieft&lt;/p&gt;
-  &lt;div class=&quot;waiting-for-user-animation irma-web-waiting-for-user-animation&quot;&gt;&lt;/div&gt;
-  &lt;p class=&quot;waiting-for-user-text&quot;&gt;Volg de instructies op je telefoon&lt;/p&gt;
-  &lt;p class=&quot;cancelled-text&quot;&gt;Transactie is geannuleerd&lt;br/&gt;&lt;a href=&quot;#&quot;&gt;Opnieuw proberen&lt;/a&gt;&lt;/p&gt;
-  &lt;p class=&quot;timeout-text&quot;&gt;Transactie is verlopen&lt;br/&gt;&lt;a href=&quot;#&quot;&gt;Opnieuw proberen&lt;/a&gt;&lt;/p&gt;
-  &lt;p class=&quot;error-text&quot;&gt;Er is een fout opgetreden&lt;br/&gt;&lt;a href=&quot;#&quot;&gt;Opnieuw proberen&lt;/a&gt;&lt;/p&gt;
-  &lt;p class=&quot;unsupported-text&quot;&gt;Het spijt ons, maar je browser voldoet niet aan de minimale eisen&lt;/p&gt;
-  &lt;p class=&quot;success-text&quot;&gt;Transactie voltooid!&lt;/p&gt;
-&lt;/section&gt;
-</code></pre>
-  </section>
-</section></div>
 
             </article>
 
@@ -141,10 +115,6 @@
       <section class="centered irma-web-qr-code">
         <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAK8AAACvAQMAAACxXBw2AAAABlBMVEX///8AAABVwtN+AAAACXBIWXMAAA7EAAAOxAGVKw4bAAADOElEQVRIx+2XP2rlMBDGx6hQE+z2FQJdQ2miq+QINmmDZfPaYF/gQa6iNNE1BCpea5NGC8Kzo3WSYtlkkdtdFQb/DPoz8+mbMcA/PSRuGuTWOPSds5gqRF+MBdQgw4w2hIlbkKOFA9hMXAYctE/GQmKji4cwnFIzIojuBTF1f8Uc6l4RsTpcqkMYag6p77UXoFR6rD5PWYApsOoqukkF0b2qcOk+412AaWgM88S93BQEXD6zXIDlL4KTxtTqiM/r+waLMDwspJOhBwTaGw2noBjLMyUNl85KNmKEe3MEs6cKeZgAkjDoAGpl/Tf4bdLXVA0q4bqpgFmfxRjMwGnuWoFcrcZ8ZXw5bnvKzrpwmeAWkYKjy7FcWpJ9X2uUg8orqQOYvW36JJqFeza+kmxJv1COcSTP6FuObEXHLg2l6ACeI0/dpAUOt5H5fg/VF1jiijxVqwseKkeBhV0nRVg8kByzoIJoNTJcdDyAb1qIvq2BUrTxgOsuzUJMQeBh6DWjwIJg8xEs31a8irpzPqwxZ2aXfRmmufFEh1OI66sOz4gfSxZgeBhUxHVSnmRPjtpy5YuxaCZF8V4p3iaSWD9s/c+YFK1Pcly0l8sdh8eW63IszxRYpJtGRSDq9Ghwd80iLMwC1+xVIdDcLDVoD2AwpFgAzsKg6EHFzRdjlqpI1ltF6ev8bY7qAD5v+ur7XgFb7jRhi+VY3FBxTd2WHxiT6N7lU4Tl22xBVPnajK9K3LfwLabjXIUZHeD6w3k5wC77MvxUK0k6USGQNNl5jg7K8XnhMQw1WRi+WP9o3G5hRZhmc9QVjFb6KtICdOfLsXyC7Fzkv7jcAWlfYzlmQ614mEeLQHPTBuNeL4uwzB0JGxeQoiWdPKPb4/0Fnjd+ClPjIIyk0UtlYzlmS4VUhidgWd/h0jhdjuGmsVefLYj8H0NAjAcwmS3KzVifW258XriGYkwvZDxtY4McdBT3nYNy/KthpU5JeZGNh3zQHcBm0jG1VBQTNazyYj6crRArKtEzBjA/LPX+oL/HnLoCpL+U5oX0OX9YbxGGOu+kiYwNd9wL89nyF+CcE8nWkXRqqFF/P00h/j9+Hz8BKgnu5v9Z8jEAAAAASUVORK5CYII="/>
       </section>
-      <section class="centered">
-        <div class="irma-web-loading-animation"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
-        <p>Eén moment alsjeblieft</p>
-      </section>
     </section>
   </section>
 </section></div>
@@ -160,10 +130,6 @@
     &lt;section class&#x3D;&quot;content&quot;&gt;
       &lt;section class&#x3D;&quot;centered irma-web-qr-code&quot;&gt;
         &lt;img src&#x3D;&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAK8AAACvAQMAAACxXBw2AAAABlBMVEX///8AAABVwtN+AAAACXBIWXMAAA7EAAAOxAGVKw4bAAADOElEQVRIx+2XP2rlMBDGx6hQE+z2FQJdQ2miq+QINmmDZfPaYF/gQa6iNNE1BCpea5NGC8Kzo3WSYtlkkdtdFQb/DPoz8+mbMcA/PSRuGuTWOPSds5gqRF+MBdQgw4w2hIlbkKOFA9hMXAYctE/GQmKji4cwnFIzIojuBTF1f8Uc6l4RsTpcqkMYag6p77UXoFR6rD5PWYApsOoqukkF0b2qcOk+412AaWgM88S93BQEXD6zXIDlL4KTxtTqiM/r+waLMDwspJOhBwTaGw2noBjLMyUNl85KNmKEe3MEs6cKeZgAkjDoAGpl/Tf4bdLXVA0q4bqpgFmfxRjMwGnuWoFcrcZ8ZXw5bnvKzrpwmeAWkYKjy7FcWpJ9X2uUg8orqQOYvW36JJqFeza+kmxJv1COcSTP6FuObEXHLg2l6ACeI0/dpAUOt5H5fg/VF1jiijxVqwseKkeBhV0nRVg8kByzoIJoNTJcdDyAb1qIvq2BUrTxgOsuzUJMQeBh6DWjwIJg8xEs31a8irpzPqwxZ2aXfRmmufFEh1OI66sOz4gfSxZgeBhUxHVSnmRPjtpy5YuxaCZF8V4p3iaSWD9s/c+YFK1Pcly0l8sdh8eW63IszxRYpJtGRSDq9Ghwd80iLMwC1+xVIdDcLDVoD2AwpFgAzsKg6EHFzRdjlqpI1ltF6ev8bY7qAD5v+ur7XgFb7jRhi+VY3FBxTd2WHxiT6N7lU4Tl22xBVPnajK9K3LfwLabjXIUZHeD6w3k5wC77MvxUK0k6USGQNNl5jg7K8XnhMQw1WRi+WP9o3G5hRZhmc9QVjFb6KtICdOfLsXyC7Fzkv7jcAWlfYzlmQ614mEeLQHPTBuNeL4uwzB0JGxeQoiWdPKPb4/0Fnjd+ClPjIIyk0UtlYzlmS4VUhidgWd/h0jhdjuGmsVefLYj8H0NAjAcwmS3KzVifW258XriGYkwvZDxtY4McdBT3nYNy/KthpU5JeZGNh3zQHcBm0jG1VBQTNazyYj6crRArKtEzBjA/LPX+oL/HnLoCpL+U5oX0OX9YbxGGOu+kiYwNd9wL89nyF+CcE8nWkXRqqFF/P00h/j9+Hz8BKgnu5v9Z8jEAAAAASUVORK5CYII&#x3D;&quot;/&gt;
-      &lt;/section&gt;
-      &lt;section class&#x3D;&quot;centered&quot;&gt;
-        &lt;div class&#x3D;&quot;irma-web-loading-animation&quot;&gt;&lt;i&gt;&lt;/i&gt;&lt;i&gt;&lt;/i&gt;&lt;i&gt;&lt;/i&gt;&lt;i&gt;&lt;/i&gt;&lt;i&gt;&lt;/i&gt;&lt;i&gt;&lt;/i&gt;&lt;i&gt;&lt;/i&gt;&lt;i&gt;&lt;/i&gt;&lt;i&gt;&lt;/i&gt;&lt;/div&gt;
-        &lt;p&gt;Eén moment alsjeblieft&lt;/p&gt;
       &lt;/section&gt;
     &lt;/section&gt;
   &lt;/section&gt;
