@@ -1,0 +1,42 @@
+// IRMA button
+//
+// A button to press to launch the disclosure flow in the IRMA app (locally on a
+// mobile device)
+//
+// Markup:
+// <button class="irma-web-button">
+//   Open IRMA app
+// </button>
+// <a href="#" class="irma-web-button">
+//   Open IRMA app
+// </a>
+//
+// Styleguide Components.IRMA button
+
+@import '../mixins/reset',
+        '../mixins/fonts',
+        '../variables/colours';
+
+.irma-web-button {
+  @include reset;
+  @include font;
+  display: inline-block;
+  padding: 2.5em;
+
+  background-color: $irma-blue;
+  border: 1px solid darken($irma-blue, 10%);
+  border-radius: 10px;
+  box-shadow: 1px 1px 3px 0px rgba(0, 0, 0, 0.5);
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+
+  &:active {
+    transform: translate(1px, 1px);
+    box-shadow: -1px -1px 3px 0px rgba(0, 0, 0, 0.5);
+  }
+
+  &:focus {
+    outline: 0;
+  }
+}
