@@ -87,19 +87,23 @@
           the "root" element comes first in this loop, and can be detected using
           the "#if @first" block as seen below.
         -->
-            <header class="kss-section kss-section--depth-2" id="kssref-mixins-responsiveness">
+            <header class="kss-section kss-section--depth-3" id="kssref-mixins-animation-keyframes">
 
             <article class="kss-section__content">
-                <p class="kss-section__source">Source: <span>mixins/responsiveness.scss</span>, line <span>1</span></p>
+                <p class="kss-section__source">Source: <span>mixins/animation.scss</span>, line <span>44</span></p>
 
-              <a class="kss-section__permalink" href="#kssref-mixins-responsiveness">
-                <h2 class="kss-section__item kss-section__item--depth-2">
-                  <span class="kss-section__ref">3.4</span>
-                  <span class="kss-section__name">Responsiveness</span>
-                </h2>
+              <a class="kss-section__permalink" href="#kssref-mixins-animation-keyframes">
+                <h3 class="kss-section__item kss-section__item--depth-3">
+                  <span class="kss-section__ref">3.1.3</span>
+                  <span class="kss-section__name">keyframes($name) { ... }</span>
+                </h3>
               </a>
 
-                <div class="kss-section__description"><p>We'll probably want to revisit this some time soon, but for now it will get us going.</p>
+                <div class="kss-section__description"><p>A mixin for vendor prefixing the <code>@keyframes</code> declaration</p>
+<pre class="hljs"><code class="language-css">@<span class="hljs-keyword">include</span> keyframes(animation-name) {
+  // <span class="hljs-selector-tag">Your</span> <span class="hljs-selector-tag">animation</span> <span class="hljs-selector-tag">here</span>
+}
+</code></pre>
 </div>
 
             </article>
