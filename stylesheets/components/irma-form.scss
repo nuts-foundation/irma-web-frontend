@@ -32,24 +32,25 @@
         '../mixins/responsiveness',
         '../mixins/center',
         '../mixins/animation',
-        '../variables/colours';
+        '../variables/colours',
+        '../variables/sizes';
 
 .irma-web-form {
   @include reset;
   display: flex;
   flex-direction: column;
   width: 80%;
-  min-width: 266px;
+  min-width: $qr-code-size + 6px;
   max-width: 400px;
-  min-height: 480px;
+  min-height: $qr-code-size + 224px;
 
   @include on-small-screen {
-    min-height: 440px;
+    min-height: $qr-code-size + 184px;
   }
 
   background-color: $background-color;
   border: 1px solid $border-color;
-  border-radius: 10px;
+  border-radius: $border-radius;
 
   .header {
     @include reset;
@@ -61,6 +62,8 @@
     text-align: center;
     background-color: $background-color;
     border-bottom: 1px solid $border-color;
+    border-top-left-radius: $border-radius - 1;
+    border-top-right-radius: $border-radius - 1;
 
     @include on-small-screen {
       padding: 1em;

@@ -7,11 +7,14 @@
 //
 // Styleguide Components.QR code
 
+@import '../mixins/reset',
+        '../variables/sizes';
+
 .irma-web-qr-code {
   @include reset;
   display: block;
-  width: 256px;
-  height: 256px;
+  width: $qr-code-size;
+  height: $qr-code-size;
 
   background-color: white;
 }
