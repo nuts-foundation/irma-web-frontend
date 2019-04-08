@@ -9,6 +9,7 @@
 // Styleguide Animations.Waiting for user
 
 @import '../mixins/reset',
+        '../mixins/animation',
         '../variables/colours';
 
 .irma-web-waiting-for-user-animation {
@@ -44,20 +45,9 @@
     border-radius: 50%;
   }
 
-  -webkit-animation: waiting-for-user-animation 2s infinite ease-in-out;
-          animation: waiting-for-user-animation 2s infinite ease-in-out;
+  @include animation(waiting-for-user-animation 2s infinite ease-in-out);
 
-  @-webkit-keyframes waiting-for-user-animation {
-    0%, 100% {
-      -webkit-transform: scale3D(1, 1, 1);
-              transform: scale3D(1, 1, 1);
-    } 50% {
-      -webkit-transform: scale3D(0.8, 0.8, 1);
-              transform: scale3D(0.8, 0.8, 1);
-    }
-  }
-
-  @keyframes waiting-for-user-animation {
+  @include keyframes(waiting-for-user-animation) {
     0%, 100% {
       -webkit-transform: scale3D(1, 1, 1);
               transform: scale3D(1, 1, 1);
