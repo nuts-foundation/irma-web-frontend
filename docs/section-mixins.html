@@ -80,6 +80,12 @@
                         <span class="kss-nav__name">keyframes($name) { ... }</span>
                       </a>
                     </li>
+                    <li class="kss-nav__item kss-nav__item--grandchild">
+                      <a href="section-mixins.html#kssref-mixins-animation-transition">
+                        <span class="kss-nav__ref">3.1.4</span>
+                        <span class="kss-nav__name">transition($props);</span>
+                      </a>
+                    </li>
                     <li class="kss-nav__item ">
                       <a href="section-mixins.html#kssref-mixins-center">
                         <span class="kss-nav__ref">3.2</span>
@@ -271,6 +277,29 @@ leave the annoying vendor specific prefixing to the mixin.</p>
                 <div class="kss-section__description"><p>A mixin for vendor prefixing the <code>@keyframes</code> declaration</p>
 <pre class="hljs"><code class="language-css">@<span class="hljs-keyword">include</span> keyframes(animation-name) {
   // <span class="hljs-selector-tag">Your</span> <span class="hljs-selector-tag">animation</span> <span class="hljs-selector-tag">here</span>
+}
+</code></pre>
+</div>
+
+            </article>
+
+
+            </section>
+            <section class="kss-section kss-section--depth-3" id="kssref-mixins-animation-transition">
+
+            <article class="kss-section__content">
+                <p class="kss-section__source">Source: <span>mixins/animation.scss</span>, line <span>68</span></p>
+
+              <a class="kss-section__permalink" href="#kssref-mixins-animation-transition">
+                <h3 class="kss-section__item kss-section__item--depth-3">
+                  <span class="kss-section__ref">3.1.4</span>
+                  <span class="kss-section__name">transition($props);</span>
+                </h3>
+              </a>
+
+                <div class="kss-section__description"><p>A mixin for vendor prefixing transitions</p>
+<pre class="hljs"><code class="language-css"><span class="hljs-selector-class">.complicated-element</span> {
+  @include transition(transform 0.2s ease-in-out);
 }
 </code></pre>
 </div>

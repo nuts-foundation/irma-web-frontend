@@ -186,7 +186,12 @@
 
                 <div class="kss-section__description"><p>These examples show the different states that the disclosure flow can move
 through.</p>
-</div>
+<p>Helper triggers:</p>
+<ul>
+  <li><a href="javascript:document.querySelectorAll('.helper').forEach((h) => h.classList.add('active'))">Show helper</a></li>
+  <li><a href="javascript:document.querySelectorAll('.helper').forEach((h) => h.classList=['helper'])">Hide helper</a></li>
+  <li><a href="javascript:document.querySelectorAll('.helper').forEach((h) => h.classList.add('auto-activate'))">Auto-show helper after 10 seconds</a></li>
+</ul></div>
 
             </article>
 
@@ -195,7 +200,7 @@ through.</p>
             <section class="kss-section kss-section--depth-3" id="kssref-examples-states-uninitialised">
 
             <article class="kss-section__content">
-                <p class="kss-section__source">Source: <span>examples/states.scss</span>, line <span>8</span></p>
+                <p class="kss-section__source">Source: <span>examples/states.scss</span>, line <span>15</span></p>
 
               <a class="kss-section__permalink" href="#kssref-examples-states-uninitialised">
                 <h3 class="kss-section__item kss-section__item--depth-3">
@@ -217,6 +222,9 @@ through.</p>
       <p>Inloggen met <img src="https://raw.githubusercontent.com/privacybydesign/irma_mobile/master/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png"/></p>
     </header>
     <section class="content">
+      <section class="helper">
+        <p>Kom je er niet uit? Kijk dan eerst eens op <a href="https://privacybydesign.foundation/irma-begin/">de website van IRMA</a>.</p>
+      </section>
       <section class="centered">
         <div class="irma-web-loading-animation"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
         <p>Eén moment alsjeblieft</p>
@@ -234,6 +242,9 @@ through.</p>
       &lt;p&gt;Inloggen met &lt;img src&#x3D;&quot;https://raw.githubusercontent.com/privacybydesign/irma_mobile/master/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png&quot;/&gt;&lt;/p&gt;
     &lt;/header&gt;
     &lt;section class&#x3D;&quot;content&quot;&gt;
+      &lt;section class&#x3D;&quot;helper&quot;&gt;
+        &lt;p&gt;Kom je er niet uit? Kijk dan eerst eens op &lt;a href&#x3D;&quot;https://privacybydesign.foundation/irma-begin/&quot;&gt;de website van IRMA&lt;/a&gt;.&lt;/p&gt;
+      &lt;/section&gt;
       &lt;section class&#x3D;&quot;centered&quot;&gt;
         &lt;div class&#x3D;&quot;irma-web-loading-animation&quot;&gt;&lt;i&gt;&lt;/i&gt;&lt;i&gt;&lt;/i&gt;&lt;i&gt;&lt;/i&gt;&lt;i&gt;&lt;/i&gt;&lt;i&gt;&lt;/i&gt;&lt;i&gt;&lt;/i&gt;&lt;i&gt;&lt;/i&gt;&lt;i&gt;&lt;/i&gt;&lt;i&gt;&lt;/i&gt;&lt;/div&gt;
         &lt;p&gt;Eén moment alsjeblieft&lt;/p&gt;
@@ -247,7 +258,7 @@ through.</p>
             <section class="kss-section kss-section--depth-3" id="kssref-examples-states-loading">
 
             <article class="kss-section__content">
-                <p class="kss-section__source">Source: <span>examples/states.scss</span>, line <span>29</span></p>
+                <p class="kss-section__source">Source: <span>examples/states.scss</span>, line <span>39</span></p>
 
               <a class="kss-section__permalink" href="#kssref-examples-states-loading">
                 <h3 class="kss-section__item kss-section__item--depth-3">
@@ -269,6 +280,9 @@ through.</p>
       <p>Inloggen met <img src="https://raw.githubusercontent.com/privacybydesign/irma_mobile/master/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png"/></p>
     </header>
     <section class="content">
+      <section class="helper">
+        <p>Kom je er niet uit? Kijk dan eerst eens op <a href="https://privacybydesign.foundation/irma-begin/">de website van IRMA</a>.</p>
+      </section>
       <section class="centered">
         <div class="irma-web-loading-animation"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
         <p>Eén moment alsjeblieft</p>
@@ -286,6 +300,9 @@ through.</p>
       &lt;p&gt;Inloggen met &lt;img src&#x3D;&quot;https://raw.githubusercontent.com/privacybydesign/irma_mobile/master/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png&quot;/&gt;&lt;/p&gt;
     &lt;/header&gt;
     &lt;section class&#x3D;&quot;content&quot;&gt;
+      &lt;section class&#x3D;&quot;helper&quot;&gt;
+        &lt;p&gt;Kom je er niet uit? Kijk dan eerst eens op &lt;a href&#x3D;&quot;https://privacybydesign.foundation/irma-begin/&quot;&gt;de website van IRMA&lt;/a&gt;.&lt;/p&gt;
+      &lt;/section&gt;
       &lt;section class&#x3D;&quot;centered&quot;&gt;
         &lt;div class&#x3D;&quot;irma-web-loading-animation&quot;&gt;&lt;i&gt;&lt;/i&gt;&lt;i&gt;&lt;/i&gt;&lt;i&gt;&lt;/i&gt;&lt;i&gt;&lt;/i&gt;&lt;i&gt;&lt;/i&gt;&lt;i&gt;&lt;/i&gt;&lt;i&gt;&lt;/i&gt;&lt;i&gt;&lt;/i&gt;&lt;i&gt;&lt;/i&gt;&lt;/div&gt;
         &lt;p&gt;Eén moment alsjeblieft&lt;/p&gt;
@@ -299,7 +316,7 @@ through.</p>
             <section class="kss-section kss-section--depth-3" id="kssref-examples-states-showing-qr-code">
 
             <article class="kss-section__content">
-                <p class="kss-section__source">Source: <span>examples/states.scss</span>, line <span>50</span></p>
+                <p class="kss-section__source">Source: <span>examples/states.scss</span>, line <span>63</span></p>
 
               <a class="kss-section__permalink" href="#kssref-examples-states-showing-qr-code">
                 <h3 class="kss-section__item kss-section__item--depth-3">
@@ -321,8 +338,11 @@ through.</p>
       <p>Inloggen met <img src="https://raw.githubusercontent.com/privacybydesign/irma_mobile/master/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png"/></p>
     </header>
     <section class="content">
-      <section class="centered irma-web-qr-code">
-        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAK8AAACvAQMAAACxXBw2AAAABlBMVEX///8AAABVwtN+AAAACXBIWXMAAA7EAAAOxAGVKw4bAAADOElEQVRIx+2XP2rlMBDGx6hQE+z2FQJdQ2miq+QINmmDZfPaYF/gQa6iNNE1BCpea5NGC8Kzo3WSYtlkkdtdFQb/DPoz8+mbMcA/PSRuGuTWOPSds5gqRF+MBdQgw4w2hIlbkKOFA9hMXAYctE/GQmKji4cwnFIzIojuBTF1f8Uc6l4RsTpcqkMYag6p77UXoFR6rD5PWYApsOoqukkF0b2qcOk+412AaWgM88S93BQEXD6zXIDlL4KTxtTqiM/r+waLMDwspJOhBwTaGw2noBjLMyUNl85KNmKEe3MEs6cKeZgAkjDoAGpl/Tf4bdLXVA0q4bqpgFmfxRjMwGnuWoFcrcZ8ZXw5bnvKzrpwmeAWkYKjy7FcWpJ9X2uUg8orqQOYvW36JJqFeza+kmxJv1COcSTP6FuObEXHLg2l6ACeI0/dpAUOt5H5fg/VF1jiijxVqwseKkeBhV0nRVg8kByzoIJoNTJcdDyAb1qIvq2BUrTxgOsuzUJMQeBh6DWjwIJg8xEs31a8irpzPqwxZ2aXfRmmufFEh1OI66sOz4gfSxZgeBhUxHVSnmRPjtpy5YuxaCZF8V4p3iaSWD9s/c+YFK1Pcly0l8sdh8eW63IszxRYpJtGRSDq9Ghwd80iLMwC1+xVIdDcLDVoD2AwpFgAzsKg6EHFzRdjlqpI1ltF6ev8bY7qAD5v+ur7XgFb7jRhi+VY3FBxTd2WHxiT6N7lU4Tl22xBVPnajK9K3LfwLabjXIUZHeD6w3k5wC77MvxUK0k6USGQNNl5jg7K8XnhMQw1WRi+WP9o3G5hRZhmc9QVjFb6KtICdOfLsXyC7Fzkv7jcAWlfYzlmQ614mEeLQHPTBuNeL4uwzB0JGxeQoiWdPKPb4/0Fnjd+ClPjIIyk0UtlYzlmS4VUhidgWd/h0jhdjuGmsVefLYj8H0NAjAcwmS3KzVifW258XriGYkwvZDxtY4McdBT3nYNy/KthpU5JeZGNh3zQHcBm0jG1VBQTNazyYj6crRArKtEzBjA/LPX+oL/HnLoCpL+U5oX0OX9YbxGGOu+kiYwNd9wL89nyF+CcE8nWkXRqqFF/P00h/j9+Hz8BKgnu5v9Z8jEAAAAASUVORK5CYII="/>
+      <section class="helper">
+        <p>Kom je er niet uit? Kijk dan eerst eens op <a href="https://privacybydesign.foundation/irma-begin/">de website van IRMA</a>.</p>
+      </section>
+      <section class="centered">
+        <img class="irma-web-qr-code" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAK8AAACvAQMAAACxXBw2AAAABlBMVEX///8AAABVwtN+AAAACXBIWXMAAA7EAAAOxAGVKw4bAAADOElEQVRIx+2XP2rlMBDGx6hQE+z2FQJdQ2miq+QINmmDZfPaYF/gQa6iNNE1BCpea5NGC8Kzo3WSYtlkkdtdFQb/DPoz8+mbMcA/PSRuGuTWOPSds5gqRF+MBdQgw4w2hIlbkKOFA9hMXAYctE/GQmKji4cwnFIzIojuBTF1f8Uc6l4RsTpcqkMYag6p77UXoFR6rD5PWYApsOoqukkF0b2qcOk+412AaWgM88S93BQEXD6zXIDlL4KTxtTqiM/r+waLMDwspJOhBwTaGw2noBjLMyUNl85KNmKEe3MEs6cKeZgAkjDoAGpl/Tf4bdLXVA0q4bqpgFmfxRjMwGnuWoFcrcZ8ZXw5bnvKzrpwmeAWkYKjy7FcWpJ9X2uUg8orqQOYvW36JJqFeza+kmxJv1COcSTP6FuObEXHLg2l6ACeI0/dpAUOt5H5fg/VF1jiijxVqwseKkeBhV0nRVg8kByzoIJoNTJcdDyAb1qIvq2BUrTxgOsuzUJMQeBh6DWjwIJg8xEs31a8irpzPqwxZ2aXfRmmufFEh1OI66sOz4gfSxZgeBhUxHVSnmRPjtpy5YuxaCZF8V4p3iaSWD9s/c+YFK1Pcly0l8sdh8eW63IszxRYpJtGRSDq9Ghwd80iLMwC1+xVIdDcLDVoD2AwpFgAzsKg6EHFzRdjlqpI1ltF6ev8bY7qAD5v+ur7XgFb7jRhi+VY3FBxTd2WHxiT6N7lU4Tl22xBVPnajK9K3LfwLabjXIUZHeD6w3k5wC77MvxUK0k6USGQNNl5jg7K8XnhMQw1WRi+WP9o3G5hRZhmc9QVjFb6KtICdOfLsXyC7Fzkv7jcAWlfYzlmQ614mEeLQHPTBuNeL4uwzB0JGxeQoiWdPKPb4/0Fnjd+ClPjIIyk0UtlYzlmS4VUhidgWd/h0jhdjuGmsVefLYj8H0NAjAcwmS3KzVifW258XriGYkwvZDxtY4McdBT3nYNy/KthpU5JeZGNh3zQHcBm0jG1VBQTNazyYj6crRArKtEzBjA/LPX+oL/HnLoCpL+U5oX0OX9YbxGGOu+kiYwNd9wL89nyF+CcE8nWkXRqqFF/P00h/j9+Hz8BKgnu5v9Z8jEAAAAASUVORK5CYII="/>
       </section>
     </section>
   </section>
@@ -337,8 +357,11 @@ through.</p>
       &lt;p&gt;Inloggen met &lt;img src&#x3D;&quot;https://raw.githubusercontent.com/privacybydesign/irma_mobile/master/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png&quot;/&gt;&lt;/p&gt;
     &lt;/header&gt;
     &lt;section class&#x3D;&quot;content&quot;&gt;
-      &lt;section class&#x3D;&quot;centered irma-web-qr-code&quot;&gt;
-        &lt;img src&#x3D;&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAK8AAACvAQMAAACxXBw2AAAABlBMVEX///8AAABVwtN+AAAACXBIWXMAAA7EAAAOxAGVKw4bAAADOElEQVRIx+2XP2rlMBDGx6hQE+z2FQJdQ2miq+QINmmDZfPaYF/gQa6iNNE1BCpea5NGC8Kzo3WSYtlkkdtdFQb/DPoz8+mbMcA/PSRuGuTWOPSds5gqRF+MBdQgw4w2hIlbkKOFA9hMXAYctE/GQmKji4cwnFIzIojuBTF1f8Uc6l4RsTpcqkMYag6p77UXoFR6rD5PWYApsOoqukkF0b2qcOk+412AaWgM88S93BQEXD6zXIDlL4KTxtTqiM/r+waLMDwspJOhBwTaGw2noBjLMyUNl85KNmKEe3MEs6cKeZgAkjDoAGpl/Tf4bdLXVA0q4bqpgFmfxRjMwGnuWoFcrcZ8ZXw5bnvKzrpwmeAWkYKjy7FcWpJ9X2uUg8orqQOYvW36JJqFeza+kmxJv1COcSTP6FuObEXHLg2l6ACeI0/dpAUOt5H5fg/VF1jiijxVqwseKkeBhV0nRVg8kByzoIJoNTJcdDyAb1qIvq2BUrTxgOsuzUJMQeBh6DWjwIJg8xEs31a8irpzPqwxZ2aXfRmmufFEh1OI66sOz4gfSxZgeBhUxHVSnmRPjtpy5YuxaCZF8V4p3iaSWD9s/c+YFK1Pcly0l8sdh8eW63IszxRYpJtGRSDq9Ghwd80iLMwC1+xVIdDcLDVoD2AwpFgAzsKg6EHFzRdjlqpI1ltF6ev8bY7qAD5v+ur7XgFb7jRhi+VY3FBxTd2WHxiT6N7lU4Tl22xBVPnajK9K3LfwLabjXIUZHeD6w3k5wC77MvxUK0k6USGQNNl5jg7K8XnhMQw1WRi+WP9o3G5hRZhmc9QVjFb6KtICdOfLsXyC7Fzkv7jcAWlfYzlmQ614mEeLQHPTBuNeL4uwzB0JGxeQoiWdPKPb4/0Fnjd+ClPjIIyk0UtlYzlmS4VUhidgWd/h0jhdjuGmsVefLYj8H0NAjAcwmS3KzVifW258XriGYkwvZDxtY4McdBT3nYNy/KthpU5JeZGNh3zQHcBm0jG1VBQTNazyYj6crRArKtEzBjA/LPX+oL/HnLoCpL+U5oX0OX9YbxGGOu+kiYwNd9wL89nyF+CcE8nWkXRqqFF/P00h/j9+Hz8BKgnu5v9Z8jEAAAAASUVORK5CYII&#x3D;&quot;/&gt;
+      &lt;section class&#x3D;&quot;helper&quot;&gt;
+        &lt;p&gt;Kom je er niet uit? Kijk dan eerst eens op &lt;a href&#x3D;&quot;https://privacybydesign.foundation/irma-begin/&quot;&gt;de website van IRMA&lt;/a&gt;.&lt;/p&gt;
+      &lt;/section&gt;
+      &lt;section class&#x3D;&quot;centered&quot;&gt;
+        &lt;img class&#x3D;&quot;irma-web-qr-code&quot; src&#x3D;&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAK8AAACvAQMAAACxXBw2AAAABlBMVEX///8AAABVwtN+AAAACXBIWXMAAA7EAAAOxAGVKw4bAAADOElEQVRIx+2XP2rlMBDGx6hQE+z2FQJdQ2miq+QINmmDZfPaYF/gQa6iNNE1BCpea5NGC8Kzo3WSYtlkkdtdFQb/DPoz8+mbMcA/PSRuGuTWOPSds5gqRF+MBdQgw4w2hIlbkKOFA9hMXAYctE/GQmKji4cwnFIzIojuBTF1f8Uc6l4RsTpcqkMYag6p77UXoFR6rD5PWYApsOoqukkF0b2qcOk+412AaWgM88S93BQEXD6zXIDlL4KTxtTqiM/r+waLMDwspJOhBwTaGw2noBjLMyUNl85KNmKEe3MEs6cKeZgAkjDoAGpl/Tf4bdLXVA0q4bqpgFmfxRjMwGnuWoFcrcZ8ZXw5bnvKzrpwmeAWkYKjy7FcWpJ9X2uUg8orqQOYvW36JJqFeza+kmxJv1COcSTP6FuObEXHLg2l6ACeI0/dpAUOt5H5fg/VF1jiijxVqwseKkeBhV0nRVg8kByzoIJoNTJcdDyAb1qIvq2BUrTxgOsuzUJMQeBh6DWjwIJg8xEs31a8irpzPqwxZ2aXfRmmufFEh1OI66sOz4gfSxZgeBhUxHVSnmRPjtpy5YuxaCZF8V4p3iaSWD9s/c+YFK1Pcly0l8sdh8eW63IszxRYpJtGRSDq9Ghwd80iLMwC1+xVIdDcLDVoD2AwpFgAzsKg6EHFzRdjlqpI1ltF6ev8bY7qAD5v+ur7XgFb7jRhi+VY3FBxTd2WHxiT6N7lU4Tl22xBVPnajK9K3LfwLabjXIUZHeD6w3k5wC77MvxUK0k6USGQNNl5jg7K8XnhMQw1WRi+WP9o3G5hRZhmc9QVjFb6KtICdOfLsXyC7Fzkv7jcAWlfYzlmQ614mEeLQHPTBuNeL4uwzB0JGxeQoiWdPKPb4/0Fnjd+ClPjIIyk0UtlYzlmS4VUhidgWd/h0jhdjuGmsVefLYj8H0NAjAcwmS3KzVifW258XriGYkwvZDxtY4McdBT3nYNy/KthpU5JeZGNh3zQHcBm0jG1VBQTNazyYj6crRArKtEzBjA/LPX+oL/HnLoCpL+U5oX0OX9YbxGGOu+kiYwNd9wL89nyF+CcE8nWkXRqqFF/P00h/j9+Hz8BKgnu5v9Z8jEAAAAASUVORK5CYII&#x3D;&quot;/&gt;
       &lt;/section&gt;
     &lt;/section&gt;
   &lt;/section&gt;
@@ -349,7 +372,7 @@ through.</p>
             <section class="kss-section kss-section--depth-3" id="kssref-examples-states-showing-irma-button">
 
             <article class="kss-section__content">
-                <p class="kss-section__source">Source: <span>examples/states.scss</span>, line <span>70</span></p>
+                <p class="kss-section__source">Source: <span>examples/states.scss</span>, line <span>86</span></p>
 
               <a class="kss-section__permalink" href="#kssref-examples-states-showing-irma-button">
                 <h3 class="kss-section__item kss-section__item--depth-3">
@@ -371,6 +394,9 @@ through.</p>
       <p>Inloggen met <img src="https://raw.githubusercontent.com/privacybydesign/irma_mobile/master/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png"/></p>
     </header>
     <section class="content">
+      <section class="helper">
+        <p>Kom je er niet uit? Kijk dan eerst eens op <a href="https://privacybydesign.foundation/irma-begin/">de website van IRMA</a>.</p>
+      </section>
       <section class="centered">
         <button class="irma-web-button">Open IRMA app</button>
         <p><a href="#">Toon QR code</a></p>
@@ -388,6 +414,9 @@ through.</p>
       &lt;p&gt;Inloggen met &lt;img src&#x3D;&quot;https://raw.githubusercontent.com/privacybydesign/irma_mobile/master/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png&quot;/&gt;&lt;/p&gt;
     &lt;/header&gt;
     &lt;section class&#x3D;&quot;content&quot;&gt;
+      &lt;section class&#x3D;&quot;helper&quot;&gt;
+        &lt;p&gt;Kom je er niet uit? Kijk dan eerst eens op &lt;a href&#x3D;&quot;https://privacybydesign.foundation/irma-begin/&quot;&gt;de website van IRMA&lt;/a&gt;.&lt;/p&gt;
+      &lt;/section&gt;
       &lt;section class&#x3D;&quot;centered&quot;&gt;
         &lt;button class&#x3D;&quot;irma-web-button&quot;&gt;Open IRMA app&lt;/button&gt;
         &lt;p&gt;&lt;a href&#x3D;&quot;#&quot;&gt;Toon QR code&lt;/a&gt;&lt;/p&gt;
@@ -401,7 +430,7 @@ through.</p>
             <section class="kss-section kss-section--depth-3" id="kssref-examples-states-code-scanned-continue-on-phone">
 
             <article class="kss-section__content">
-                <p class="kss-section__source">Source: <span>examples/states.scss</span>, line <span>91</span></p>
+                <p class="kss-section__source">Source: <span>examples/states.scss</span>, line <span>110</span></p>
 
               <a class="kss-section__permalink" href="#kssref-examples-states-code-scanned-continue-on-phone">
                 <h3 class="kss-section__item kss-section__item--depth-3">
@@ -423,6 +452,9 @@ through.</p>
       <p>Inloggen met <img src="https://raw.githubusercontent.com/privacybydesign/irma_mobile/master/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png"/></p>
     </header>
     <section class="content">
+      <section class="helper">
+        <p>Kom je er niet uit? Kijk dan eerst eens op <a href="https://privacybydesign.foundation/irma-begin/">de website van IRMA</a>.</p>
+      </section>
       <section class="centered">
         <div class="irma-web-waiting-for-user-animation"></div>
         <p>Volg de instructies op je telefoon</p>
@@ -440,6 +472,9 @@ through.</p>
       &lt;p&gt;Inloggen met &lt;img src&#x3D;&quot;https://raw.githubusercontent.com/privacybydesign/irma_mobile/master/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png&quot;/&gt;&lt;/p&gt;
     &lt;/header&gt;
     &lt;section class&#x3D;&quot;content&quot;&gt;
+      &lt;section class&#x3D;&quot;helper&quot;&gt;
+        &lt;p&gt;Kom je er niet uit? Kijk dan eerst eens op &lt;a href&#x3D;&quot;https://privacybydesign.foundation/irma-begin/&quot;&gt;de website van IRMA&lt;/a&gt;.&lt;/p&gt;
+      &lt;/section&gt;
       &lt;section class&#x3D;&quot;centered&quot;&gt;
         &lt;div class&#x3D;&quot;irma-web-waiting-for-user-animation&quot;&gt;&lt;/div&gt;
         &lt;p&gt;Volg de instructies op je telefoon&lt;/p&gt;
@@ -453,7 +488,7 @@ through.</p>
             <section class="kss-section kss-section--depth-3" id="kssref-examples-states-disclosure-cancelled">
 
             <article class="kss-section__content">
-                <p class="kss-section__source">Source: <span>examples/states.scss</span>, line <span>112</span></p>
+                <p class="kss-section__source">Source: <span>examples/states.scss</span>, line <span>134</span></p>
 
               <a class="kss-section__permalink" href="#kssref-examples-states-disclosure-cancelled">
                 <h3 class="kss-section__item kss-section__item--depth-3">
@@ -475,6 +510,9 @@ through.</p>
       <p>Inloggen met <img src="https://raw.githubusercontent.com/privacybydesign/irma_mobile/master/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png"/></p>
     </header>
     <section class="content">
+      <section class="helper">
+        <p>Kom je er niet uit? Kijk dan eerst eens op <a href="https://privacybydesign.foundation/irma-begin/">de website van IRMA</a>.</p>
+      </section>
       <section class="centered">
         <p>Transactie is geannuleerd</p>
         <p><a href="#">Opnieuw proberen</a></p>
@@ -492,6 +530,9 @@ through.</p>
       &lt;p&gt;Inloggen met &lt;img src&#x3D;&quot;https://raw.githubusercontent.com/privacybydesign/irma_mobile/master/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png&quot;/&gt;&lt;/p&gt;
     &lt;/header&gt;
     &lt;section class&#x3D;&quot;content&quot;&gt;
+      &lt;section class&#x3D;&quot;helper&quot;&gt;
+        &lt;p&gt;Kom je er niet uit? Kijk dan eerst eens op &lt;a href&#x3D;&quot;https://privacybydesign.foundation/irma-begin/&quot;&gt;de website van IRMA&lt;/a&gt;.&lt;/p&gt;
+      &lt;/section&gt;
       &lt;section class&#x3D;&quot;centered&quot;&gt;
         &lt;p&gt;Transactie is geannuleerd&lt;/p&gt;
         &lt;p&gt;&lt;a href&#x3D;&quot;#&quot;&gt;Opnieuw proberen&lt;/a&gt;&lt;/p&gt;
@@ -505,7 +546,7 @@ through.</p>
             <section class="kss-section kss-section--depth-3" id="kssref-examples-states-disclosure-timed-out">
 
             <article class="kss-section__content">
-                <p class="kss-section__source">Source: <span>examples/states.scss</span>, line <span>133</span></p>
+                <p class="kss-section__source">Source: <span>examples/states.scss</span>, line <span>158</span></p>
 
               <a class="kss-section__permalink" href="#kssref-examples-states-disclosure-timed-out">
                 <h3 class="kss-section__item kss-section__item--depth-3">
@@ -527,6 +568,9 @@ through.</p>
       <p>Inloggen met <img src="https://raw.githubusercontent.com/privacybydesign/irma_mobile/master/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png"/></p>
     </header>
     <section class="content">
+      <section class="helper">
+        <p>Kom je er niet uit? Kijk dan eerst eens op <a href="https://privacybydesign.foundation/irma-begin/">de website van IRMA</a>.</p>
+      </section>
       <section class="centered">
         <p>Transactie is verlopen</p>
         <p><a href="#">Opnieuw proberen</a></p>
@@ -544,6 +588,9 @@ through.</p>
       &lt;p&gt;Inloggen met &lt;img src&#x3D;&quot;https://raw.githubusercontent.com/privacybydesign/irma_mobile/master/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png&quot;/&gt;&lt;/p&gt;
     &lt;/header&gt;
     &lt;section class&#x3D;&quot;content&quot;&gt;
+      &lt;section class&#x3D;&quot;helper&quot;&gt;
+        &lt;p&gt;Kom je er niet uit? Kijk dan eerst eens op &lt;a href&#x3D;&quot;https://privacybydesign.foundation/irma-begin/&quot;&gt;de website van IRMA&lt;/a&gt;.&lt;/p&gt;
+      &lt;/section&gt;
       &lt;section class&#x3D;&quot;centered&quot;&gt;
         &lt;p&gt;Transactie is verlopen&lt;/p&gt;
         &lt;p&gt;&lt;a href&#x3D;&quot;#&quot;&gt;Opnieuw proberen&lt;/a&gt;&lt;/p&gt;
@@ -557,7 +604,7 @@ through.</p>
             <section class="kss-section kss-section--depth-3" id="kssref-examples-states-disclosure-errored">
 
             <article class="kss-section__content">
-                <p class="kss-section__source">Source: <span>examples/states.scss</span>, line <span>154</span></p>
+                <p class="kss-section__source">Source: <span>examples/states.scss</span>, line <span>182</span></p>
 
               <a class="kss-section__permalink" href="#kssref-examples-states-disclosure-errored">
                 <h3 class="kss-section__item kss-section__item--depth-3">
@@ -579,6 +626,9 @@ through.</p>
       <p>Inloggen met <img src="https://raw.githubusercontent.com/privacybydesign/irma_mobile/master/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png"/></p>
     </header>
     <section class="content">
+      <section class="helper">
+        <p>Kom je er niet uit? Kijk dan eerst eens op <a href="https://privacybydesign.foundation/irma-begin/">de website van IRMA</a>.</p>
+      </section>
       <section class="centered">
         <p>Er is een fout opgetreden</p>
         <p><a href="#">Opnieuw proberen</a></p>
@@ -596,6 +646,9 @@ through.</p>
       &lt;p&gt;Inloggen met &lt;img src&#x3D;&quot;https://raw.githubusercontent.com/privacybydesign/irma_mobile/master/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png&quot;/&gt;&lt;/p&gt;
     &lt;/header&gt;
     &lt;section class&#x3D;&quot;content&quot;&gt;
+      &lt;section class&#x3D;&quot;helper&quot;&gt;
+        &lt;p&gt;Kom je er niet uit? Kijk dan eerst eens op &lt;a href&#x3D;&quot;https://privacybydesign.foundation/irma-begin/&quot;&gt;de website van IRMA&lt;/a&gt;.&lt;/p&gt;
+      &lt;/section&gt;
       &lt;section class&#x3D;&quot;centered&quot;&gt;
         &lt;p&gt;Er is een fout opgetreden&lt;/p&gt;
         &lt;p&gt;&lt;a href&#x3D;&quot;#&quot;&gt;Opnieuw proberen&lt;/a&gt;&lt;/p&gt;
@@ -609,7 +662,7 @@ through.</p>
             <section class="kss-section kss-section--depth-3" id="kssref-examples-states-browser-is-not-supported">
 
             <article class="kss-section__content">
-                <p class="kss-section__source">Source: <span>examples/states.scss</span>, line <span>175</span></p>
+                <p class="kss-section__source">Source: <span>examples/states.scss</span>, line <span>206</span></p>
 
               <a class="kss-section__permalink" href="#kssref-examples-states-browser-is-not-supported">
                 <h3 class="kss-section__item kss-section__item--depth-3">
@@ -631,6 +684,9 @@ through.</p>
       <p>Inloggen met <img src="https://raw.githubusercontent.com/privacybydesign/irma_mobile/master/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png"/></p>
     </header>
     <section class="content">
+      <section class="helper">
+        <p>Kom je er niet uit? Kijk dan eerst eens op <a href="https://privacybydesign.foundation/irma-begin/">de website van IRMA</a>.</p>
+      </section>
       <section class="centered">
         <p>Het spijt ons, maar je browser voldoet niet aan de minimale eisen</p>
       </section>
@@ -647,6 +703,9 @@ through.</p>
       &lt;p&gt;Inloggen met &lt;img src&#x3D;&quot;https://raw.githubusercontent.com/privacybydesign/irma_mobile/master/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png&quot;/&gt;&lt;/p&gt;
     &lt;/header&gt;
     &lt;section class&#x3D;&quot;content&quot;&gt;
+      &lt;section class&#x3D;&quot;helper&quot;&gt;
+        &lt;p&gt;Kom je er niet uit? Kijk dan eerst eens op &lt;a href&#x3D;&quot;https://privacybydesign.foundation/irma-begin/&quot;&gt;de website van IRMA&lt;/a&gt;.&lt;/p&gt;
+      &lt;/section&gt;
       &lt;section class&#x3D;&quot;centered&quot;&gt;
         &lt;p&gt;Het spijt ons, maar je browser voldoet niet aan de minimale eisen&lt;/p&gt;
       &lt;/section&gt;
@@ -659,7 +718,7 @@ through.</p>
             <section class="kss-section kss-section--depth-3" id="kssref-examples-states-success">
 
             <article class="kss-section__content">
-                <p class="kss-section__source">Source: <span>examples/states.scss</span>, line <span>195</span></p>
+                <p class="kss-section__source">Source: <span>examples/states.scss</span>, line <span>229</span></p>
 
               <a class="kss-section__permalink" href="#kssref-examples-states-success">
                 <h3 class="kss-section__item kss-section__item--depth-3">
@@ -681,6 +740,9 @@ through.</p>
       <p>Inloggen met <img src="https://raw.githubusercontent.com/privacybydesign/irma_mobile/master/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png"/></p>
     </header>
     <section class="content">
+      <section class="helper">
+        <p>Kom je er niet uit? Kijk dan eerst eens op <a href="https://privacybydesign.foundation/irma-begin/">de website van IRMA</a>.</p>
+      </section>
       <section class="centered">
         <p>Transactie voltooid!</p>
       </section>
@@ -697,6 +759,9 @@ through.</p>
       &lt;p&gt;Inloggen met &lt;img src&#x3D;&quot;https://raw.githubusercontent.com/privacybydesign/irma_mobile/master/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png&quot;/&gt;&lt;/p&gt;
     &lt;/header&gt;
     &lt;section class&#x3D;&quot;content&quot;&gt;
+      &lt;section class&#x3D;&quot;helper&quot;&gt;
+        &lt;p&gt;Kom je er niet uit? Kijk dan eerst eens op &lt;a href&#x3D;&quot;https://privacybydesign.foundation/irma-begin/&quot;&gt;de website van IRMA&lt;/a&gt;.&lt;/p&gt;
+      &lt;/section&gt;
       &lt;section class&#x3D;&quot;centered&quot;&gt;
         &lt;p&gt;Transactie voltooid!&lt;/p&gt;
       &lt;/section&gt;
