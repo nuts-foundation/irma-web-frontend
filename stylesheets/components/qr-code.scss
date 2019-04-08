@@ -38,35 +38,34 @@
 
   // The QR code itself should nicely fit its parent
 
-  img {
+  & > img {
     @include reset;
     width: 256px;
     height: 256px;
   }
 
-  // The other states generally have an icon and a text. The icon lives in a
-  // before pseudo-element, the text in a paragraph
+  // The other states generally have an icon and a text. The icon is a `div`,
+  // the text is a `p`. They are hidden by default.
 
-  &:before {
-    content: ' ';
+  & > div {
     position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
+    left: 50%;
+    top: 33%;
 
-    background-repeat: no-repeat;
+    display: none;
   }
 
-  p {
+  & > p {
     @include reset;
     @include font($color: $subtle-text-color, $size: 15px);
     position: absolute;
-    top: 65%;
+    top: 60%;
     left: 0;
     width: 100%;
     padding: 0 1em;
     text-align: center;
+
+    display: none;
 
     a {
       @include reset;
@@ -77,18 +76,6 @@
         color: $irma-blue;
       }
     }
-  }
-
-  // Hide state texts by default
-
-  .loading-text,
-  .waiting-for-user-text,
-  .cancelled-text,
-  .timeout-text,
-  .error-text,
-  .unsupported-text,
-  .success-text {
-    display: none;
   }
 
   // Hide QR code if in a feedback state
@@ -105,27 +92,25 @@
     }
   }
 
-  // Feedback states
+  // Specifics for feedback states
 
   &.loading {
-    &:before {
-      // background-image: url($gif-image-waiting-animation);
-      background-size: 30%;
-      background-position: center 75px;
-    }
     .loading-text {
       display: initial;
+    }
+    .loading-animation {
+      display: initial;
+      margin-left: -19px;
     }
   }
 
   &.waiting-for-user {
-    &:before {
-      // background-image: svg-url($svg-image-irma-app);
-      background-size: 20%;
-      background-position: center 65px;
-    }
     .waiting-for-user-text {
       display: initial;
+    }
+    .waiting-for-user-animation {
+      display: initial;
+      margin-left: -15px;
     }
   }
 

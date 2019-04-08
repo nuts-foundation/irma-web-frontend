@@ -19,6 +19,7 @@
   height: 39px;
 
   * {
+    @include reset;
     display: block;
     width: 33%;
     height: 33%;
