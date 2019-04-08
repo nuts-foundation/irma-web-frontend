@@ -32,7 +32,7 @@
     border-right: 0;
     transform: translate(0px, 18px) rotate(-45deg);
     transform-origin: left top;
-    @include animation(checkmark-animation 2s infinite ease);
+    @include animation(checkmark-animation 0.6s 1 ease);
   }
 
   @include keyframes(checkmark-animation) {
@@ -41,14 +41,9 @@
       width: 0;
       opacity: 1;
     }
-    15% {
+    50% {
       height: $check-height;
       width: 0;
-      opacity: 1;
-    }
-    30% {
-      height: $check-height;
-      width: $check-width;
       opacity: 1;
     }
     100% {
