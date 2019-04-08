@@ -1,6 +1,13 @@
 // IRMA 'login form'
 //
-// A place to nicely show the different states of the IRMA disclosure flow
+// A place to nicely show the different states of the IRMA disclosure flow.
+//
+// Helper triggers:
+// <ul>
+//   <li><a href="javascript:document.querySelectorAll('.helper').forEach((h) => h.classList.add('active'))">Show helper</a></li>
+//   <li><a href="javascript:document.querySelectorAll('.helper').forEach((h) => h.classList=['helper'])">Hide helper</a></li>
+//   <li><a href="javascript:document.querySelectorAll('.helper').forEach((h) => h.classList.add('auto-activate'))">Auto-show helper after 10 seconds</a></li>
+// </ul>
 //
 // Markup:
 // <section class="irma-web-form">
@@ -8,6 +15,9 @@
 //     <p>Inloggen met <img src="https://raw.githubusercontent.com/privacybydesign/irma_mobile/master/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png"/></p>
 //   </header>
 //   <section class="content">
+//     <section class="helper">
+//       <p>Kom je er niet uit? Kijk dan eerst eens op <a href="https://privacybydesign.foundation/irma-begin/">de website van IRMA</a>.</p>
+//     </section>
 //     <section class="centered">
 //       <button>Some action here</button>
 //       <p>With some text <a href="#">and stuff</a></p>
@@ -21,6 +31,7 @@
         '../mixins/fonts',
         '../mixins/responsiveness',
         '../mixins/center',
+        '../mixins/animation',
         '../variables/colours';
 
 .irma-web-form {
@@ -33,7 +44,7 @@
   min-height: 480px;
 
   @include on-small-screen {
-    min-height: 430px;
+    min-height: 440px;
   }
 
   background-color: $background-color;
@@ -45,8 +56,10 @@
     flex: 0 0 auto;
     padding: 2em;
     margin: 0 3px;
+    z-index: 1;
 
     text-align: center;
+    background-color: $background-color;
     border-bottom: 1px solid $border-color;
 
     @include on-small-screen {
@@ -73,6 +86,8 @@
     @include reset;
     @include center;
     flex: 1 1 auto;
+    position: relative;
+    z-index: 0;
 
     .centered {
       @include reset;
@@ -97,6 +112,50 @@
 
       &:hover {
         color: $irma-blue;
+      }
+    }
+
+    .helper {
+      @include reset;
+      position: absolute;
+      top: 0;
+      left: 10%;
+      right: 10%;
+      height: auto;
+
+      background-color: $helper-color;
+      border: 1px solid darken($helper-color, 10%);
+      border-top: 0;
+      border-bottom-left-radius: 10px;
+      border-bottom-right-radius: 10px;
+      box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.5);
+
+      // Animate in
+      transform: translateY(-110%);
+      @include transition(transform 0.4s ease-in-out);
+      &.active {
+        transform: translateY(0%);
+      }
+
+      // Show the helper automatically after 10 seconds of inactivity
+      &.auto-activate {
+        @include animation(auto-activate 0.4s ease-in-out 10s 1 forwards);
+        @include keyframes(auto-activate) {
+          from {
+            transform: translateY(-110%);
+          }
+          to {
+            transform: translateY(0%);
+          }
+        }
+      }
+
+      p, a {
+        @include font($color: white, $size: 13px);
+      }
+      p {
+        margin: 1em;
+        text-align: center;
       }
     }
   }
