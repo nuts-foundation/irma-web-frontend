@@ -1,5 +1,10 @@
 # IRMA web front-end
 
+![Screenshot of the IRMA component](screenshot.gif)
+
+_See [the examples in the styleguide](https://nuts-foundation.github.io/irma-web-frontend/section-examples.html)
+for more visual examples._
+
 Implementing IRMA disclosure flows for verifying credentials or allowing users
 to log in using IRMA can be a bit daunting, from a UX perspective. IRMA has a
 lot of different states that the user has to be guided through and the whole
@@ -17,9 +22,8 @@ that you can embed in your own (web based) applications.
 
 We want to make embedding an IRMA disclosure flow in your website as simple as
 we can. We'll start with the required design elements that cover the different
-states of the flow, so we can connect those to the `irmajs` javascript
-implementation. We may later add a small javascript abstraction and add a
-dependency on `irmajs`, to make things even simpler.
+states of the flow, so we can connect those to our own functional implementation.
+We may later add some Javascript to this package to make things even simpler.
 
 ## UX considerations
 
@@ -58,6 +62,9 @@ States 5 - 8 are all basically just catching different edge-cases.
 
 ## Embedding in your application
 
+This project currently only contains CSS. So basically you just include the CSS
+file(s) and find the right HTML snippets [in the styleguide](https://nuts-foundation.github.io/irma-web-frontend/section-examples.html).
+
 ### The old fashioned way
 
 The easy way to use these styles in your project is to link them like so:
@@ -66,8 +73,9 @@ The easy way to use these styles in your project is to link them like so:
 <link rel="stylesheet" href="//nuts-foundation.github.io/irma-web-frontend/application.css" />
 ```
 
-Or [download](https://nuts-foundation.github.io/irma-web-frontend/application.css)
-the CSS file and the fonts and host it yourself.
+Or download the [CSS file](https://nuts-foundation.github.io/irma-web-frontend/application.css)
+and the [fonts](https://github.com/nuts-foundation/irma-web-frontend/tree/master/fonts/Roboto)
+and host them yourself.
 
 ### The way the cool kids do it
 

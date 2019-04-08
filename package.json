@@ -19,7 +19,7 @@
   },
   "scripts": {
     "serve": "http-server docs -c-1",
-    "clean": "npm run clear && npm run fonts && npm run rebuild",
+    "clean": "npm run clear && npm run fonts && npm run copy-screenshot && npm run rebuild",
     "clear": "rm -rf docs/*",
     "watch-stylesheets": "onchange 'stylesheets/**/*.*' -- npm run rebuild",
     "rebuild": "concurrently \"npm run sass\" \"npm run kss\"",
@@ -29,6 +29,8 @@
     "fonts": "mkdir docs/fonts && cp -r fonts/roboto docs/fonts",
     "watch-images": "onchange 'images/png/*.*' -- npm run png-images",
     "png-images": "echo \"// This file is auto-generated from the images directory, so don't bother manually changing it.\" > stylesheets/variables/png-images.scss; for file in images/png/*; do [ -e \"$file\" ] || continue; base64=`base64 \"$file\"`; name=`basename \"$file\" .png`; echo \"\\$png-image-$name: 'data:image/png;base64,$base64';\" >> stylesheets/variables/png-images.scss; done",
+    "watch-screenshot": "onchange 'screenshot.gif' -- npm run copy-screenshot",
+    "copy-screenshot": "cp screenshot.gif docs/",
     "dev": "npm run clean && concurrently --kill-others \"npm run watch-stylesheets\" \"npm run watch-fonts\" \"npm run watch-images\" \"npm run serve\""
   },
   "devDependencies": {
