@@ -83,6 +83,9 @@
     <section class="kss-documentation">
         <article class="kss-markdown">
           <h1>IRMA web front-end</h1>
+<p><img src="screenshot.gif" alt="Screenshot of the IRMA component"></p>
+<p><em>See <a href="https://nuts-foundation.github.io/irma-web-frontend/section-examples.html">the examples in the styleguide</a>
+for more visual examples.</em></p>
 <p>Implementing IRMA disclosure flows for verifying credentials or allowing users
 to log in using IRMA can be a bit daunting, from a UX perspective. IRMA has a
 lot of different states that the user has to be guided through and the whole
@@ -96,9 +99,8 @@ that you can embed in your own (web based) applications.</p>
 <h2>Technical design considerations</h2>
 <p>We want to make embedding an IRMA disclosure flow in your website as simple as
 we can. We'll start with the required design elements that cover the different
-states of the flow, so we can connect those to the <code>irmajs</code> javascript
-implementation. We may later add a small javascript abstraction and add a
-dependency on <code>irmajs</code>, to make things even simpler.</p>
+states of the flow, so we can connect those to our own functional implementation.
+We may later add some Javascript to this package to make things even simpler.</p>
 <h2>UX considerations</h2>
 <p>Essentially we're guiding the user through a state machine, where for each state
 we help the user recognise the next step to take. We visually mirror the design
@@ -131,12 +133,15 @@ website and the app.</p>
 </code></pre>
 <p>States 5 - 8 are all basically just catching different edge-cases.</p>
 <h2>Embedding in your application</h2>
+<p>This project currently only contains CSS. So basically you just include the CSS
+file(s) and find the right HTML snippets <a href="https://nuts-foundation.github.io/irma-web-frontend/section-examples.html">in the styleguide</a>.</p>
 <h3>The old fashioned way</h3>
 <p>The easy way to use these styles in your project is to link them like so:</p>
 <pre class="hljs"><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">"stylesheet"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"//nuts-foundation.github.io/irma-web-frontend/application.css"</span> /&gt;</span>
 </code></pre>
-<p>Or <a href="https://nuts-foundation.github.io/irma-web-frontend/application.css">download</a>
-the CSS file and the fonts and host it yourself.</p>
+<p>Or download the <a href="https://nuts-foundation.github.io/irma-web-frontend/application.css">CSS file</a>
+and the <a href="https://github.com/nuts-foundation/irma-web-frontend/tree/master/fonts/Roboto">fonts</a>
+and host them yourself.</p>
 <h3>The way the cool kids do it</h3>
 <p>Alternatively, you can install it as an npm package. This can be useful if you
 want to use (parts of) the SCSS behind it and override some variables, if you
