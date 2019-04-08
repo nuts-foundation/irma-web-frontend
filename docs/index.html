@@ -109,8 +109,13 @@ website and the app.</p>
 <ol>
 <li>Uninitialised</li>
 <li>Loading</li>
-<li>Showing QR code</li>
-<li>Code scanned, continue on phone</li>
+<li>Transition to IRMA app
+<ul>
+<li>Showing QR code (desktop)</li>
+<li>Showing IRMA button (mobile)</li>
+</ul>
+</li>
+<li>Code scanned, continue on phone (desktop)</li>
 <li>Disclosure cancelled</li>
 <li>Disclosure timed out</li>
 <li>Disclosure errored</li>
@@ -120,9 +125,9 @@ website and the app.</p>
 <p>The happy path for this flow is:</p>
 <pre class="hljs"><code class="language-">1. Uninitialised →
   2. Loading →
-    3. Showing QR code →
-      4. Code scanned, continue on phone →
-        9. Success
+    3. Transition to IRMA app →
+      (4. Code scanned, continue on phone) →
+         9. Success
 </code></pre>
 <p>States 5 - 8 are all basically just catching different edge-cases.</p>
 <h2>Embedding in your application</h2>
