@@ -11,20 +11,19 @@
 //
 // Triggers:
 // <ul>
-//   <li><a href="javascript:document.querySelectorAll('.helper').forEach((h) => h.classList.add('active'))">Show helpers</a></li>
-//   <li><a href="javascript:document.querySelectorAll('.helper').forEach((h) => h.classList=['helper'])">Hide helpers</a></li>
-//   <li><a href="javascript:document.querySelectorAll('.helper').forEach((h) => h.classList.add('auto-activate'))">Auto-show helpers after 10 seconds</a></li>
+//   <li><a href="javascript:document.querySelectorAll('.header').forEach((h) => h.classList.add('show-helper'))">Show helpers</a></li>
+//   <li><a href="javascript:document.querySelectorAll('.header').forEach((h) => h.classList=['header'])">Hide helpers</a></li>
 // </ul>
 //
 // Markup:
 // <section class="irma-web-form">
-//   <header class="header">
+//   <header class="header show-helper">
 //     <p>Inloggen met <i class="irma-web-logo">IRMA</i></p>
-//   </header>
-//   <section class="content">
-//     <section class="helper active">
+//     <section class="helper">
 //       <p>Kom je er niet uit? Kijk dan eerst eens op <a href="https://privacybydesign.foundation/irma-begin/">de website van IRMA</a>.</p>
 //     </section>
+//   </header>
+//   <section class="content">
 //   </section>
 // </section>
 //

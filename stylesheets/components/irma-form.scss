@@ -2,22 +2,21 @@
 //
 // A place to nicely show the different states of the IRMA disclosure flow.
 //
-// Helper triggers:
+// Trigger helper:
 // <ul>
-//   <li><a href="javascript:document.querySelectorAll('.helper').forEach((h) => h.classList.add('active'))">Show helper</a></li>
-//   <li><a href="javascript:document.querySelectorAll('.helper').forEach((h) => h.classList=['helper'])">Hide helper</a></li>
-//   <li><a href="javascript:document.querySelectorAll('.helper').forEach((h) => h.classList.add('auto-activate'))">Auto-show helper after 10 seconds</a></li>
+//   <li><a href="javascript:document.querySelectorAll('.header').forEach((h) => h.classList.add('show-helper'))">Show helper</a></li>
+//   <li><a href="javascript:document.querySelectorAll('.header').forEach((h) => h.classList=['header'])">Hide helper</a></li>
 // </ul>
 //
 // Markup:
 // <section class="irma-web-form">
 //   <header class="header">
 //     <p>Inloggen met <i class="irma-web-logo">IRMA</i></p>
-//   </header>
-//   <section class="content">
 //     <section class="helper">
 //       <p>Kom je er niet uit? Kijk dan eerst eens op <a href="https://privacybydesign.foundation/irma-begin/">de website van IRMA</a>.</p>
 //     </section>
+//   </header>
+//   <section class="content">
 //     <section class="centered">
 //       <button>Some action here</button>
 //       <p>With some text <a href="#">and stuff</a></p>
@@ -54,13 +53,13 @@
 
   .header {
     @include reset;
+    position: relative;
     flex: 0 0 auto;
     padding: 2em;
-    margin: 0 3px;
-    z-index: 1;
+    margin: 0 $border-radius;
+    overflow: hidden;
 
     text-align: center;
-    background-color: $background-color;
     border-bottom: 1px solid $border-color;
     border-top-left-radius: $border-radius - 1;
     border-top-right-radius: $border-radius - 1;
@@ -78,19 +77,52 @@
       }
     }
 
-    img {
+    .helper {
       @include reset;
-      height: 50px;
-      vertical-align: middle;
+      @include center;
+      position: absolute;
+      bottom: 10px;
+      left: 0;
+      right: 0;
+      height: calc(100% - 20px);
+
+      background-color: $helper-color;
+      border-top-left-radius: $border-radius - 5px;
+      border-top-right-radius: $border-radius - 5px;
+
+      p, a {
+        @include font($color: white, $size: 13px);
+      }
+      p {
+        margin: 1em;
+        text-align: center;
+      }
     }
+
+    // Swap out the header content for the helper in a nice animation
+    & > *:not(.helper) {
+      transform: translateX(0%);
+      @include transition(transform 0.4s ease);
+    }
+    .helper {
+      transform: translateX(120%);
+      @include transition(transform 0.4s ease);
+    }
+    &.show-helper {
+      & > *:not(.helper) {
+        transform: translateX(-120%);
+      }
+      .helper {
+        transform: translateX(0%);
+      }
+    }
+
   }
 
   .content {
     @include reset;
     @include center;
     flex: 1 1 auto;
-    position: relative;
-    z-index: 0;
 
     .centered {
       @include reset;
@@ -115,50 +147,6 @@
 
       &:hover {
         color: $irma-blue;
-      }
-    }
-
-    .helper {
-      @include reset;
-      position: absolute;
-      top: 0;
-      left: 10%;
-      right: 10%;
-      height: auto;
-
-      background-color: $helper-color;
-      border: 1px solid darken($helper-color, 10%);
-      border-top: 0;
-      border-bottom-left-radius: 10px;
-      border-bottom-right-radius: 10px;
-      box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.5);
-
-      // Animate in
-      transform: translateY(-110%);
-      @include transition(transform 0.4s ease-in-out);
-      &.active {
-        transform: translateY(0%);
-      }
-
-      // Show the helper automatically after 10 seconds of inactivity
-      &.auto-activate {
-        @include animation(auto-activate 0.4s ease-in-out 10s 1 forwards);
-        @include keyframes(auto-activate) {
-          from {
-            transform: translateY(-110%);
-          }
-          to {
-            transform: translateY(0%);
-          }
-        }
-      }
-
-      p, a {
-        @include font($color: white, $size: 13px);
-      }
-      p {
-        margin: 1em;
-        text-align: center;
       }
     }
   }
