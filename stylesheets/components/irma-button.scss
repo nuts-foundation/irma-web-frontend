@@ -15,7 +15,8 @@
 
 @import '../mixins/reset',
         '../mixins/fonts',
-        '../variables/colours';
+        '../variables/colours',
+        '../variables/sizes';
 
 .irma-web-button {
   @include reset;
@@ -25,15 +26,24 @@
 
   background-color: $irma-blue;
   border: 1px solid darken($irma-blue, 10%);
-  border-radius: 10px;
-  box-shadow: 1px 1px 3px 0px rgba(0, 0, 0, 0.5);
+  border-radius: $border-radius;
   text-decoration: none;
   color: white;
   cursor: pointer;
 
+  // Keep your paws off our button, mobile browsers!
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+
   &:active {
-    transform: translate(1px, 1px);
-    box-shadow: -1px -1px 3px 0px rgba(0, 0, 0, 0.5);
+    transform: scale3d(0.99,0.99,1.0);
+    transform-origin: center;
   }
 
   &:focus {
