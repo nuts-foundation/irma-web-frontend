@@ -27,8 +27,8 @@
     "kss": "kss --config kss-config.json",
     "watch-fonts": "onchange 'fonts/**/*.*' --no-exclude -- npm run fonts",
     "fonts": "mkdir docs/fonts && cp -r fonts/roboto docs/fonts",
-    "watch-images": "onchange 'images/png/*.*' -- npm run png-images",
-    "png-images": "echo \"// This file is auto-generated from the images directory, so don't bother manually changing it.\" > stylesheets/variables/png-images.scss; for file in images/png/*; do [ -e \"$file\" ] || continue; base64=`base64 \"$file\"`; name=`basename \"$file\" .png`; echo \"\\$png-image-$name: 'data:image/png;base64,$base64';\" >> stylesheets/variables/png-images.scss; done",
+    "watch-images": "onchange 'images/*.*' -- npm run svg-images",
+    "svg-images": "echo \"// This file is auto-generated from the images directory, so don't bother manually changing it.\" > stylesheets/variables/svg-images.scss; for file in images/*; do [ -e \"$file\" ] || continue; svgo=`svgo \"$file\" -o -`; name=`basename \"$file\" .svg`; echo \"\\$svg-image-$name: '$svgo';\" >> stylesheets/variables/svg-images.scss; done",
     "watch-screenshot": "onchange 'screenshot.gif' -- npm run copy-screenshot",
     "copy-screenshot": "cp screenshot.gif docs/",
     "dev": "npm run clean && concurrently --kill-others \"npm run watch-stylesheets\" \"npm run watch-fonts\" \"npm run watch-images\" \"npm run serve\"",
@@ -41,6 +41,7 @@
     "michelangelo": "^0.8.0",
     "onchange": "^5.2.0",
     "sass": "^1.17.4",
+    "svgo": "^1.2.1",
     "uglifycss": "0.0.29"
   }
 }
