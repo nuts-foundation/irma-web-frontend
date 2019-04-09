@@ -1,15 +1,17 @@
 {
   "name": "irma-web-frontend",
-  "version": "0.0.1",
-  "description": "CSS and Javascript to simplify and standardize the IRMA login flow",
+  "version": "0.1.0",
+  "description": "Styling to simplify and standardize the IRMA login flow",
   "homepage": "https://nuts-foundation.github.io/irma-web-frontend/",
   "files": [
     "stylesheets/**/*",
-    "docs/application.css",
-    "fonts/**/*"
+    "dist/**/*",
+    "LICENSE",
+    "README.md",
+    "screenshot.gif"
   ],
-  "style": "docs/application.css",
-  "sass": "stylesheets/application.scss",
+  "style": "dist/irma-web-frontend.css",
+  "sass": "stylesheets/index.scss",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/nuts-foundation/irma-web-frontend.git"
