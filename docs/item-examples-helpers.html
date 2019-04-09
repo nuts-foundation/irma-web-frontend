@@ -87,18 +87,29 @@
           the "root" element comes first in this loop, and can be detected using
           the "#if @first" block as seen below.
         -->
-            <header class="kss-section kss-section--depth-3" id="kssref-examples-states-loading">
+            <header class="kss-section kss-section--depth-2" id="kssref-examples-helpers">
 
             <article class="kss-section__content">
-                <p class="kss-section__source">Source: <span>examples/states.scss</span>, line <span>34</span></p>
+                <p class="kss-section__source">Source: <span>examples/helpers.scss</span>, line <span>1</span></p>
 
-              <a class="kss-section__permalink" href="#kssref-examples-states-loading">
-                <h3 class="kss-section__item kss-section__item--depth-3">
-                  <span class="kss-section__ref">1.3.2</span>
-                  <span class="kss-section__name">State 2: Loading</span>
-                </h3>
+              <a class="kss-section__permalink" href="#kssref-examples-helpers">
+                <h2 class="kss-section__item kss-section__item--depth-2">
+                  <span class="kss-section__ref">1.1</span>
+                  <span class="kss-section__name">Helpers</span>
+                </h2>
               </a>
 
+                <div class="kss-section__description"><p>The IRMA form has a notification area for non-state errors that occur outside
+the disclosure flow. We call these &quot;helpers&quot;, and they're supposed to give
+the user hints about known issues or point to specific resources to help the
+user along.</p>
+<p>You can trigger these helpers to show in each and every example on this page.</p>
+<p>Triggers:</p>
+<ul>
+  <li><a href="javascript:document.querySelectorAll('.helper').forEach((h) => h.classList.add('active'))">Show helpers</a></li>
+  <li><a href="javascript:document.querySelectorAll('.helper').forEach((h) => h.classList=['helper'])">Hide helpers</a></li>
+  <li><a href="javascript:document.querySelectorAll('.helper').forEach((h) => h.classList.add('auto-activate'))">Auto-show helpers after 10 seconds</a></li>
+</ul></div>
 
             </article>
 
@@ -106,19 +117,13 @@
                 <h1 class="kss-modifiers__heading">Example</h1>
 
 
-                <div class="kss-modifiers__example"><section class="irma-web-center-child" style="/** Parent styles **/ width: 100%; height: 700px; border: 2px solid red;">
-  <section class="irma-web-form">
-    <header class="header">
-      <p>Inloggen met <img src="https://raw.githubusercontent.com/privacybydesign/irma_mobile/master/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png"/></p>
-    </header>
-    <section class="content">
-      <section class="helper">
-        <p>Kom je er niet uit? Kijk dan eerst eens op <a href="https://privacybydesign.foundation/irma-begin/">de website van IRMA</a>.</p>
-      </section>
-      <section class="centered">
-        <div class="irma-web-loading-animation"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
-        <p>Eén moment alsjeblieft</p>
-      </section>
+                <div class="kss-modifiers__example"><section class="irma-web-form">
+  <header class="header">
+    <p>Inloggen met <img src="https://raw.githubusercontent.com/privacybydesign/irma_mobile/master/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png"/></p>
+  </header>
+  <section class="content">
+    <section class="helper active">
+      <p>Kom je er niet uit? Kijk dan eerst eens op <a href="https://privacybydesign.foundation/irma-begin/">de website van IRMA</a>.</p>
     </section>
   </section>
 </section></div>
@@ -126,19 +131,13 @@
               </article>
 
                 <article class="kss-section__markup">
-                  <pre><code class="language-markup">&lt;section class&#x3D;&quot;irma-web-center-child&quot; style&#x3D;&quot;/** Parent styles **/ width: 100%; height: 700px; border: 2px solid red;&quot;&gt;
-  &lt;section class&#x3D;&quot;irma-web-form&quot;&gt;
-    &lt;header class&#x3D;&quot;header&quot;&gt;
-      &lt;p&gt;Inloggen met &lt;img src&#x3D;&quot;https://raw.githubusercontent.com/privacybydesign/irma_mobile/master/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png&quot;/&gt;&lt;/p&gt;
-    &lt;/header&gt;
-    &lt;section class&#x3D;&quot;content&quot;&gt;
-      &lt;section class&#x3D;&quot;helper&quot;&gt;
-        &lt;p&gt;Kom je er niet uit? Kijk dan eerst eens op &lt;a href&#x3D;&quot;https://privacybydesign.foundation/irma-begin/&quot;&gt;de website van IRMA&lt;/a&gt;.&lt;/p&gt;
-      &lt;/section&gt;
-      &lt;section class&#x3D;&quot;centered&quot;&gt;
-        &lt;div class&#x3D;&quot;irma-web-loading-animation&quot;&gt;&lt;i&gt;&lt;/i&gt;&lt;i&gt;&lt;/i&gt;&lt;i&gt;&lt;/i&gt;&lt;i&gt;&lt;/i&gt;&lt;i&gt;&lt;/i&gt;&lt;i&gt;&lt;/i&gt;&lt;i&gt;&lt;/i&gt;&lt;i&gt;&lt;/i&gt;&lt;i&gt;&lt;/i&gt;&lt;/div&gt;
-        &lt;p&gt;Eén moment alsjeblieft&lt;/p&gt;
-      &lt;/section&gt;
+                  <pre><code class="language-markup">&lt;section class&#x3D;&quot;irma-web-form&quot;&gt;
+  &lt;header class&#x3D;&quot;header&quot;&gt;
+    &lt;p&gt;Inloggen met &lt;img src&#x3D;&quot;https://raw.githubusercontent.com/privacybydesign/irma_mobile/master/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png&quot;/&gt;&lt;/p&gt;
+  &lt;/header&gt;
+  &lt;section class&#x3D;&quot;content&quot;&gt;
+    &lt;section class&#x3D;&quot;helper active&quot;&gt;
+      &lt;p&gt;Kom je er niet uit? Kijk dan eerst eens op &lt;a href&#x3D;&quot;https://privacybydesign.foundation/irma-begin/&quot;&gt;de website van IRMA&lt;/a&gt;.&lt;/p&gt;
     &lt;/section&gt;
   &lt;/section&gt;
 &lt;/section&gt;</code></pre>
