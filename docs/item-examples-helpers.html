@@ -106,9 +106,8 @@ user along.</p>
 <p>You can trigger these helpers to show in each and every example on this page.</p>
 <p>Triggers:</p>
 <ul>
-  <li><a href="javascript:document.querySelectorAll('.helper').forEach((h) => h.classList.add('active'))">Show helpers</a></li>
-  <li><a href="javascript:document.querySelectorAll('.helper').forEach((h) => h.classList=['helper'])">Hide helpers</a></li>
-  <li><a href="javascript:document.querySelectorAll('.helper').forEach((h) => h.classList.add('auto-activate'))">Auto-show helpers after 10 seconds</a></li>
+  <li><a href="javascript:document.querySelectorAll('.header').forEach((h) => h.classList.add('show-helper'))">Show helpers</a></li>
+  <li><a href="javascript:document.querySelectorAll('.header').forEach((h) => h.classList=['header'])">Hide helpers</a></li>
 </ul></div>
 
             </article>
@@ -118,13 +117,13 @@ user along.</p>
 
 
                 <div class="kss-modifiers__example"><section class="irma-web-form">
-  <header class="header">
-    <p>Inloggen met <img src="https://raw.githubusercontent.com/privacybydesign/irma_mobile/master/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png"/></p>
-  </header>
-  <section class="content">
-    <section class="helper active">
+  <header class="header show-helper">
+    <p>Inloggen met <i class="irma-web-logo">IRMA</i></p>
+    <section class="helper">
       <p>Kom je er niet uit? Kijk dan eerst eens op <a href="https://privacybydesign.foundation/irma-begin/">de website van IRMA</a>.</p>
     </section>
+  </header>
+  <section class="content">
   </section>
 </section></div>
 
@@ -132,13 +131,13 @@ user along.</p>
 
                 <article class="kss-section__markup">
                   <pre><code class="language-markup">&lt;section class&#x3D;&quot;irma-web-form&quot;&gt;
-  &lt;header class&#x3D;&quot;header&quot;&gt;
-    &lt;p&gt;Inloggen met &lt;img src&#x3D;&quot;https://raw.githubusercontent.com/privacybydesign/irma_mobile/master/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png&quot;/&gt;&lt;/p&gt;
-  &lt;/header&gt;
-  &lt;section class&#x3D;&quot;content&quot;&gt;
-    &lt;section class&#x3D;&quot;helper active&quot;&gt;
+  &lt;header class&#x3D;&quot;header show-helper&quot;&gt;
+    &lt;p&gt;Inloggen met &lt;i class&#x3D;&quot;irma-web-logo&quot;&gt;IRMA&lt;/i&gt;&lt;/p&gt;
+    &lt;section class&#x3D;&quot;helper&quot;&gt;
       &lt;p&gt;Kom je er niet uit? Kijk dan eerst eens op &lt;a href&#x3D;&quot;https://privacybydesign.foundation/irma-begin/&quot;&gt;de website van IRMA&lt;/a&gt;.&lt;/p&gt;
     &lt;/section&gt;
+  &lt;/header&gt;
+  &lt;section class&#x3D;&quot;content&quot;&gt;
   &lt;/section&gt;
 &lt;/section&gt;</code></pre>
                 </article>

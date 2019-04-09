@@ -81,8 +81,14 @@
                       </a>
                     </li>
                     <li class="kss-nav__item ">
-                      <a href="section-components.html#kssref-components-qr-code">
+                      <a href="section-components.html#kssref-components-irma-logo">
                         <span class="kss-nav__ref">5.3</span>
+                        <span class="kss-nav__name">IRMA logo</span>
+                      </a>
+                    </li>
+                    <li class="kss-nav__item ">
+                      <a href="section-components.html#kssref-components-qr-code">
+                        <span class="kss-nav__ref">5.4</span>
                         <span class="kss-nav__name">QR code</span>
                       </a>
                     </li>
@@ -178,11 +184,10 @@ mobile device)</p>
               </a>
 
                 <div class="kss-section__description"><p>A place to nicely show the different states of the IRMA disclosure flow.</p>
-<p>Helper triggers:</p>
+<p>Trigger helper:</p>
 <ul>
-  <li><a href="javascript:document.querySelectorAll('.helper').forEach((h) => h.classList.add('active'))">Show helper</a></li>
-  <li><a href="javascript:document.querySelectorAll('.helper').forEach((h) => h.classList=['helper'])">Hide helper</a></li>
-  <li><a href="javascript:document.querySelectorAll('.helper').forEach((h) => h.classList.add('auto-activate'))">Auto-show helper after 10 seconds</a></li>
+  <li><a href="javascript:document.querySelectorAll('.header').forEach((h) => h.classList.add('show-helper'))">Show helper</a></li>
+  <li><a href="javascript:document.querySelectorAll('.header').forEach((h) => h.classList=['header'])">Hide helper</a></li>
 </ul></div>
 
             </article>
@@ -193,12 +198,12 @@ mobile device)</p>
 
                 <div class="kss-modifiers__example"><section class="irma-web-form">
   <header class="header">
-    <p>Inloggen met <img src="https://raw.githubusercontent.com/privacybydesign/irma_mobile/master/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png"/></p>
-  </header>
-  <section class="content">
+    <p>Inloggen met <i class="irma-web-logo">IRMA</i></p>
     <section class="helper">
       <p>Kom je er niet uit? Kijk dan eerst eens op <a href="https://privacybydesign.foundation/irma-begin/">de website van IRMA</a>.</p>
     </section>
+  </header>
+  <section class="content">
     <section class="centered">
       <button>Some action here</button>
       <p>With some text <a href="#">and stuff</a></p>
@@ -211,18 +216,52 @@ mobile device)</p>
                 <article class="kss-section__markup">
                   <pre><code class="language-markup">&lt;section class&#x3D;&quot;irma-web-form&quot;&gt;
   &lt;header class&#x3D;&quot;header&quot;&gt;
-    &lt;p&gt;Inloggen met &lt;img src&#x3D;&quot;https://raw.githubusercontent.com/privacybydesign/irma_mobile/master/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png&quot;/&gt;&lt;/p&gt;
-  &lt;/header&gt;
-  &lt;section class&#x3D;&quot;content&quot;&gt;
+    &lt;p&gt;Inloggen met &lt;i class&#x3D;&quot;irma-web-logo&quot;&gt;IRMA&lt;/i&gt;&lt;/p&gt;
     &lt;section class&#x3D;&quot;helper&quot;&gt;
       &lt;p&gt;Kom je er niet uit? Kijk dan eerst eens op &lt;a href&#x3D;&quot;https://privacybydesign.foundation/irma-begin/&quot;&gt;de website van IRMA&lt;/a&gt;.&lt;/p&gt;
     &lt;/section&gt;
+  &lt;/header&gt;
+  &lt;section class&#x3D;&quot;content&quot;&gt;
     &lt;section class&#x3D;&quot;centered&quot;&gt;
       &lt;button&gt;Some action here&lt;/button&gt;
       &lt;p&gt;With some text &lt;a href&#x3D;&quot;#&quot;&gt;and stuff&lt;/a&gt;&lt;/p&gt;
     &lt;/section&gt;
   &lt;/section&gt;
 &lt;/section&gt;</code></pre>
+                </article>
+
+            </section>
+            <section class="kss-section kss-section--depth-2" id="kssref-components-irma-logo">
+
+            <article class="kss-section__content">
+                <p class="kss-section__source">Source: <span>components/irma-logo.scss</span>, line <span>1</span></p>
+
+              <a class="kss-section__permalink" href="#kssref-components-irma-logo">
+                <h2 class="kss-section__item kss-section__item--depth-2">
+                  <span class="kss-section__ref">5.3</span>
+                  <span class="kss-section__name">IRMA logo</span>
+                </h2>
+              </a>
+
+                <div class="kss-section__description"><p>Change an element into the IRMA logo</p>
+</div>
+
+            </article>
+
+              <article class="kss-section__modifiers">
+                <h1 class="kss-modifiers__heading">Example</h1>
+
+
+                <div class="kss-modifiers__example"><div class="irma-web-logo"></div>
+<i class="irma-web-logo"></i><br/>
+<i class="irma-web-logo" style="width: 200px; height: 160px;"></i></div>
+
+              </article>
+
+                <article class="kss-section__markup">
+                  <pre><code class="language-markup">&lt;div class&#x3D;&quot;irma-web-logo&quot;&gt;&lt;/div&gt;
+&lt;i class&#x3D;&quot;irma-web-logo&quot;&gt;&lt;/i&gt;&lt;br/&gt;
+&lt;i class&#x3D;&quot;irma-web-logo&quot; style&#x3D;&quot;width: 200px; height: 160px;&quot;&gt;&lt;/i&gt;</code></pre>
                 </article>
 
             </section>
@@ -233,7 +272,7 @@ mobile device)</p>
 
               <a class="kss-section__permalink" href="#kssref-components-qr-code">
                 <h2 class="kss-section__item kss-section__item--depth-2">
-                  <span class="kss-section__ref">5.3</span>
+                  <span class="kss-section__ref">5.4</span>
                   <span class="kss-section__name">QR code</span>
                 </h2>
               </a>

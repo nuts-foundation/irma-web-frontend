@@ -100,11 +100,10 @@
               </a>
 
                 <div class="kss-section__description"><p>A place to nicely show the different states of the IRMA disclosure flow.</p>
-<p>Helper triggers:</p>
+<p>Trigger helper:</p>
 <ul>
-  <li><a href="javascript:document.querySelectorAll('.helper').forEach((h) => h.classList.add('active'))">Show helper</a></li>
-  <li><a href="javascript:document.querySelectorAll('.helper').forEach((h) => h.classList=['helper'])">Hide helper</a></li>
-  <li><a href="javascript:document.querySelectorAll('.helper').forEach((h) => h.classList.add('auto-activate'))">Auto-show helper after 10 seconds</a></li>
+  <li><a href="javascript:document.querySelectorAll('.header').forEach((h) => h.classList.add('show-helper'))">Show helper</a></li>
+  <li><a href="javascript:document.querySelectorAll('.header').forEach((h) => h.classList=['header'])">Hide helper</a></li>
 </ul></div>
 
             </article>
@@ -115,12 +114,12 @@
 
                 <div class="kss-modifiers__example"><section class="irma-web-form">
   <header class="header">
-    <p>Inloggen met <img src="https://raw.githubusercontent.com/privacybydesign/irma_mobile/master/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png"/></p>
-  </header>
-  <section class="content">
+    <p>Inloggen met <i class="irma-web-logo">IRMA</i></p>
     <section class="helper">
       <p>Kom je er niet uit? Kijk dan eerst eens op <a href="https://privacybydesign.foundation/irma-begin/">de website van IRMA</a>.</p>
     </section>
+  </header>
+  <section class="content">
     <section class="centered">
       <button>Some action here</button>
       <p>With some text <a href="#">and stuff</a></p>
@@ -133,12 +132,12 @@
                 <article class="kss-section__markup">
                   <pre><code class="language-markup">&lt;section class&#x3D;&quot;irma-web-form&quot;&gt;
   &lt;header class&#x3D;&quot;header&quot;&gt;
-    &lt;p&gt;Inloggen met &lt;img src&#x3D;&quot;https://raw.githubusercontent.com/privacybydesign/irma_mobile/master/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png&quot;/&gt;&lt;/p&gt;
-  &lt;/header&gt;
-  &lt;section class&#x3D;&quot;content&quot;&gt;
+    &lt;p&gt;Inloggen met &lt;i class&#x3D;&quot;irma-web-logo&quot;&gt;IRMA&lt;/i&gt;&lt;/p&gt;
     &lt;section class&#x3D;&quot;helper&quot;&gt;
       &lt;p&gt;Kom je er niet uit? Kijk dan eerst eens op &lt;a href&#x3D;&quot;https://privacybydesign.foundation/irma-begin/&quot;&gt;de website van IRMA&lt;/a&gt;.&lt;/p&gt;
     &lt;/section&gt;
+  &lt;/header&gt;
+  &lt;section class&#x3D;&quot;content&quot;&gt;
     &lt;section class&#x3D;&quot;centered&quot;&gt;
       &lt;button&gt;Some action here&lt;/button&gt;
       &lt;p&gt;With some text &lt;a href&#x3D;&quot;#&quot;&gt;and stuff&lt;/a&gt;&lt;/p&gt;
