@@ -67,15 +67,16 @@ file(s) and find the right HTML snippets [in the styleguide](https://nuts-founda
 
 ### The old fashioned way
 
-The easy way to use these styles in your project is to link them like so:
+There is a normal version and a minified version of the styles [available for
+download on Github](https://github.com/nuts-foundation/irma-web-frontend/tree/master/dist)
+that you can include in your own project. If you don't even want to host the CSS
+files yourself you can link from your project to the latest version like so:
 
 ```html
 <link rel="stylesheet" href="//nuts-foundation.github.io/irma-web-frontend/application.css" />
 ```
 
-Or download the [CSS file](https://nuts-foundation.github.io/irma-web-frontend/application.css)
-and the [fonts](https://github.com/nuts-foundation/irma-web-frontend/tree/master/fonts/Roboto)
-and host them yourself.
+Please be aware though that we can make breaking changes at any time.
 
 ### The way the cool kids do it
 
