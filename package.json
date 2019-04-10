@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "description": "Styling to simplify and standardize the IRMA login flow",
   "homepage": "https://nuts-foundation.github.io/irma-web-frontend/",
+  "license": "LGPL-3.0-or-later",
   "files": [
     "stylesheets/**/*",
     "dist/**/*",
