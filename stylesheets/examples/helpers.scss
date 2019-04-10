@@ -9,10 +9,15 @@
 //
 // You can trigger these helpers to show in each and every example on this page.
 //
-// Triggers:
+// <script type="text/javascript">
+//   // Poor man's forEach that works in IE11 too ;)
+//   function eachDo(l, f) { for(var i=0; i < l.length; i++) { f(l[i]); } }
+// </script>
+//
+// Trigger helper:
 // <ul>
-//   <li><a href="javascript:document.querySelectorAll('.header').forEach((h) => h.classList.add('show-helper'))">Show helpers</a></li>
-//   <li><a href="javascript:document.querySelectorAll('.header').forEach((h) => h.classList=['header'])">Hide helpers</a></li>
+//   <li><a href="javascript:eachDo(document.querySelectorAll('.header'), function(h) {h.classList.add('show-helper')})">Show helpers</a></li>
+//   <li><a href="javascript:eachDo(document.querySelectorAll('.header'), function(h) {h.classList.remove('show-helper')})">Hide helpers</a></li>
 // </ul>
 //
 // Markup:

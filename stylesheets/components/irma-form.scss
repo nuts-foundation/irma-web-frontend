@@ -2,10 +2,15 @@
 //
 // A place to nicely show the different states of the IRMA disclosure flow.
 //
+// <script type="text/javascript">
+//   // Poor man's forEach that works in IE11 too ;)
+//   function eachDo(l, f) { for(var i=0; i < l.length; i++) { f(l[i]); } }
+// </script>
+//
 // Trigger helper:
 // <ul>
-//   <li><a href="javascript:document.querySelectorAll('.header').forEach((h) => h.classList.add('show-helper'))">Show helper</a></li>
-//   <li><a href="javascript:document.querySelectorAll('.header').forEach((h) => h.classList=['header'])">Hide helper</a></li>
+//   <li><a href="javascript:eachDo(document.querySelectorAll('.header'), function(h) {h.classList.add('show-helper')})">Show helpers</a></li>
+//   <li><a href="javascript:eachDo(document.querySelectorAll('.header'), function(h) {h.classList.remove('show-helper')})">Hide helpers</a></li>
 // </ul>
 //
 // Markup:
@@ -41,7 +46,8 @@
   width: 80%;
   min-width: $qr-code-size + 6px;
   max-width: 400px;
-  min-height: $qr-code-size + 224px;
+  height: $qr-code-size + 224px; // Acts as min-height, but IE11 needs a fixed
+                                 // parent height for the vertical centering...
 
   @include on-small-screen {
     min-height: $qr-code-size + 184px;

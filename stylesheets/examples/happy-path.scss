@@ -5,10 +5,13 @@
 // This is what the entire flow should look like if everything works as intended.
 //
 // <script type="text/javascript">
+//   // Poor man's forEach that works in IE11 too ;)
+//   function eachDo(l, f) { for(var i=0; i < l.length; i++) { f(l[i]); } }
+//
 //   window.addEventListener('load', function() {
-//     document.querySelectorAll('[data-animate]').forEach(function(section) {
+//     eachDo(document.querySelectorAll('[data-animate]'), function(section) {
 //       let panels = section.querySelectorAll('.centered');
-//       panels.forEach(function(panel) { panel.style.display = 'none'; });
+//       eachDo(panels, function(panel) { panel.style.display = 'none'; });
 //       function showPanel(panels, index) {
 //         panels[index].style.display = 'block';
 //         let duration = panels[index].getAttribute('data-duration');
