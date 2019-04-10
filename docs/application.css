@@ -90,7 +90,7 @@
   width: 80%;
   min-width: 262px;
   max-width: 400px;
-  min-height: 480px;
+  height: 480px;
   background-color: #f8f8f8;
   border: 1px solid #cccccc;
   border-radius: 10px;

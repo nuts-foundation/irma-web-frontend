@@ -184,10 +184,14 @@ mobile device)</p>
               </a>
 
                 <div class="kss-section__description"><p>A place to nicely show the different states of the IRMA disclosure flow.</p>
+<script type="text/javascript">
+  // Poor man's forEach that works in IE11 too ;)
+  function eachDo(l, f) { for(var i=0; i < l.length; i++) { f(l[i]); } }
+</script>
 <p>Trigger helper:</p>
 <ul>
-  <li><a href="javascript:document.querySelectorAll('.header').forEach((h) => h.classList.add('show-helper'))">Show helper</a></li>
-  <li><a href="javascript:document.querySelectorAll('.header').forEach((h) => h.classList=['header'])">Hide helper</a></li>
+  <li><a href="javascript:eachDo(document.querySelectorAll('.header'), function(h) {h.classList.add('show-helper')})">Show helpers</a></li>
+  <li><a href="javascript:eachDo(document.querySelectorAll('.header'), function(h) {h.classList.remove('show-helper')})">Hide helpers</a></li>
 </ul></div>
 
             </article>

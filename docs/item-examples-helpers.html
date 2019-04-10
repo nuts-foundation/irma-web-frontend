@@ -104,10 +104,14 @@ the disclosure flow. We call these &quot;helpers&quot;, and they're supposed to 
 the user hints about known issues or point to specific resources to help the
 user along.</p>
 <p>You can trigger these helpers to show in each and every example on this page.</p>
-<p>Triggers:</p>
+<script type="text/javascript">
+  // Poor man's forEach that works in IE11 too ;)
+  function eachDo(l, f) { for(var i=0; i < l.length; i++) { f(l[i]); } }
+</script>
+<p>Trigger helper:</p>
 <ul>
-  <li><a href="javascript:document.querySelectorAll('.header').forEach((h) => h.classList.add('show-helper'))">Show helpers</a></li>
-  <li><a href="javascript:document.querySelectorAll('.header').forEach((h) => h.classList=['header'])">Hide helpers</a></li>
+  <li><a href="javascript:eachDo(document.querySelectorAll('.header'), function(h) {h.classList.add('show-helper')})">Show helpers</a></li>
+  <li><a href="javascript:eachDo(document.querySelectorAll('.header'), function(h) {h.classList.remove('show-helper')})">Hide helpers</a></li>
 </ul></div>
 
             </article>

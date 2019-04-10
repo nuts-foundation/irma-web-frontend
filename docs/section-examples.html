@@ -213,10 +213,14 @@ the disclosure flow. We call these &quot;helpers&quot;, and they're supposed to 
 the user hints about known issues or point to specific resources to help the
 user along.</p>
 <p>You can trigger these helpers to show in each and every example on this page.</p>
-<p>Triggers:</p>
+<script type="text/javascript">
+  // Poor man's forEach that works in IE11 too ;)
+  function eachDo(l, f) { for(var i=0; i < l.length; i++) { f(l[i]); } }
+</script>
+<p>Trigger helper:</p>
 <ul>
-  <li><a href="javascript:document.querySelectorAll('.header').forEach((h) => h.classList.add('show-helper'))">Show helpers</a></li>
-  <li><a href="javascript:document.querySelectorAll('.header').forEach((h) => h.classList=['header'])">Hide helpers</a></li>
+  <li><a href="javascript:eachDo(document.querySelectorAll('.header'), function(h) {h.classList.add('show-helper')})">Show helpers</a></li>
+  <li><a href="javascript:eachDo(document.querySelectorAll('.header'), function(h) {h.classList.remove('show-helper')})">Hide helpers</a></li>
 </ul></div>
 
             </article>
@@ -266,10 +270,13 @@ user along.</p>
 
                 <div class="kss-section__description"><p>This is what the entire flow should look like if everything works as intended.</p>
 <script type="text/javascript">
+  // Poor man's forEach that works in IE11 too ;)
+  function eachDo(l, f) { for(var i=0; i < l.length; i++) { f(l[i]); } }
+
   window.addEventListener('load', function() {
-    document.querySelectorAll('[data-animate]').forEach(function(section) {
+    eachDo(document.querySelectorAll('[data-animate]'), function(section) {
       let panels = section.querySelectorAll('.centered');
-      panels.forEach(function(panel) { panel.style.display = 'none'; });
+      eachDo(panels, function(panel) { panel.style.display = 'none'; });
       function showPanel(panels, index) {
         panels[index].style.display = 'block';
         let duration = panels[index].getAttribute('data-duration');
@@ -292,7 +299,7 @@ user along.</p>
             <section class="kss-section kss-section--depth-3" id="kssref-examples-happy-path-desktop">
 
             <article class="kss-section__content">
-                <p class="kss-section__source">Source: <span>examples/happy-path.scss</span>, line <span>29</span></p>
+                <p class="kss-section__source">Source: <span>examples/happy-path.scss</span>, line <span>32</span></p>
 
               <a class="kss-section__permalink" href="#kssref-examples-happy-path-desktop">
                 <h3 class="kss-section__item kss-section__item--depth-3">
@@ -372,7 +379,7 @@ user along.</p>
             <section class="kss-section kss-section--depth-3" id="kssref-examples-happy-path-mobile">
 
             <article class="kss-section__content">
-                <p class="kss-section__source">Source: <span>examples/happy-path.scss</span>, line <span>64</span></p>
+                <p class="kss-section__source">Source: <span>examples/happy-path.scss</span>, line <span>67</span></p>
 
               <a class="kss-section__permalink" href="#kssref-examples-happy-path-mobile">
                 <h3 class="kss-section__item kss-section__item--depth-3">

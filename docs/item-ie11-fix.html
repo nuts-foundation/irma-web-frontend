@@ -45,32 +45,38 @@
             </a>
           </li>
           <li class="kss-nav__item">
-            <a class="" href="section-variables.html">
+            <a class="kss-state-active" href="section-ie11-fix.html">
               <span class="kss-nav__ref">2</span>
+              <span class="kss-nav__name">IE11 polyfill</span>
+            </a>
+          </li>
+          <li class="kss-nav__item">
+            <a class="" href="section-variables.html">
+              <span class="kss-nav__ref">3</span>
               <span class="kss-nav__name">Variables</span>
             </a>
           </li>
           <li class="kss-nav__item">
             <a class="" href="section-mixins.html">
-              <span class="kss-nav__ref">3</span>
+              <span class="kss-nav__ref">4</span>
               <span class="kss-nav__name">Mixins</span>
             </a>
           </li>
           <li class="kss-nav__item">
             <a class="" href="section-layouts.html">
-              <span class="kss-nav__ref">4</span>
+              <span class="kss-nav__ref">5</span>
               <span class="kss-nav__name">Layouts</span>
             </a>
           </li>
           <li class="kss-nav__item">
             <a class="" href="section-components.html">
-              <span class="kss-nav__ref">5</span>
+              <span class="kss-nav__ref">6</span>
               <span class="kss-nav__name">Components</span>
             </a>
           </li>
           <li class="kss-nav__item">
             <a class="" href="section-animations.html">
-              <span class="kss-nav__ref">6</span>
+              <span class="kss-nav__ref">7</span>
               <span class="kss-nav__name">Animations</span>
             </a>
           </li>
@@ -87,68 +93,32 @@
           the "root" element comes first in this loop, and can be detected using
           the "#if @first" block as seen below.
         -->
-            <header class="kss-section kss-section--depth-2" id="kssref-components-irma-login">
+            <header class="kss-section kss-section--depth-1" id="kssref-ie11-fix">
 
             <article class="kss-section__content">
-                <p class="kss-section__source">Source: <span>components/irma-form.scss</span>, line <span>1</span></p>
+                <p class="kss-section__source">Source: <span>ie11-fix.scss</span>, line <span>1</span></p>
 
-              <a class="kss-section__permalink" href="#kssref-components-irma-login">
-                <h2 class="kss-section__item kss-section__item--depth-2">
-                  <span class="kss-section__ref">5.2</span>
-                  <span class="kss-section__name">IRMA &#x27;login form&#x27;</span>
-                </h2>
+              <a class="kss-section__permalink" href="#kssref-ie11-fix">
+                <h1 class="kss-section__item kss-section__item--depth-1">
+                  <span class="kss-section__ref">2</span>
+                  <span class="kss-section__name">IE11 polyfill</span>
+                </h1>
               </a>
 
-                <div class="kss-section__description"><p>A place to nicely show the different states of the IRMA disclosure flow.</p>
-<script type="text/javascript">
-  // Poor man's forEach that works in IE11 too ;)
-  function eachDo(l, f) { for(var i=0; i < l.length; i++) { f(l[i]); } }
-</script>
-<p>Trigger helper:</p>
-<ul>
-  <li><a href="javascript:eachDo(document.querySelectorAll('.header'), function(h) {h.classList.add('show-helper')})">Show helpers</a></li>
-  <li><a href="javascript:eachDo(document.querySelectorAll('.header'), function(h) {h.classList.remove('show-helper')})">Hide helpers</a></li>
-</ul></div>
+                <div class="kss-section__description"><script type="text/javascript">
+  if ('NodeList' in window && !NodeList.prototype.forEach) {
+    console.info('polyfill for IE11');
+    NodeList.prototype.forEach = function (callback, thisArg) {
+      thisArg = thisArg || window;
+      for (var i = 0; i < this.length; i++) {
+        callback.call(thisArg, this[i], i, this);
+      }
+    };
+  }
+</script></div>
 
             </article>
 
-              <article class="kss-section__modifiers">
-                <h1 class="kss-modifiers__heading">Example</h1>
-
-
-                <div class="kss-modifiers__example"><section class="irma-web-form">
-  <header class="header">
-    <p>Inloggen met <i class="irma-web-logo">IRMA</i></p>
-    <section class="helper">
-      <p>Kom je er niet uit? Kijk dan eerst eens op <a href="https://privacybydesign.foundation/irma-begin/">de website van IRMA</a>.</p>
-    </section>
-  </header>
-  <section class="content">
-    <section class="centered">
-      <button>Some action here</button>
-      <p>With some text <a href="#">and stuff</a></p>
-    </section>
-  </section>
-</section></div>
-
-              </article>
-
-                <article class="kss-section__markup">
-                  <pre><code class="language-markup">&lt;section class&#x3D;&quot;irma-web-form&quot;&gt;
-  &lt;header class&#x3D;&quot;header&quot;&gt;
-    &lt;p&gt;Inloggen met &lt;i class&#x3D;&quot;irma-web-logo&quot;&gt;IRMA&lt;/i&gt;&lt;/p&gt;
-    &lt;section class&#x3D;&quot;helper&quot;&gt;
-      &lt;p&gt;Kom je er niet uit? Kijk dan eerst eens op &lt;a href&#x3D;&quot;https://privacybydesign.foundation/irma-begin/&quot;&gt;de website van IRMA&lt;/a&gt;.&lt;/p&gt;
-    &lt;/section&gt;
-  &lt;/header&gt;
-  &lt;section class&#x3D;&quot;content&quot;&gt;
-    &lt;section class&#x3D;&quot;centered&quot;&gt;
-      &lt;button&gt;Some action here&lt;/button&gt;
-      &lt;p&gt;With some text &lt;a href&#x3D;&quot;#&quot;&gt;and stuff&lt;/a&gt;&lt;/p&gt;
-    &lt;/section&gt;
-  &lt;/section&gt;
-&lt;/section&gt;</code></pre>
-                </article>
 
             </header>
     </section>
