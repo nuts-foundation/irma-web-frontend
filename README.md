@@ -88,7 +88,7 @@ want to use (parts of) the SCSS behind it and override some variables, if you
 need to package it in some complicated way or if you want to stay up to date.
 
 ```bash
-$ npm install nuts-foundation/irma-web-frontend
+$ npm install irma-web-frontend
 ```
 
 You can then pull from the entire thing or just bits and pieces of it in your
