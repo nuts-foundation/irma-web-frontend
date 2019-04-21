@@ -150,6 +150,7 @@
       @include reset;
       @include font($color: $text-color, $size: 15px);
       text-decoration: underline;
+      cursor: pointer;
 
       &:hover {
         color: $irma-blue;
