@@ -220,6 +220,7 @@
   font-size: 15px;
   color: #4C4C4C;
   text-decoration: underline;
+  cursor: pointer;
 }
 .irma-web-form .content a:hover {
   color: #00b1e7;
