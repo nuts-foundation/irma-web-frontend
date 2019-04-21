@@ -18,6 +18,9 @@ For these reasons we have released this important part of the
 [Helder application](https://helder.health) as a stand-alone open source package
 that you can embed in your own (web based) applications.
 
+This package has been designed and tested to work with the browsers Chrome,
+Firefox, Safari, Opera, Edge and IE11.
+
 ## Technical design considerations
 
 We want to make embedding an IRMA disclosure flow in your website as simple as
