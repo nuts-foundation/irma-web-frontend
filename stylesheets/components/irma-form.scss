@@ -134,6 +134,10 @@
       @include reset;
       height: auto;
       text-align: center;
+
+      img, canvas {
+        cursor: none;
+      }
     }
 
     p {
