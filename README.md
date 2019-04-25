@@ -24,9 +24,9 @@ Firefox, Safari, Opera, Edge and IE11.
 ## Technical design considerations
 
 We want to make embedding an IRMA disclosure flow in your website as simple as
-we can. We'll start with the required design elements that cover the different
-states of the flow, so we can connect those to our own functional implementation.
-We may later add some Javascript to this package to make things even simpler.
+we can. This package only provides the required design elements that cover the
+different states of the flow. If you want to make these designs actually work
+with the IRMA app and the IRMA server, take a look at [`irma-web-glue`](https://github.com/nuts-foundation/irma-web-glue).
 
 ## UX considerations
 
