@@ -14,7 +14,7 @@
 //
 // Styleguide Variables.colours.app
 
-$irma-blue:        #00b1e7;
+$irma-blue:        #004C92;
 $background-color: #f8f8f8;
 $border-color:     #cccccc;
 
@@ -29,8 +29,8 @@ $border-color:     #cccccc;
 //
 // Styleguide Variables.colours.text
 
-$text-color:        #4C4C4C;
-$subtle-text-color: lighten($text-color, 20%);
+$text-color:        $irma-blue;
+$subtle-text-color: lighten(#4C4C4C, 20%);
 
 // Other colours
 //
@@ -42,4 +42,4 @@ $subtle-text-color: lighten($text-color, 20%);
 //
 // Styleguide Variables.colours.other
 
-$helper-color: #484d58;
+$helper-color: #47679e;
