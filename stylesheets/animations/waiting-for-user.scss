@@ -19,14 +19,14 @@
   height: 39px;
   position: relative;
 
-  background-color: $irma-blue;
+  background-color: $animation-color;
   border-radius: 2px;
 
   &:before, &:after {
     content: '';
     display: block;
     position: absolute;
-    background-color: white;
+    background-color: $content-bg-color;
   }
 
   &:before {
