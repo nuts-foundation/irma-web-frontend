@@ -3,7 +3,7 @@
 // A forbidden sign to show issues
 //
 // Markup:
-// <div class="irma-web-forbidden-animation"></div>
+// <div class="irma-web-forbidden-animation" onclick="var elm = this; elm.className = ''; setTimeout(function() { elm.className = 'irma-web-forbidden-animation'; }, 100)"></div>
 //
 // Styleguide Animations.Forbidden
 
@@ -15,110 +15,120 @@
   $sign-size: 44px;
   $line-size: 7px;
 
+  // Parent element is just a container for :before and :after
+
   @include reset;
   display: inline-block;
   position: relative;
+  width: $sign-size;
   height: $sign-size;
-  border: $line-size solid $irma-red;
 
-  @include animation(complete-animation 0.5s linear 1 forwards);
+  // Before and after together form the animated forbidden sign
 
-  // Draw circle
-
-  &:before {
+  &:before, &:after {
     content: ' ';
     display: block;
+    position: absolute;
     box-sizing: border-box;
     width: $sign-size / 2;
     height: $sign-size;
-    position: absolute;
-    left: 0;
-    top: -1 * $line-size;
+    top: 0;
+    left: $sign-size / 2;
 
-    background-color: white;
+    // Note: Safari has issues animating the border if it hasn't been set before
     border: $line-size solid $irma-red;
-    opacity: 0;
-    transform: rotate(0deg);
-    transform-origin: center left;
-    @include animation(rotate-animation 0.5s linear 1 forwards);
+    // Note: IE11 has issues animating the border radius :/
+    border-radius: $sign-size / 2;
+  }
+
+  &:before {
+    @include animation(complete-animation 0.8s linear 1 forwards);
+  }
+
+  &:after {
+    @include animation(rotate-animation 0.8s linear 1 forwards);
   }
 
   @include keyframes(complete-animation) {
-    0%, 99.50% {
-      width: $sign-size / 2;
-      left: $sign-size / 2;
+    // Be half a circle
+    0%, 65.99% {
       border-radius: 0px;
       border-left: 0px;
       border-top-right-radius: $sign-size / 2;
       border-bottom-right-radius: $sign-size / 2;
+      width: $sign-size / 2;
+      left: $sign-size / 2;
     }
-    99.51%, 100% {
+
+    // Become a whole circle
+    66%, 100% {
+      border: $line-size solid $irma-red;
+      border-radius: $sign-size / 2;
       width: $sign-size;
       left: 0;
-      border-radius: 50%;
     }
   }
 
   @include keyframes(rotate-animation) {
-    // The element has to look different in the two stages of the animation
-    0%, 49.99% {
+    // Be a white mask to hide :before
+    0%, 32.99% {
       border: 0;
       border-radius: 0;
+      background-color: $content-bg-color;
+      transform-origin: center left;
     }
-    50%, 100% {
+    // Be a half circle
+    33%, 65.99% {
       border: $line-size solid $irma-red;
       border-radius: 0px;
       border-left: 0px;
       border-top-right-radius: $sign-size / 2;
       border-bottom-right-radius: $sign-size / 2;
+      background-color: $content-bg-color;
+      width: $sign-size / 2;
+      height: $sign-size;
+      transform-origin: center left;
+      left: $sign-size / 2;
+    }
+    // Be a diagonal line
+    66%, 100% {
+      border: 0;
+      background-color: $irma-red;
+      height: $line-size;
+      transform: rotate(-45deg) translate($sign-size / -2 + $line-size / 2, $sign-size / 2 + $line-size / 2 + 2);
+      transform-origin: top left;
+      left: 0;
     }
 
     // Rotate twice the same way with a different look to complete the circle
     0% {
-      transform: rotate(0deg);
+      transform: rotate(1deg); // Note: Safari rotates the wrong way when more than 180 degrees :(
     }
-    49.99% {
+    32.99% {
       transform: rotate(180deg);
     }
-    50.01% {
-      transform: rotate(0deg);
+    33% {
+      transform: rotate(1deg); // Note: Safari rotates the wrong way when more than 180 degrees :(
     }
-    100% {
+    65.99% {
       transform: rotate(180deg);
     }
 
-    // Hide the crimes ;)
-    0%, 49.80%, 50.20%, 99.80% {
-      opacity: 1;
-    }
-    49.90%, 50.10%, 99.90% {
-      opacity: 0;
-    }
-  }
-
-  // Strike through
-
-  &:after {
-    content: ' ';
-    display: block;
-    box-sizing: content-box;
-    width: 0;
-    height: $line-size;
-
-    background-color: $irma-red;
-    transform: translate(0, 0.5 * $sign-size + $line-size / 2) rotate(-45deg);
-    transform-origin: top left;
-    @include animation(strike-animation 0.3s 1 ease 0.5s forwards);
-  }
-
-  @include keyframes(strike-animation) {
-    0% {
+    // Then animate width to draw the strike-through line
+    66% {
       width: 0;
     }
     100% {
       width: $sign-size - $line-size;
     }
-  }
 
+    // Hide the crimes ;)
+    0%, 32.97%, 33.02%, 65.97%, 66.02%, 100% {
+      opacity: 1;
+    }
+    32.98%, 33.01%, 65.98%, 66.01% {
+      opacity: 0;
+    }
+  }
 
 }
