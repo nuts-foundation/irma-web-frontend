@@ -46,12 +46,13 @@
   }
 
   &:after {
+    width: $sign-size - $line-size; // Desired end state that's not in the 100% declaration
     @include animation(rotate-animation 0.8s linear 1 forwards);
   }
 
   @include keyframes(complete-animation) {
     // Be half a circle
-    0%, 65.99% {
+    0%, 65% {
       border-radius: 0px;
       border-left: 0px;
       border-top-right-radius: $sign-size / 2;
@@ -69,6 +70,9 @@
     }
   }
 
+  // Note: If you use multiple blocks with the same percentage, IE11 doesn't
+  // combine them, but overwrites the first with the last.
+
   @include keyframes(rotate-animation) {
     // Be a white mask to hide :before
     0%, 32.99% {
@@ -76,6 +80,7 @@
       border-radius: 0;
       background-color: $content-bg-color;
       transform-origin: center left;
+      width: $sign-size / 2;
     }
     // Be a half circle
     33%, 65.99% {
@@ -101,33 +106,25 @@
     }
 
     // Rotate twice the same way with a different look to complete the circle
-    0% {
+    0.01% {
       transform: rotate(1deg); // Note: Safari rotates the wrong way when more than 180 degrees :(
     }
-    32.99% {
+    32.98% {
       transform: rotate(180deg);
     }
-    33% {
+    33.01% {
       transform: rotate(1deg); // Note: Safari rotates the wrong way when more than 180 degrees :(
     }
-    65.99% {
+    65.98% {
       transform: rotate(180deg);
     }
 
     // Then animate width to draw the strike-through line
-    66% {
+    66.01% {
       width: 0;
     }
-    100% {
+    99.99% {
       width: $sign-size - $line-size;
-    }
-
-    // Hide the crimes ;)
-    0%, 32.97%, 33.02%, 65.97%, 66.02%, 100% {
-      opacity: 1;
-    }
-    32.98%, 33.01%, 65.98%, 66.01% {
-      opacity: 0;
     }
   }
 
