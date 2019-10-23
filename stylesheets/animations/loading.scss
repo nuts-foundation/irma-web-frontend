@@ -24,7 +24,7 @@
     display: block;
     width: 33%;
     height: 33%;
-    background-color: $animation-color;
+    background-color: $irma-light-blue;
     float: left;
 
     @include animation(loading-animation 1.3s infinite ease-in-out);

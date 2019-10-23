@@ -1,0 +1,124 @@
+// Forbidden
+//
+// A forbidden sign to show issues
+//
+// Markup:
+// <div class="irma-web-forbidden-animation"></div>
+//
+// Styleguide Animations.Forbidden
+
+@import '../mixins/reset',
+        '../mixins/animation',
+        '../variables/colours';
+
+.irma-web-forbidden-animation {
+  $sign-size: 44px;
+  $line-size: 7px;
+
+  @include reset;
+  display: inline-block;
+  position: relative;
+  height: $sign-size;
+  border: $line-size solid $irma-red;
+
+  @include animation(complete-animation 0.5s linear 1 forwards);
+
+  // Draw circle
+
+  &:before {
+    content: ' ';
+    display: block;
+    box-sizing: border-box;
+    width: $sign-size / 2;
+    height: $sign-size;
+    position: absolute;
+    left: 0;
+    top: -1 * $line-size;
+
+    background-color: white;
+    border: $line-size solid $irma-red;
+    opacity: 0;
+    transform: rotate(0deg);
+    transform-origin: center left;
+    @include animation(rotate-animation 0.5s linear 1 forwards);
+  }
+
+  @include keyframes(complete-animation) {
+    0%, 99.50% {
+      width: $sign-size / 2;
+      left: $sign-size / 2;
+      border-radius: 0px;
+      border-left: 0px;
+      border-top-right-radius: $sign-size / 2;
+      border-bottom-right-radius: $sign-size / 2;
+    }
+    99.51%, 100% {
+      width: $sign-size;
+      left: 0;
+      border-radius: 50%;
+    }
+  }
+
+  @include keyframes(rotate-animation) {
+    // The element has to look different in the two stages of the animation
+    0%, 49.99% {
+      border: 0;
+      border-radius: 0;
+    }
+    50%, 100% {
+      border: $line-size solid $irma-red;
+      border-radius: 0px;
+      border-left: 0px;
+      border-top-right-radius: $sign-size / 2;
+      border-bottom-right-radius: $sign-size / 2;
+    }
+
+    // Rotate twice the same way with a different look to complete the circle
+    0% {
+      transform: rotate(0deg);
+    }
+    49.99% {
+      transform: rotate(180deg);
+    }
+    50.01% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(180deg);
+    }
+
+    // Hide the crimes ;)
+    0%, 49.80%, 50.20%, 99.80% {
+      opacity: 1;
+    }
+    49.90%, 50.10%, 99.90% {
+      opacity: 0;
+    }
+  }
+
+  // Strike through
+
+  &:after {
+    content: ' ';
+    display: block;
+    box-sizing: content-box;
+    width: 0;
+    height: $line-size;
+
+    background-color: $irma-red;
+    transform: translate(0, 0.5 * $sign-size + $line-size / 2) rotate(-45deg);
+    transform-origin: top left;
+    @include animation(strike-animation 0.3s 1 ease 0.5s forwards);
+  }
+
+  @include keyframes(strike-animation) {
+    0% {
+      width: 0;
+    }
+    100% {
+      width: $sign-size - $line-size;
+    }
+  }
+
+
+}
