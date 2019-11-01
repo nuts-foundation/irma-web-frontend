@@ -17,7 +17,7 @@
 //     <header class="header">
 //       <p>Inloggen met <i class="irma-web-logo">IRMA</i></p>
 //       <section class="helper">
-//         <p>Kom je er niet uit? Kijk dan eerst eens op <a href="https://privacybydesign.foundation/irma-begin/">de website van IRMA</a>.</p>
+//         <p>Kom je er niet uit? Kijk dan eerst eens op <a href="https://irma.app/">de website van IRMA</a>.</p>
 //       </section>
 //     </header>
 //     <section class="content">
@@ -41,7 +41,7 @@
 //     <header class="header">
 //       <p>Inloggen met <i class="irma-web-logo">IRMA</i></p>
 //       <section class="helper">
-//         <p>Kom je er niet uit? Kijk dan eerst eens op <a href="https://privacybydesign.foundation/irma-begin/">de website van IRMA</a>.</p>
+//         <p>Kom je er niet uit? Kijk dan eerst eens op <a href="https://irma.app/">de website van IRMA</a>.</p>
 //       </section>
 //     </header>
 //     <section class="content">
@@ -65,7 +65,7 @@
 //     <header class="header">
 //       <p>Inloggen met <i class="irma-web-logo">IRMA</i></p>
 //       <section class="helper">
-//         <p>Kom je er niet uit? Kijk dan eerst eens op <a href="https://privacybydesign.foundation/irma-begin/">de website van IRMA</a>.</p>
+//         <p>Kom je er niet uit? Kijk dan eerst eens op <a href="https://irma.app/">de website van IRMA</a>.</p>
 //       </section>
 //     </header>
 //     <section class="content">
@@ -88,7 +88,7 @@
 //     <header class="header">
 //       <p>Inloggen met <i class="irma-web-logo">IRMA</i></p>
 //       <section class="helper">
-//         <p>Kom je er niet uit? Kijk dan eerst eens op <a href="https://privacybydesign.foundation/irma-begin/">de website van IRMA</a>.</p>
+//         <p>Kom je er niet uit? Kijk dan eerst eens op <a href="https://irma.app/">de website van IRMA</a>.</p>
 //       </section>
 //     </header>
 //     <section class="content">
@@ -112,13 +112,13 @@
 //     <header class="header">
 //       <p>Inloggen met <i class="irma-web-logo">IRMA</i></p>
 //       <section class="helper">
-//         <p>Kom je er niet uit? Kijk dan eerst eens op <a href="https://privacybydesign.foundation/irma-begin/">de website van IRMA</a>.</p>
+//         <p>Kom je er niet uit? Kijk dan eerst eens op <a href="https://irma.app/">de website van IRMA</a>.</p>
 //       </section>
 //     </header>
 //     <section class="content">
 //       <section class="centered">
 //         <div class="irma-web-waiting-for-user-animation"></div>
-//         <p>Volg de instructies op je telefoon</p>
+//         <p>Volg de instructies in de IRMA app</p>
 //       </section>
 //     </section>
 //   </section>
@@ -136,12 +136,13 @@
 //     <header class="header">
 //       <p>Inloggen met <i class="irma-web-logo">IRMA</i></p>
 //       <section class="helper">
-//         <p>Kom je er niet uit? Kijk dan eerst eens op <a href="https://privacybydesign.foundation/irma-begin/">de website van IRMA</a>.</p>
+//         <p>Kom je er niet uit? Kijk dan eerst eens op <a href="https://irma.app/">de website van IRMA</a>.</p>
 //       </section>
 //     </header>
 //     <section class="content">
 //       <section class="centered">
-//         <p>Transactie is geannuleerd</p>
+//         <div class="irma-web-forbidden-animation"></div>
+//         <p>We hebben de attributen niet ontvangen. Het spijt ons, maar dan kunnen we je niet inloggen</p>
 //         <p><a href="#">Opnieuw proberen</a></p>
 //       </section>
 //     </section>
@@ -160,12 +161,13 @@
 //     <header class="header">
 //       <p>Inloggen met <i class="irma-web-logo">IRMA</i></p>
 //       <section class="helper">
-//         <p>Kom je er niet uit? Kijk dan eerst eens op <a href="https://privacybydesign.foundation/irma-begin/">de website van IRMA</a>.</p>
+//         <p>Kom je er niet uit? Kijk dan eerst eens op <a href="https://irma.app/">de website van IRMA</a>.</p>
 //       </section>
 //     </header>
 //     <section class="content">
 //       <section class="centered">
-//         <p>Transactie is verlopen</p>
+//         <div class="irma-web-clock-animation"></div>
+//         <p>Sorry! We hebben te lang<br/>niks van je gehoord</p>
 //         <p><a href="#">Opnieuw proberen</a></p>
 //       </section>
 //     </section>
@@ -184,12 +186,13 @@
 //     <header class="header">
 //       <p>Inloggen met <i class="irma-web-logo">IRMA</i></p>
 //       <section class="helper">
-//         <p>Kom je er niet uit? Kijk dan eerst eens op <a href="https://privacybydesign.foundation/irma-begin/">de website van IRMA</a>.</p>
+//         <p>Kom je er niet uit? Kijk dan eerst eens op <a href="https://irma.app/">de website van IRMA</a>.</p>
 //       </section>
 //     </header>
 //     <section class="content">
 //       <section class="centered">
-//         <p>Er is een fout opgetreden</p>
+//         <div class="irma-web-forbidden-animation"></div>
+//         <p>Sorry! Er is een fout opgetreden</p>
 //         <p><a href="#">Opnieuw proberen</a></p>
 //       </section>
 //     </section>
@@ -208,11 +211,12 @@
 //     <header class="header">
 //       <p>Inloggen met <i class="irma-web-logo">IRMA</i></p>
 //       <section class="helper">
-//         <p>Kom je er niet uit? Kijk dan eerst eens op <a href="https://privacybydesign.foundation/irma-begin/">de website van IRMA</a>.</p>
+//         <p>Kom je er niet uit? Kijk dan eerst eens op <a href="https://irma.app/">de website van IRMA</a>.</p>
 //       </section>
 //     </header>
 //     <section class="content">
 //       <section class="centered">
+//         <div class="irma-web-forbidden-animation"></div>
 //         <p>Het spijt ons, maar je browser voldoet niet aan de minimale eisen</p>
 //       </section>
 //     </section>
@@ -231,7 +235,7 @@
 //     <header class="header">
 //       <p>Inloggen met <i class="irma-web-logo">IRMA</i></p>
 //       <section class="helper">
-//         <p>Kom je er niet uit? Kijk dan eerst eens op <a href="https://privacybydesign.foundation/irma-begin/">de website van IRMA</a>.</p>
+//         <p>Kom je er niet uit? Kijk dan eerst eens op <a href="https://irma.app/">de website van IRMA</a>.</p>
 //       </section>
 //     </header>
 //     <section class="content">
