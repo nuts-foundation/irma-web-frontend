@@ -1,3 +1,6 @@
+_Please note that this repository has been handed over to the Privacy by Design foundation. You can find the latest version here: https://github.com/privacybydesign/irma-frontend-packages_
+
+
 # IRMA web front-end
 
 ![Screenshot of the IRMA component](screenshot.gif)
